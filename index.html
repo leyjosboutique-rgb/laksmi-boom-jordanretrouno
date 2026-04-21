@@ -142,7 +142,7 @@ footer{background:#111;color:#fff;padding:24px 16px;text-align:center}
 
 <!-- PROMO BAR -->
 <div class="promobar">
-  🔥 1 PAR <span>$89.900</span> &nbsp;|&nbsp; 2 PARES SOLO <span>$119.900</span><br>
+  🔥 1 PAR <span>$109.900</span> &nbsp;|&nbsp; 2 PARES SOLO <span>$149.900</span><br>
   <em>Y es curioso… porque cuando ves el segundo par… ya sabes que uno no es suficiente.</em>
 </div>
 
@@ -176,16 +176,16 @@ footer{background:#111;color:#fff;padding:24px 16px;text-align:center}
 
 <!-- PRECIO -->
 <div class="precio-box">
-  <div class="precio-antes">ANTES $149.900</div>
-  <div class="precio-ahora">$89.900</div>
+  <div class="precio-antes">ANTES $169.900</div>
+  <div class="precio-ahora">$109.900</div>
   <div class="precio-desc">🔥 -40% SOLO POR HOY</div>
   <div class="precio-urgencia">Y mientras lo piensas… otros ya están asegurando el suyo.</div>
 </div>
 
 <div class="promo2">
-  <div class="pt">🔥 APROVECHA ESTO MIENTRAS SIGA DISPONIBLE</div>
-  <div class="pp">2 PARES × $119.900</div>
-  <div class="ps">Uno para ti… y el otro… ya sabes para quién.<br>(O simplemente… para no quedarte con ganas después)</div>
+  <div class="pt">⭐ LA ELECCIÓN MÁS INTELIGENTE</div>
+  <div class="pp">2 PARES × $149.900</div>
+  <div class="ps">La mayoría empieza con uno… pero termina eligiendo este.<br>Uno para ti… y el otro… ya sabes para quién.</div>
 </div>
 
 <div class="stock-bar">
@@ -281,23 +281,61 @@ footer{background:#111;color:#fff;padding:24px 16px;text-align:center}
       <p style="font-size:15px;font-weight:900;color:#111;text-transform:uppercase;margin-bottom:6px">1. ¿CUÁNTOS PARES QUIERES?</p>
       <p class="form-microcopy">Es interesante… porque la mayoría empieza con uno… y termina eligiendo dos.</p>
 
-      <div class="qty-grid">
-        <div class="qty-btn active" id="qty-1" onclick="setQty(1)">
-          <div class="qnum">1 PAR</div>
-          <div class="qprice">$89.900</div>
-        </div>
-        <div class="qty-btn" id="qty-2" onclick="setQty(2)">
-          <div class="qbadge">🔥 MEJOR PRECIO</div>
-          <div class="qnum" style="margin-top:14px">2 PARES</div>
-          <div class="qprice">$119.900</div>
-          <div style="font-size:10px;color:#999">Ahorras $49.800</div>
-        </div>
+      <!-- ANCLA MENTAL -->
+      <div style="text-align:center;margin-bottom:16px">
+        <span style="font-size:14px;color:#999;text-decoration:line-through;font-weight:600">Precio normal: $169.900</span>
+        <span style="background:#e74c3c;color:#fff;font-size:11px;font-weight:800;padding:3px 10px;border-radius:999px;margin-left:8px">HOY -40%</span>
       </div>
-      <div class="qty-sm">
-        <div class="qty-sm-btn" id="qty-3" onclick="setQty(3)"><div class="qn">3</div><div class="qp">$184.900</div></div>
-        <div class="qty-sm-btn" id="qty-4" onclick="setQty(4)"><div class="qn">4</div><div class="qp">$249.900</div></div>
-        <div class="qty-sm-btn" id="qty-5" onclick="setQty(5)"><div class="qn">5</div><div class="qp">$314.900</div></div>
-        <div class="qty-sm-btn" id="qty-6" onclick="setQty(6)"><div class="qn">6</div><div class="qp">$379.900</div></div>
+
+      <!-- 3 OPCIONES -->
+      <div style="display:grid;gap:12px;margin-bottom:16px">
+
+        <!-- OPCION 1 -->
+        <div class="qty-btn" id="qty-1" onclick="setQty(1)" style="display:flex;justify-content:space-between;align-items:center;padding:16px">
+          <div style="display:flex;align-items:center;gap:10px">
+            <span style="font-size:20px">🥉</span>
+            <div>
+              <div style="font-size:15px;font-weight:800;color:#111">1 PAR</div>
+              <div style="font-size:12px;color:#777">Llévate tu primer par hoy…</div>
+            </div>
+          </div>
+          <div style="text-align:right">
+            <div style="font-size:20px;font-weight:900;color:#e74c3c">$109.900</div>
+          </div>
+        </div>
+
+        <!-- OPCION 2 — DOMINANTE -->
+        <div class="qty-btn active" id="qty-2" onclick="setQty(2)" style="display:flex;justify-content:space-between;align-items:center;padding:16px;border:3px solid #e74c3c;background:#fff5f5;position:relative">
+          <div class="qbadge" style="font-size:11px;padding:4px;background:#e74c3c">⭐ LA ELECCIÓN MÁS INTELIGENTE — MÁS VENDIDO 🔥</div>
+          <div style="display:flex;align-items:center;gap:10px;margin-top:18px">
+            <span style="font-size:20px">🥈</span>
+            <div>
+              <div style="font-size:15px;font-weight:800;color:#111">2 PARES</div>
+              <div style="font-size:12px;color:#e74c3c;font-weight:700">La mayoría empieza con uno… pero termina eligiendo este.</div>
+              <div style="font-size:11px;color:#27ae60;font-weight:700;margin-top:2px">✓ Envío GRATIS · Ahorras $69.900</div>
+            </div>
+          </div>
+          <div style="text-align:right;margin-top:18px">
+            <div style="font-size:11px;color:#999;text-decoration:line-through">$219.800</div>
+            <div style="font-size:22px;font-weight:900;color:#e74c3c">$149.900</div>
+          </div>
+        </div>
+
+        <!-- OPCION 3 — SEÑUELO -->
+        <div class="qty-btn" id="qty-3" onclick="setQty(3)" style="display:flex;justify-content:space-between;align-items:center;padding:16px">
+          <div style="display:flex;align-items:center;gap:10px">
+            <span style="font-size:20px">🥇</span>
+            <div>
+              <div style="font-size:15px;font-weight:800;color:#111">3 PARES</div>
+              <div style="font-size:12px;color:#777">💣 Máximo ahorro por unidad</div>
+            </div>
+          </div>
+          <div style="text-align:right">
+            <div style="font-size:11px;color:#999;text-decoration:line-through">$329.700</div>
+            <div style="font-size:20px;font-weight:900;color:#e74c3c">$199.900</div>
+          </div>
+        </div>
+
       </div>
 
       <div id="pares-container"></div>
@@ -383,7 +421,7 @@ const COLORES=[
   {color:'Azul Cielo Holográfica',img:'img/azul.jpg',gender:'Dama'},
   {color:'Dorada',img:'img/dorada.jpg',gender:'Dama'},
 ];
-const PRECIOS={1:89900,2:119900,3:184900,4:249900,5:314900,6:379900};
+const PRECIOS={1:109900,2:149900,3:199900};
 const fmt=n=>'$'+n.toLocaleString('es-CO');
 let selectedQty=1,selections={};
 
@@ -430,9 +468,16 @@ function selectSizePar(par,size,btn){
 
 function setQty(n){
   selectedQty=n;
-  for(let i=1;i<=6;i++){
+  for(let i=1;i<=3;i++){
     const btn=document.getElementById(`qty-${i}`);
-    if(btn)btn.classList.toggle('active',i===n);
+    if(!btn) continue;
+    if(i===n){
+      btn.style.border=i===2?'3px solid #e74c3c':'2px solid #e74c3c';
+      btn.style.background='#fff5f5';
+    } else {
+      btn.style.border='2px solid #ddd';
+      btn.style.background='#fff';
+    }
   }
   buildPares();updateSummary();
 }
@@ -481,7 +526,7 @@ function submitForm(e){
 let stock=23;
 setInterval(()=>{if(stock>8&&Math.random()>.7){stock--;const el=document.getElementById('stock-count');if(el)el.textContent=stock;}},15000);
 
-setQty(1);
+setQty(2);
 </script>
 </body>
 </html>

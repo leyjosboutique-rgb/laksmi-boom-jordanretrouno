@@ -180,12 +180,12 @@ footer{background:var(--black);padding:40px 16px;text-align:center;color:var(--c
       <p class="trust">📦 Pago contraentrega · ✈️ Envío gratis</p>
     </div>
     <div class="hero-img">
-      <img src="img/negra-panda.jpg" alt="Jordan Retro LAKSMI BOOM" loading="eager"/>
+      <img id="hero-main" src="img/negra-panda.jpg" alt="Jordan Retro LAKSMI BOOM" loading="eager" style="transition:opacity 0.2s"/>
       <div class="mini-imgs">
-        <img src="img/mini1.jpg" alt="Mini 1"/>
-        <img src="img/mini2.jpg" alt="Mini 2"/>
-        <img src="img/mini3.jpg" alt="Mini 3"/>
-        <img src="img/mini4.jpg" alt="Mini 4"/>
+        <img src="img/mini1.jpg" alt="Mini 1" onclick="changeHero(this)" style="cursor:pointer;opacity:1;border:2px solid var(--gold)"/>
+        <img src="img/mini2.jpg" alt="Mini 2" onclick="changeHero(this)" style="cursor:pointer;opacity:0.7"/>
+        <img src="img/mini3.jpg" alt="Mini 3" onclick="changeHero(this)" style="cursor:pointer;opacity:0.7"/>
+        <img src="img/mini4.jpg" alt="Mini 4" onclick="changeHero(this)" style="cursor:pointer;opacity:0.7"/>
       </div>
     </div>
   </div>
@@ -202,7 +202,7 @@ footer{background:var(--black);padding:40px 16px;text-align:center;color:var(--c
     <p class="section-sub">Cada par está diseñado para acompañar tu estilo, tu ritmo y tu brillo.</p>
     <div class="colors-grid">
       <div class="color-card" onclick="selectColor('Negra / Roja');document.getElementById('pedido').scrollIntoView({behavior:'smooth'})">
-        <img src="img/negra-roja.png" alt="Jordan Negra Roja"/>
+        <img src="img/negra-roja.jpg" alt="Jordan Negra Roja"/>
         <p class="color-gender">Caballero</p>
         <p class="color-name display">Negra / Roja</p>
       </div>
@@ -212,7 +212,7 @@ footer{background:var(--black);padding:40px 16px;text-align:center;color:var(--c
         <p class="color-name display">Negra / Blanca Panda</p>
       </div>
       <div class="color-card" onclick="selectColor('Rosada Holográfica');document.getElementById('pedido').scrollIntoView({behavior:'smooth'})">
-        <img src="img/rosada.jpeg" alt="Jordan Rosada Holográfica"/>
+        <img src="img/rosada.jpg" alt="Jordan Rosada Holográfica"/>
         <p class="color-gender">Dama</p>
         <p class="color-name display">Rosada Holográfica</p>
       </div>
@@ -225,6 +225,11 @@ footer{background:var(--black);padding:40px 16px;text-align:center;color:var(--c
         <img src="img/cristal.png" alt="Jordan Negra Suela Cristal"/>
         <p class="color-gender">Unisex</p>
         <p class="color-name display">Negra Suela Cristal</p>
+      </div>
+      <div class="color-card" onclick="selectColor('Dorada');document.getElementById('pedido').scrollIntoView({behavior:'smooth'})">
+        <img src="img/dorada.jpg" alt="Jordan Dorada"/>
+        <p class="color-gender">Unisex</p>
+        <p class="color-name display">Dorada</p>
       </div>
     </div>
   </div>
@@ -292,7 +297,7 @@ footer{background:var(--black);padding:40px 16px;text-align:center;color:var(--c
         <div class="color-options" id="color-options">
           <label class="color-opt" data-color="Negra / Roja">
             <input type="radio" name="color" value="Negra / Roja"/>
-            <img src="img/mini1.jpg" alt="Mini 1"/>
+            <img src="img/negra-roja.jpg" alt="Negra Roja"/>
             <div class="color-opt-info">
               <div class="gender">Caballero</div>
               <div class="cname display">Negra / Roja</div>
@@ -310,7 +315,7 @@ footer{background:var(--black);padding:40px 16px;text-align:center;color:var(--c
           </label>
           <label class="color-opt" data-color="Rosada Holográfica">
             <input type="radio" name="color" value="Rosada Holográfica"/>
-            <img src="img/rosada.jpeg" alt="Rosada"/>
+            <img src="img/rosada.jpg" alt="Rosada"/>
             <div class="color-opt-info">
               <div class="gender">Dama</div>
               <div class="cname display">Rosada Holográfica</div>
@@ -332,6 +337,15 @@ footer{background:var(--black);padding:40px 16px;text-align:center;color:var(--c
             <div class="color-opt-info">
               <div class="gender">Unisex</div>
               <div class="cname display">Negra Suela Cristal</div>
+              <div class="cprice"><s>$149.900</s> <span>$89.900</span></div>
+            </div>
+          </label>
+          <label class="color-opt" data-color="Dorada">
+            <input type="radio" name="color" value="Dorada"/>
+            <img src="img/dorada.jpg" alt="Dorada"/>
+            <div class="color-opt-info">
+              <div class="gender">Unisex</div>
+              <div class="cname display">Dorada</div>
               <div class="cprice"><s>$149.900</s> <span>$89.900</span></div>
             </div>
           </label>
@@ -432,6 +446,21 @@ footer{background:var(--black);padding:40px 16px;text-align:center;color:var(--c
 </footer>
 
 <script>
+function changeHero(img) {
+  const hero = document.getElementById('hero-main');
+  hero.style.opacity = '0';
+  setTimeout(() => {
+    hero.src = img.src;
+    hero.style.opacity = '1';
+  }, 150);
+  document.querySelectorAll('.mini-imgs img').forEach(i => {
+    i.style.opacity = '0.7';
+    i.style.border = 'none';
+  });
+  img.style.opacity = '1';
+  img.style.border = '2px solid var(--gold)';
+}
+
 let selectedColor = '';
 let selectedSize = '';
 

@@ -381,6 +381,24 @@ footer{background:#111;color:#fff;padding:24px 16px;text-align:center}
 </footer>
 
 <script>
+// ====== META PIXEL ======
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1294262828814434');
+fbq('track', 'PageView');
+fbq('track', 'ViewContent', {
+  content_name: 'Jordan Retro 1',
+  content_category: 'Calzado',
+  currency: 'COP',
+  value: 109900
+});
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1294262828814434&ev=PageView&noscript=1"/></noscript>
+
+<script>
 // ====== CONFIGURACIÓN ======
 const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwFOe4vxQkRXBIMxfuGf9_iz7z2erp6EM9ChrHd1xByA60FzSfr9I0ESK2JFqEp7Nw0/exec';
 
@@ -504,6 +522,14 @@ async function submitForm(e){
   btn.disabled=true;
   btn.textContent='⏳ Enviando pedido...';
 
+  // Evento InitiateCheckout
+  fbq('track', 'InitiateCheckout', {
+    content_name: 'Jordan Retro 1',
+    currency: 'COP',
+    value: PRECIOS[selectedQty],
+    num_items: selectedQty
+  });
+
   const data={
     nombre:form.nombre.value,
     email:form.email.value,
@@ -535,6 +561,14 @@ async function submitForm(e){
   document.getElementById('order-form').style.display='none';
   document.getElementById('success-msg').style.display='block';
   window.scrollTo({top:document.getElementById('pedido').offsetTop,behavior:'smooth'});
+
+  // Evento Purchase
+  fbq('track', 'Purchase', {
+    content_name: 'Jordan Retro 1',
+    currency: 'COP',
+    value: PRECIOS[selectedQty],
+    num_items: selectedQty
+  });
 }
 
 setQty(2);

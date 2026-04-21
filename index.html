@@ -159,14 +159,14 @@ footer{background:var(--black);padding:40px 16px;text-align:center;color:var(--c
 
 <!-- PROMO BAR -->
 <div style="background:linear-gradient(90deg,#8B1a1a,#C0392B,#8B1a1a);color:#fff;text-align:center;padding:14px 16px;font-size:14px;font-weight:800;letter-spacing:.05em;animation:pulse 2s infinite">
-  🔥 1 PAR <span style="font-size:20px;color:#FFD700">$89.900</span> &nbsp;|&nbsp; 2 PARES SOLO <span style="font-size:20px;color:#FFD700">$129.900</span> — ¡AHORRA $49.800! 🔥
+  🔥 1 PAR <span style="font-size:20px;color:#FFD700">$89.900</span> &nbsp;|&nbsp; 2 PARES SOLO <span style="font-size:20px;color:#FFD700">$119.900</span> — ¡AHORRA $49.800! 🔥
 </div>
 <style>@keyframes pulse{0%,100%{opacity:1}50%{opacity:.85}}</style>
 
 <!-- HEADER -->
 <header>
   <div style="display:flex;align-items:center;justify-content:center;gap:14px">
-    <img src="img/dorada.jpg" alt="LAKSMI BOOM Logo" style="width:52px;height:52px;border-radius:50%;object-fit:cover;border:2px solid var(--gold);box-shadow:0 4px 12px rgba(184,144,106,.4)"/>
+    <img src="img/logo.jpg" alt="LAKSMI BOOM Logo" style="width:52px;height:52px;border-radius:50%;object-fit:cover;border:2px solid var(--gold);box-shadow:0 4px 12px rgba(184,144,106,.4)" onerror="this.style.display='none'"/>
     <div>
       <div class="logo">LAKSMI <span>BOOM</span></div>
       <p class="tagline">Mereces brillar en cada paso</p>
@@ -188,7 +188,7 @@ footer{background:var(--black);padding:40px 16px;text-align:center;color:var(--c
       </div>
       <div style="margin-top:12px;background:linear-gradient(135deg,#C0392B,#922B21);border-radius:12px;padding:12px 16px;color:#fff;display:inline-block">
         <p style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;opacity:.85">🔥 OFERTA ESPECIAL</p>
-        <p style="font-size:16px;font-weight:800;margin-top:2px">2 PARES por solo <span style="font-size:22px;color:#FFD700">$129.900</span></p>
+        <p style="font-size:16px;font-weight:800;margin-top:2px">2 PARES por solo <span style="font-size:22px;color:#FFD700">$119.900</span></p>
         <p style="font-size:11px;opacity:.85;margin-top:2px">Combina colores · Ahorra $49.800</p>
       </div>
       <a href="#pedido" class="cta-btn">Ordenar ahora ✦</a>
@@ -314,81 +314,45 @@ footer{background:var(--black);padding:40px 16px;text-align:center;color:var(--c
       <div class="step">
         <div class="step-header">
           <div class="step-num">1</div>
-          <h3 class="step-title display">Selecciona modelo y talla</h3>
-        </div>
-        <div class="color-options" id="color-options">
-          <label class="color-opt" data-color="Negra / Roja">
-            <input type="radio" name="color" value="Negra / Roja"/>
-            <img src="img/negra-roja.jpg" alt="Negra Roja"/>
-            <div class="color-opt-info">
-              <div class="gender">Caballero</div>
-              <div class="cname display">Negra / Roja</div>
-              <div class="cprice"><s>$149.900</s> <span>$89.900</span></div>
-            </div>
-          </label>
-          <label class="color-opt" data-color="Negra / Blanca Panda">
-            <input type="radio" name="color" value="Negra / Blanca Panda"/>
-            <img src="img/PANDA.jpg" alt="Negra Panda"/>
-            <div class="color-opt-info">
-              <div class="gender">Caballero</div>
-              <div class="cname display">Negra / Blanca Panda</div>
-              <div class="cprice"><s>$149.900</s> <span>$89.900</span></div>
-            </div>
-          </label>
-          <label class="color-opt" data-color="Oro Rosa">
-            <input type="radio" name="color" value="Oro Rosa"/>
-            <img src="img/rosada.jpg" alt="Rosada"/>
-            <div class="color-opt-info">
-              <div class="gender">Dama</div>
-              <div class="cname display">Oro Rosa</div>
-              <div class="cprice"><s>$149.900</s> <span>$89.900</span></div>
-            </div>
-          </label>
-          <label class="color-opt" data-color="Azul Cielo Holográfica">
-            <input type="radio" name="color" value="Azul Cielo Holográfica"/>
-            <img src="img/azul.jpg" alt="Azul"/>
-            <div class="color-opt-info">
-              <div class="gender">Dama</div>
-              <div class="cname display">Azul Cielo Holográfica</div>
-              <div class="cprice"><s>$149.900</s> <span>$89.900</span></div>
-            </div>
-          </label>
-          <label class="color-opt" data-color="Negra Suela Cristal">
-            <input type="radio" name="color" value="Negra Suela Cristal"/>
-            <img src="img/cristal.jpg" alt="Cristal"/>
-            <div class="color-opt-info">
-              <div class="gender">Unisex</div>
-              <div class="cname display">Negra Suela Cristal</div>
-              <div class="cprice"><s>$149.900</s> <span>$89.900</span></div>
-            </div>
-          </label>
-          <label class="color-opt" data-color="Dorada">
-            <input type="radio" name="color" value="Dorada"/>
-            <img src="img/dorada.jpg" alt="Dorada"/>
-            <div class="color-opt-info">
-              <div class="gender">Unisex</div>
-              <div class="cname display">Dorada</div>
-              <div class="cprice"><s>$149.900</s> <span>$89.900</span></div>
-            </div>
-          </label>
+          <h3 class="step-title display">¿Cuántos pares quieres?</h3>
         </div>
 
-        <div style="margin-top:20px">
-          <label class="field-label">Talla</label>
-          <div class="sizes" id="sizes">
-            <button type="button" class="size-btn" onclick="selectSize(this)">33</button>
-            <button type="button" class="size-btn" onclick="selectSize(this)">34</button>
-            <button type="button" class="size-btn" onclick="selectSize(this)">35</button>
-            <button type="button" class="size-btn" onclick="selectSize(this)">36</button>
-            <button type="button" class="size-btn" onclick="selectSize(this)">37</button>
-            <button type="button" class="size-btn" onclick="selectSize(this)">38</button>
-            <button type="button" class="size-btn" onclick="selectSize(this)">39</button>
-            <button type="button" class="size-btn" onclick="selectSize(this)">40</button>
-            <button type="button" class="size-btn" onclick="selectSize(this)">41</button>
-            <button type="button" class="size-btn" onclick="selectSize(this)">42</button>
+        <!-- CANTIDAD -->
+        <div style="margin-bottom:24px">
+          <div style="display:grid;gap:10px;grid-template-columns:1fr 1fr;margin-bottom:10px">
+            <div id="qty-1" onclick="setQty(1)" style="border:2px solid var(--gold);border-radius:12px;padding:14px;text-align:center;cursor:pointer;background:#faf5ed">
+              <div style="font-size:20px;font-weight:800;color:var(--black)">1 PAR</div>
+              <div style="font-size:18px;font-weight:700;color:var(--gold);margin-top:2px">$89.900</div>
+            </div>
+            <div id="qty-2" onclick="setQty(2)" style="border:2px solid #ddd;border-radius:12px;padding:14px;text-align:center;cursor:pointer;position:relative;overflow:hidden">
+              <div style="position:absolute;top:0;left:0;right:0;background:#C0392B;color:#fff;font-size:9px;font-weight:700;padding:2px;letter-spacing:.1em">🔥 MEJOR PRECIO</div>
+              <div style="margin-top:12px;font-size:20px;font-weight:800;color:var(--black)">2 PARES</div>
+              <div style="font-size:18px;font-weight:700;color:#C0392B;margin-top:2px">$119.900</div>
+              <div style="font-size:10px;color:#999">Ahorras $49.800</div>
+            </div>
           </div>
-          <input type="hidden" name="talla" id="talla-input"/>
+          <div style="display:grid;gap:10px;grid-template-columns:repeat(4,1fr)">
+            <div id="qty-3" onclick="setQty(3)" style="border:2px solid #ddd;border-radius:12px;padding:10px;text-align:center;cursor:pointer">
+              <div style="font-size:16px;font-weight:800;color:var(--black)">3</div>
+              <div style="font-size:13px;font-weight:700;color:#C0392B">$194.900</div>
+            </div>
+            <div id="qty-4" onclick="setQty(4)" style="border:2px solid #ddd;border-radius:12px;padding:10px;text-align:center;cursor:pointer">
+              <div style="font-size:16px;font-weight:800;color:var(--black)">4</div>
+              <div style="font-size:13px;font-weight:700;color:#C0392B">$259.900</div>
+            </div>
+            <div id="qty-5" onclick="setQty(5)" style="border:2px solid #ddd;border-radius:12px;padding:10px;text-align:center;cursor:pointer">
+              <div style="font-size:16px;font-weight:800;color:var(--black)">5</div>
+              <div style="font-size:13px;font-weight:700;color:#C0392B">$324.900</div>
+            </div>
+            <div id="qty-6" onclick="setQty(6)" style="border:2px solid #ddd;border-radius:12px;padding:10px;text-align:center;cursor:pointer">
+              <div style="font-size:16px;font-weight:800;color:var(--black)">6</div>
+              <div style="font-size:13px;font-weight:700;color:#C0392B">$389.900</div>
+            </div>
+          </div>
         </div>
+
+        <!-- PARES DINAMICOS -->
+        <div id="pares-container"></div>
       </div>
 
       <!-- STEP 2 -->
@@ -436,13 +400,16 @@ footer{background:var(--black);padding:40px 16px;text-align:center;color:var(--c
         <div class="summary-item">
           <span class="summary-product display" id="summary-product">Selecciona color y talla</span>
           <div class="summary-price-col">
-            <div class="summary-price-old">$149.900</div>
-            <div class="summary-price-new">$89.900</div>
+            <div class="summary-price-old" id="summary-old">$149.900</div>
+            <div class="summary-price-new" id="summary-new">$89.900</div>
           </div>
+        </div>
+        <div id="summary-par2-row" style="display:none;margin-top:8px">
+          <span class="summary-product display" id="summary-product2" style="font-size:15px;opacity:.8"></span>
         </div>
         <hr class="summary-divider"/>
         <div class="summary-shipping"><span>Envío</span><strong>GRATIS</strong></div>
-        <div class="summary-total"><span>Total</span><span class="display">$89.900</span></div>
+        <div class="summary-total"><span>Total</span><span class="display" id="summary-total">$89.900</span></div>
       </div>
 
       <div class="error-msg" id="error-msg"></div>
@@ -483,58 +450,132 @@ function changeHero(img) {
   img.style.border = '2px solid var(--gold)';
 }
 
-let selectedColor = '';
-let selectedSize = '';
+const COLORES = [
+  {color:'Negra / Roja', img:'img/negra-roja.jpg', gender:'Unisex'},
+  {color:'Negra / Blanca Panda', img:'img/PANDA.jpg', gender:'Unisex'},
+  {color:'Oro Rosa', img:'img/rosada.jpg', gender:'Dama'},
+  {color:'Azul Cielo Holográfica', img:'img/azul.jpg', gender:'Dama'},
+  {color:'Negra Suela Cristal', img:'img/cristal.jpg', gender:'Unisex'},
+  {color:'Dorada', img:'img/dorada.jpg', gender:'Dama'},
+];
 
-// Color selection via radio
-document.querySelectorAll('.color-opt').forEach(opt => {
-  opt.addEventListener('click', () => {
-    document.querySelectorAll('.color-opt').forEach(o => o.classList.remove('active'));
-    opt.classList.add('active');
-    selectedColor = opt.dataset.color;
-    opt.querySelector('input').checked = true;
-    updateSummary();
-  });
-});
+const PRECIOS = {1:89900, 2:119900, 3:184900, 4:249900, 5:314900, 6:379900};
+const fmt = n => '$' + n.toLocaleString('es-CO');
 
-function selectColor(name) {
-  document.querySelectorAll('.color-opt').forEach(opt => {
-    if(opt.dataset.color === name) {
-      opt.classList.add('active');
-      opt.querySelector('input').checked = true;
-      selectedColor = name;
-    } else {
-      opt.classList.remove('active');
-    }
-  });
+let selectedQty = 1;
+let selections = {}; // {1: {color, talla}, 2: {color, talla}, ...}
+
+function buildPares() {
+  const container = document.getElementById('pares-container');
+  container.innerHTML = '';
+  for(let i = 1; i <= selectedQty; i++) {
+    const bg = i === 1 ? '#f9f6f1' : '#fff5f5';
+    const borderColor = i === 1 ? 'var(--gold)' : '#C0392B';
+    const labelColor = i === 1 ? 'var(--gold)' : '#C0392B';
+    const sel = selections[i] || {};
+
+    const colorOpts = COLORES.map(c => `
+      <label class="color-opt ${sel.color === c.color ? 'active' : ''}" data-par="${i}" data-color="${c.color}" onclick="selectColorPar(${i}, '${c.color}', this)">
+        <input type="radio" name="color${i}" value="${c.color}" ${sel.color === c.color ? 'checked' : ''}/>
+        <img src="${c.img}" alt="${c.color}"/>
+        <div class="color-opt-info"><div class="gender">${c.gender}</div><div class="cname display">${c.color}</div></div>
+      </label>`).join('');
+
+    const sizeBtns = [33,34,35,36,37,38,39,40,41,42].map(s =>
+      `<button type="button" class="size-btn ${sel.talla == s ? 'active' : ''}" onclick="selectSizePar(${i}, '${s}', this)">${s}</button>`
+    ).join('');
+
+    container.innerHTML += `
+      <div style="background:${bg};border:1px solid ${borderColor}30;border-radius:12px;padding:16px;margin-bottom:16px">
+        <p style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:${labelColor};margin-bottom:12px">PAR ${i} — Selecciona color y talla</p>
+        <div class="color-options">${colorOpts}</div>
+        <div style="margin-top:16px">
+          <label class="field-label">Talla PAR ${i}</label>
+          <div class="sizes" id="sizes${i}">${sizeBtns}</div>
+          <input type="hidden" name="talla${i}" id="talla${i}-input" value="${sel.talla || ''}"/>
+        </div>
+      </div>`;
+  }
+}
+
+function selectColorPar(par, color, el) {
+  if(!selections[par]) selections[par] = {};
+  selections[par].color = color;
+  document.querySelectorAll(`.color-opt[data-par="${par}"]`).forEach(o => o.classList.remove('active'));
+  el.classList.add('active');
+  el.querySelector('input').checked = true;
   updateSummary();
 }
 
-function selectSize(btn) {
-  document.querySelectorAll('.size-btn').forEach(b => b.classList.remove('active'));
+function selectSizePar(par, size, btn) {
+  if(!selections[par]) selections[par] = {};
+  selections[par].talla = size;
+  document.querySelectorAll(`#sizes${par} .size-btn`).forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
-  selectedSize = btn.textContent;
-  document.getElementById('talla-input').value = selectedSize;
+  document.getElementById(`talla${par}-input`).value = size;
+  updateSummary();
+}
+
+function setQty(n) {
+  selectedQty = n;
+  // Style all qty buttons
+  for(let i = 1; i <= 6; i++) {
+    const btn = document.getElementById(`qty-${i}`);
+    if(!btn) continue;
+    if(i === n) {
+      btn.style.border = i <= 2 ? '2px solid var(--gold)' : '2px solid #C0392B';
+      btn.style.background = i <= 2 ? '#faf5ed' : '#fff5f5';
+    } else {
+      btn.style.border = '2px solid #ddd';
+      btn.style.background = '#fff';
+    }
+  }
+  buildPares();
   updateSummary();
 }
 
 function updateSummary() {
-  let text = '';
-  if(selectedColor) text += selectedColor;
-  if(selectedSize) text += (text ? ' · Talla ' : 'Talla ') + selectedSize;
-  document.getElementById('summary-product').textContent = text || 'Selecciona color y talla';
+  let lines = [];
+  for(let i = 1; i <= selectedQty; i++) {
+    const s = selections[i] || {};
+    let t = `PAR ${i}: ${s.color || '—'}`;
+    if(s.talla) t += ` · Talla ${s.talla}`;
+    lines.push(t);
+  }
+  document.getElementById('summary-product').textContent = lines[0] || 'Selecciona color y talla';
+
+  const par2row = document.getElementById('summary-par2-row');
+  const prod2 = document.getElementById('summary-product2');
+  if(lines.length > 1) {
+    par2row.style.display = 'block';
+    prod2.textContent = lines.slice(1).join(' | ');
+  } else {
+    par2row.style.display = 'none';
+  }
+
+  const precio = PRECIOS[selectedQty] || 89900;
+  document.getElementById('summary-old').textContent = selectedQty > 1 ? fmt(selectedQty * 149900) : '$149.900';
+  document.getElementById('summary-new').textContent = fmt(precio);
+  document.getElementById('summary-total').textContent = fmt(precio);
+}
+
+function selectColor(name) {
+  selectColorPar(1, name, document.querySelector(`.color-opt[data-par="1"][data-color="${name}"]`));
 }
 
 function submitForm(e) {
   e.preventDefault();
   const err = document.getElementById('error-msg');
-  
-  if(!selectedColor || !selectedSize) {
-    err.textContent = 'Por favor selecciona color y talla.';
-    err.style.display = 'block';
-    return;
+
+  for(let i = 1; i <= selectedQty; i++) {
+    const s = selections[i] || {};
+    if(!s.color || !s.talla) {
+      err.textContent = `Por favor selecciona color y talla del PAR ${i}.`;
+      err.style.display = 'block';
+      return;
+    }
   }
-  
+
   const form = e.target;
   const cel = form.celular.value;
   const cel2 = form.celular2.value;
@@ -543,31 +584,34 @@ function submitForm(e) {
     err.style.display = 'block';
     return;
   }
-  
+
   err.style.display = 'none';
-  
-  // Send to Google Sheets (placeholder)
+
+  const pares = {};
+  for(let i = 1; i <= selectedQty; i++) pares[`par${i}`] = selections[i];
+
   const data = {
-    color: selectedColor,
-    talla: selectedSize,
+    cantidad: selectedQty,
+    total: fmt(PRECIOS[selectedQty]),
+    ...pares,
     nombre: form.nombre.value,
     email: form.email.value,
     celular: cel,
-    pais: form.pais.value,
-    departamento: form.departamento.value,
     ciudad: form.ciudad.value,
-    barrio: form.barrio.value,
+    departamento: form.departamento.value,
     direccion: form.direccion.value,
     fecha: new Date().toLocaleString('es-CO')
   };
-  
+
   console.log('Pedido:', data);
-  
-  // Show success
+
   document.getElementById('order-form').style.display = 'none';
   document.getElementById('success-msg').style.display = 'block';
   window.scrollTo({top: document.getElementById('pedido').offsetTop, behavior:'smooth'});
 }
+
+// Init
+setQty(1);
 </script>
 </body>
 </html>

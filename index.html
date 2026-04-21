@@ -200,37 +200,44 @@ footer{background:var(--black);padding:40px 16px;text-align:center;color:var(--c
     <div class="section-label">Colección</div>
     <h2 class="section-title display">5 Colores. Una Personalidad.</h2>
     <p class="section-sub">Cada par está diseñado para acompañar tu estilo, tu ritmo y tu brillo.</p>
-    <div class="colors-grid">
-      <div class="color-card" onclick="selectColor('Negra / Roja');document.getElementById('pedido').scrollIntoView({behavior:'smooth'})">
-        <img src="img/negra-roja.jpg" alt="Jordan Negra Roja"/>
-        <p class="color-gender">Caballero</p>
-        <p class="color-name display">Negra / Roja</p>
+    <div style="margin-top:40px">
+      <p style="font-size:11px;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:16px">— Unisex —</p>
+      <div class="colors-grid">
+        <div class="color-card" onclick="selectColor('Negra / Roja');document.getElementById('pedido').scrollIntoView({behavior:'smooth'})">
+          <img src="img/negra-roja.jpg" alt="Jordan Negra Roja" style="object-position:center"/>
+          <p class="color-gender">Unisex</p>
+          <p class="color-name display">Negra / Roja</p>
+        </div>
+        <div class="color-card" onclick="selectColor('Negra / Blanca Panda');document.getElementById('pedido').scrollIntoView({behavior:'smooth'})">
+          <img src="img/PANDA.jpg" alt="Jordan Negra Blanca Panda" style="object-position:center"/>
+          <p class="color-gender">Unisex</p>
+          <p class="color-name display">Negra / Blanca Panda</p>
+        </div>
+        <div class="color-card" onclick="selectColor('Negra Suela Cristal');document.getElementById('pedido').scrollIntoView({behavior:'smooth'})">
+          <img src="img/cristal.jpg" alt="Jordan Negra Suela Cristal" style="object-position:center"/>
+          <p class="color-gender">Unisex</p>
+          <p class="color-name display">Negra Suela Cristal</p>
+        </div>
       </div>
-      <div class="color-card" onclick="selectColor('Negra / Blanca Panda');document.getElementById('pedido').scrollIntoView({behavior:'smooth'})">
-        <img src="img/PANDA.jpg" alt="Jordan Negra Blanca Panda"/>
-        <p class="color-gender">Caballero</p>
-        <p class="color-name display">Negra / Blanca Panda</p>
+      <p style="font-size:11px;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;margin-top:32px">— Dama —</p>
+      <div class="colors-grid">
+        <div class="color-card" onclick="selectColor('Oro Rosa');document.getElementById('pedido').scrollIntoView({behavior:'smooth'})">
+          <img src="img/rosada.jpg" alt="Jordan Oro Rosa" style="object-position:center top"/>
+          <p class="color-gender">Dama</p>
+          <p class="color-name display">Oro Rosa</p>
+        </div>
+        <div class="color-card" onclick="selectColor('Azul Cielo Holográfica');document.getElementById('pedido').scrollIntoView({behavior:'smooth'})">
+          <img src="img/azul.jpg" alt="Jordan Azul Cielo" style="object-position:center"/>
+          <p class="color-gender">Dama</p>
+          <p class="color-name display">Azul Cielo Holográfica</p>
+        </div>
+        <div class="color-card" onclick="selectColor('Dorada');document.getElementById('pedido').scrollIntoView({behavior:'smooth'})">
+          <img src="img/dorada.jpg" alt="Jordan Dorada" style="object-position:center"/>
+          <p class="color-gender">Dama</p>
+          <p class="color-name display">Dorada</p>
+        </div>
       </div>
-      <div class="color-card" onclick="selectColor('Rosada Holográfica');document.getElementById('pedido').scrollIntoView({behavior:'smooth'})">
-        <img src="img/rosada.jpg" alt="Jordan Rosada Holográfica"/>
-        <p class="color-gender">Dama</p>
-        <p class="color-name display">Rosada Holográfica</p>
-      </div>
-      <div class="color-card" onclick="selectColor('Azul Cielo Holográfica');document.getElementById('pedido').scrollIntoView({behavior:'smooth'})">
-        <img src="img/azul.jpg" alt="Jordan Azul Cielo"/>
-        <p class="color-gender">Dama</p>
-        <p class="color-name display">Azul Cielo Holográfica</p>
-      </div>
-      <div class="color-card" onclick="selectColor('Negra Suela Cristal');document.getElementById('pedido').scrollIntoView({behavior:'smooth'})">
-        <img src="img/cristal.jpg" alt="Jordan Negra Suela Cristal"/>
-        <p class="color-gender">Unisex</p>
-        <p class="color-name display">Negra Suela Cristal</p>
-      </div>
-      <div class="color-card" onclick="selectColor('Dorada');document.getElementById('pedido').scrollIntoView({behavior:'smooth'})">
-        <img src="img/dorada.jpg" alt="Jordan Dorada"/>
-        <p class="color-gender">Unisex</p>
-        <p class="color-name display">Dorada</p>
-      </div>
+    </div>
     </div>
   </div>
 </section>
@@ -313,12 +320,12 @@ footer{background:var(--black);padding:40px 16px;text-align:center;color:var(--c
               <div class="cprice"><s>$149.900</s> <span>$89.900</span></div>
             </div>
           </label>
-          <label class="color-opt" data-color="Rosada Holográfica">
-            <input type="radio" name="color" value="Rosada Holográfica"/>
+          <label class="color-opt" data-color="Oro Rosa">
+            <input type="radio" name="color" value="Oro Rosa"/>
             <img src="img/rosada.jpg" alt="Rosada"/>
             <div class="color-opt-info">
               <div class="gender">Dama</div>
-              <div class="cname display">Rosada Holográfica</div>
+              <div class="cname display">Oro Rosa</div>
               <div class="cprice"><s>$149.900</s> <span>$89.900</span></div>
             </div>
           </label>

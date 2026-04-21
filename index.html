@@ -21,7 +21,6 @@ body{font-family:'Inter',sans-serif;background:#fff;color:#111;-webkit-font-smoo
 .hero-title{background:#e74c3c;color:#fff;text-align:center;padding:20px 16px}
 .hero-title h1{font-size:clamp(20px,4vw,28px);font-weight:900;text-transform:uppercase;line-height:1.3}
 .hero-title .sub{font-size:13px;margin-top:8px;opacity:.9;font-style:italic}
-.hero-img-main{width:100%;max-height:480px;object-fit:cover;display:block;transition:opacity .2s}
 .mini-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;padding:4px}
 .mini-grid img{width:100%;aspect-ratio:1;object-fit:cover;cursor:pointer;border:3px solid transparent;transition:.2s}
 .mini-grid img:hover,.mini-grid img.active{border-color:#e74c3c}
@@ -42,9 +41,6 @@ body{font-family:'Inter',sans-serif;background:#fff;color:#111;-webkit-font-smoo
 .cta-btn.red{background:#e74c3c;box-shadow:0 4px 15px rgba(231,76,60,.4)}
 .cta-sub{text-align:center;font-size:13px;color:#555;margin:-8px 16px 16px;font-style:italic}
 @keyframes ctabounce{0%,100%{transform:scale(1)}50%{transform:scale(1.02)}}
-.imagina{background:#111;color:#fff;padding:24px 16px;text-align:center}
-.imagina h3{font-size:20px;font-weight:900;color:#f0ad4e;text-transform:uppercase}
-.imagina p{font-size:14px;line-height:1.8;margin-top:12px;color:#ddd}
 .sec-title{background:#111;color:#fff;text-align:center;padding:16px;font-size:16px;font-weight:900;text-transform:uppercase;letter-spacing:.05em}
 .sec-title em{font-style:italic;font-weight:400;font-size:12px;display:block;color:#aaa;margin-top:4px;letter-spacing:0;text-transform:none}
 .colores-section{padding:16px;background:#f9f9f9}
@@ -73,17 +69,8 @@ body{font-family:'Inter',sans-serif;background:#fff;color:#111;-webkit-font-smoo
 .form-section{background:#f9f9f9;padding:16px}
 .form-box{background:#fff;border:2px solid #e74c3c;border-radius:12px;padding:20px;max-width:760px;margin:0 auto}
 .form-microcopy{font-size:13px;color:#555;font-style:italic;margin-bottom:14px;line-height:1.5}
-.qty-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px}
 .qty-btn{border:2px solid #ddd;border-radius:10px;padding:14px 10px;text-align:center;cursor:pointer;background:#fff;transition:.2s;position:relative;overflow:hidden}
-.qty-btn.active{border-color:#e74c3c;background:#fff5f5}
-.qty-btn .qnum{font-size:20px;font-weight:900;color:#111}
-.qty-btn .qprice{font-size:16px;font-weight:800;color:#e74c3c;margin-top:2px}
 .qty-btn .qbadge{position:absolute;top:0;left:0;right:0;background:#e74c3c;color:#fff;font-size:9px;font-weight:800;padding:3px;letter-spacing:.1em;text-transform:uppercase}
-.qty-sm{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:16px}
-.qty-sm-btn{border:2px solid #ddd;border-radius:8px;padding:8px 4px;text-align:center;cursor:pointer;background:#fff;transition:.2s}
-.qty-sm-btn.active{border-color:#e74c3c;background:#fff5f5}
-.qty-sm-btn .qn{font-size:15px;font-weight:900;color:#111}
-.qty-sm-btn .qp{font-size:11px;font-weight:700;color:#e74c3c}
 .par-box{border-radius:10px;padding:14px;margin-bottom:12px}
 .par-box.p1{background:#f0f9ff;border:1px solid #3498db}
 .par-box.p2plus{background:#fff5f5;border:1px solid #e74c3c}
@@ -119,6 +106,7 @@ body{font-family:'Inter',sans-serif;background:#fff;color:#111;-webkit-font-smoo
 .summary-total span:last-child{color:#f0ad4e}
 .err{background:#fde8e8;border-radius:8px;padding:10px;font-size:13px;color:#c0392b;font-weight:700;margin-top:10px;display:none}
 .submit-btn{width:100%;background:#27ae60;color:#fff;border:none;border-radius:999px;padding:18px;font-size:16px;font-weight:900;text-transform:uppercase;cursor:pointer;margin-top:16px;font-family:'Inter',sans-serif;letter-spacing:.05em;box-shadow:0 4px 15px rgba(39,174,96,.4);animation:ctabounce 1.5s infinite}
+.submit-btn:disabled{background:#aaa;animation:none;cursor:not-allowed}
 .success{display:none;text-align:center;padding:40px 20px}
 .success-icon{width:80px;height:80px;border-radius:50%;background:#27ae60;display:flex;align-items:center;justify-content:center;font-size:36px;margin:0 auto}
 .success h2{font-size:28px;font-weight:900;margin-top:16px;color:#111}
@@ -132,21 +120,17 @@ footer{background:#111;color:#fff;padding:24px 16px;text-align:center}
 </head>
 <body>
 
-<!-- WA FLOTANTE -->
 <a href="https://wa.link/v62tzv" target="_blank" class="wa-float">
   <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.136.563 4.14 1.542 5.873L.057 23.882l6.174-1.618A11.935 11.935 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.012-1.372l-.36-.214-3.664.961.977-3.572-.234-.372A9.818 9.818 0 012.182 12c0-5.42 4.398-9.818 9.818-9.818 5.42 0 9.818 4.398 9.818 9.818 0 5.42-4.398 9.818-9.818 9.818z"/></svg>
 </a>
 
-<!-- TOP BAR -->
 <div class="topbar">✈️ ENVÍO GRATIS + PAGO CONTRAENTREGA EN TODO COLOMBIA 🇨🇴</div>
 
-<!-- PROMO BAR -->
 <div class="promobar">
   🔥 1 PAR <span>$109.900</span> &nbsp;|&nbsp; 2 PARES SOLO <span>$149.900</span><br>
   <em>Y es curioso… porque cuando ves el segundo par… ya sabes que uno no es suficiente.</em>
 </div>
 
-<!-- HEADER -->
 <div class="header">
   <div class="header-inner">
     <img src="img/LOGO.jpg" class="logo-img" alt="Logo" onerror="this.style.display='none'"/>
@@ -157,7 +141,6 @@ footer{background:#111;color:#fff;padding:24px 16px;text-align:center}
   </div>
 </div>
 
-<!-- HERO -->
 <div class="hero-title">
   <h1>No es casualidad que todos miren estos Jordan…<br><span style="font-style:italic;font-weight:700;font-size:clamp(16px,3vw,22px)">Cuando los ves puestos… entiendes por qué.</span></h1>
   <p class="sub">🔥 LOS JORDAN RETRO 1 MÁS DESEADOS EN COLOMBIA — 40% OFF HOY<br>Edición limitada. Y sí… se están acabando.</p>
@@ -174,7 +157,6 @@ footer{background:#111;color:#fff;padding:24px 16px;text-align:center}
 
 <div class="microcopy">No necesitas pensarlo mucho… solo míralos… y nota cuál ya sientes tuyo.</div>
 
-<!-- PRECIO -->
 <div class="precio-box">
   <div class="precio-antes">ANTES $169.900</div>
   <div class="precio-ahora">$109.900</div>
@@ -196,8 +178,6 @@ footer{background:#111;color:#fff;padding:24px 16px;text-align:center}
 <a href="#pedido" class="cta-btn">✈️ HAZ TU PEDIDO AHORA — ANTES DE QUE SE AGOTEN</a>
 <p class="cta-sub">Imagina tenerlos puestos… y entender por qué todos los quieren.</p>
 
-<!-- IMAGINA -->
-<!-- COLORES -->
 <div class="sec-title">🔥 6 COLORES DE EDICIÓN LIMITADA<em>Elige el que más conecte contigo… aunque… seamos honestos… ya hay uno que te eligió a ti.</em></div>
 <div class="colores-section">
   <div style="max-width:700px;margin:0 auto">
@@ -231,7 +211,6 @@ footer{background:#111;color:#fff;padding:24px 16px;text-align:center}
 <a href="#pedido" class="cta-btn red">🔥 APROVECHA ESTA OFERTA AQUÍ 🤩</a>
 <p class="cta-sub" style="color:#e74c3c">⚠️ ¡VÁLIDA SOLO POR HOY! ¡NO DEJES PASAR LA OPORTUNIDAD!</p>
 
-<!-- BENEFICIOS -->
 <div class="sec-title">🔥 CON TU COMPRA OBTIENES MÁS QUE UNOS TENIS</div>
 <div class="beneficios">
   <ul class="benefit-list">
@@ -246,14 +225,12 @@ footer{background:#111;color:#fff;padding:24px 16px;text-align:center}
   <div class="benefit-footer">Y eso cambia todo… ¿no?</div>
 </div>
 
-<!-- TESTIMONIOS -->
 <div class="sec-title">💭 LO QUE PASA CUANDO LOS TIENES…</div>
 <div class="testimonios">
   <img src="img/testimonios.jpg" alt="Opiniones clientes" style="width:100%;max-width:500px;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,.1)"/>
   <p style="font-size:13px;font-style:italic;color:#555;margin-top:12px">Y en ese punto… ya entiendes que no es casualidad.</p>
 </div>
 
-<!-- WHATSAPP -->
 <div class="wa-section">
   <p>¿Tienes dudas… o solo quieres asegurarte?</p>
   <em>Escríbenos ahora… y en un momento… ya tendrás todo claro.</em>
@@ -267,7 +244,6 @@ footer{background:#111;color:#fff;padding:24px 16px;text-align:center}
 <a href="#pedido" class="cta-btn">✅ COMPRA SEGURA — QUEDAN POCAS UNIDADES 🚚</a>
 <p class="cta-sub">No pagas ahora. No corres riesgo. Solo decides… y lo recibes en tu puerta.</p>
 
-<!-- FORMULARIO -->
 <div class="sec-title" id="pedido">⬇️ REALIZA TU PEDIDO AQUÍ ⬇️<em>ENVÍO GRATIS · PAGO CONTRAENTREGA · 3-7 DÍAS HÁBILES</em></div>
 <div class="form-section">
   <div class="form-box">
@@ -276,16 +252,12 @@ footer{background:#111;color:#fff;padding:24px 16px;text-align:center}
       <p style="font-size:15px;font-weight:900;color:#111;text-transform:uppercase;margin-bottom:6px">1. ¿CUÁNTOS PARES QUIERES?</p>
       <p class="form-microcopy">Es interesante… porque la mayoría empieza con uno… y termina eligiendo dos.</p>
 
-      <!-- ANCLA MENTAL -->
       <div style="text-align:center;margin-bottom:16px">
         <span style="font-size:14px;color:#999;text-decoration:line-through;font-weight:600">Precio normal: $169.900</span>
         <span style="background:#e74c3c;color:#fff;font-size:11px;font-weight:800;padding:3px 10px;border-radius:999px;margin-left:8px">HOY -40%</span>
       </div>
 
-      <!-- 3 OPCIONES -->
       <div style="display:grid;gap:12px;margin-bottom:16px">
-
-        <!-- OPCION 1 -->
         <div class="qty-btn" id="qty-1" onclick="setQty(1)" style="display:flex;justify-content:space-between;align-items:center;padding:16px">
           <div style="display:flex;align-items:center;gap:10px">
             <span style="font-size:20px">🥉</span>
@@ -299,8 +271,7 @@ footer{background:#111;color:#fff;padding:24px 16px;text-align:center}
           </div>
         </div>
 
-        <!-- OPCION 2 — DOMINANTE -->
-        <div class="qty-btn active" id="qty-2" onclick="setQty(2)" style="display:flex;justify-content:space-between;align-items:center;padding:16px;border:3px solid #e74c3c;background:#fff5f5;position:relative">
+        <div class="qty-btn" id="qty-2" onclick="setQty(2)" style="display:flex;justify-content:space-between;align-items:center;padding:16px;border:3px solid #e74c3c;background:#fff5f5;position:relative">
           <div class="qbadge" style="font-size:11px;padding:4px;background:#e74c3c">⭐ LA ELECCIÓN MÁS INTELIGENTE — MÁS VENDIDO 🔥</div>
           <div style="display:flex;align-items:center;gap:10px;margin-top:18px">
             <span style="font-size:20px">🥈</span>
@@ -316,7 +287,6 @@ footer{background:#111;color:#fff;padding:24px 16px;text-align:center}
           </div>
         </div>
 
-        <!-- OPCION 3 — SEÑUELO -->
         <div class="qty-btn" id="qty-3" onclick="setQty(3)" style="display:flex;justify-content:space-between;align-items:center;padding:16px">
           <div style="display:flex;align-items:center;gap:10px">
             <span style="font-size:20px">🥇</span>
@@ -330,7 +300,6 @@ footer{background:#111;color:#fff;padding:24px 16px;text-align:center}
             <div style="font-size:20px;font-weight:900;color:#e74c3c">$199.900</div>
           </div>
         </div>
-
       </div>
 
       <div id="pares-container"></div>
@@ -368,11 +337,11 @@ footer{background:#111;color:#fff;padding:24px 16px;text-align:center}
         <div id="summary-extra" style="font-size:12px;color:#ccc;margin-top:4px"></div>
         <hr style="border:none;border-top:1px solid #333;margin:10px 0"/>
         <div class="summary-row"><span>Envío</span><strong>GRATIS ✈️</strong></div>
-        <div class="summary-total"><span>TOTAL</span><span id="summary-total">$89.900</span></div>
+        <div class="summary-total"><span>TOTAL</span><span id="summary-total">$149.900</span></div>
       </div>
 
       <div class="err" id="error-msg"></div>
-      <button type="submit" class="submit-btn">✅ LOS QUIERO AHORA — ASEGURAR MIS JORDAN 🔒</button>
+      <button type="submit" class="submit-btn" id="submit-btn">✅ LOS QUIERO AHORA — ASEGURAR MIS JORDAN 🔒</button>
       <p style="text-align:center;font-size:11px;color:#999;margin-top:8px">Los envíos demoran de 3 a 7 días hábiles según tu ubicación</p>
     </form>
 
@@ -389,7 +358,6 @@ footer{background:#111;color:#fff;padding:24px 16px;text-align:center}
   </div>
 </div>
 
-<!-- GARANTIA -->
 <div class="garantia">
   <h3>⭐ CALIDAD GARANTIZADA</h3>
   <p>Si algo no cumple… nos hacemos cargo.<br>Porque sabemos lo que estás esperando… y no aceptamos menos.<br><br><strong style="color:#f0ad4e">Garantía extendida por despegado de suela o costuras. Envíos de garantía por nuestra cuenta.</strong></p>
@@ -408,6 +376,9 @@ footer{background:#111;color:#fff;padding:24px 16px;text-align:center}
 </footer>
 
 <script>
+// ====== CONFIGURACIÓN ======
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwFOe4vxQkRXBIMxfuGf9_iz7z2erp6EM9ChrHd1xByA60FzSfr9I0ESK2JFqEp7Nw0/exec';
+
 const COLORES=[
   {color:'Negra / Roja',img:'img/negra-roja.jpg',gender:'CABALLERO & UNISEX'},
   {color:'Negra / Blanca Panda',img:'img/PANDA.jpg',gender:'CABALLERO & UNISEX'},
@@ -418,7 +389,7 @@ const COLORES=[
 ];
 const PRECIOS={1:109900,2:149900,3:199900};
 const fmt=n=>'$'+n.toLocaleString('es-CO');
-let selectedQty=1,selections={};
+let selectedQty=2,selections={};
 
 function buildPares(){
   const c=document.getElementById('pares-container');c.innerHTML='';
@@ -465,11 +436,11 @@ function setQty(n){
   selectedQty=n;
   for(let i=1;i<=3;i++){
     const btn=document.getElementById(`qty-${i}`);
-    if(!btn) continue;
+    if(!btn)continue;
     if(i===n){
       btn.style.border=i===2?'3px solid #e74c3c':'2px solid #e74c3c';
       btn.style.background='#fff5f5';
-    } else {
+    }else{
       btn.style.border='2px solid #ddd';
       btn.style.background='#fff';
     }
@@ -483,7 +454,7 @@ function updateSummary(){
   let extra='';
   for(let i=2;i<=selectedQty;i++){const si=selections[i]||{};if(si.color)extra+=`PAR ${i}: ${si.color}${si.talla?' · Talla '+si.talla:''}<br>`;}
   document.getElementById('summary-extra').innerHTML=extra;
-  document.getElementById('summary-total').textContent=fmt(PRECIOS[selectedQty]||89900);
+  document.getElementById('summary-total').textContent=fmt(PRECIOS[selectedQty]||149900);
 }
 
 function selectColor(name){
@@ -503,23 +474,63 @@ function changeHero(img){
   img.classList.add('active');
 }
 
-function submitForm(e){
+async function submitForm(e){
   e.preventDefault();
   const err=document.getElementById('error-msg');
+
   for(let i=1;i<=selectedQty;i++){
     const s=selections[i]||{};
-    if(!s.color||!s.talla){err.textContent=`Por favor selecciona color y talla del PAR ${i}.`;err.style.display='block';return;}
+    if(!s.color||!s.talla){
+      err.textContent=`Por favor selecciona color y talla del PAR ${i}.`;
+      err.style.display='block';
+      return;
+    }
   }
+
   const form=e.target;
-  if(form.celular.value!==form.celular2.value){err.textContent='Los celulares no coinciden.';err.style.display='block';return;}
+  if(form.celular.value!==form.celular2.value){
+    err.textContent='Los celulares no coinciden.';
+    err.style.display='block';
+    return;
+  }
   err.style.display='none';
+
+  const btn=document.getElementById('submit-btn');
+  btn.disabled=true;
+  btn.textContent='⏳ Enviando pedido...';
+
+  const data={
+    nombre:form.nombre.value,
+    email:form.email.value,
+    celular:form.celular.value,
+    departamento:form.departamento.value,
+    ciudad:form.ciudad.value,
+    barrio:form.barrio.value,
+    direccion:form.direccion.value,
+    qty:selectedQty,
+    total:fmt(PRECIOS[selectedQty])
+  };
+
+  for(let i=1;i<=selectedQty;i++){
+    data['color'+i]=selections[i].color;
+    data['talla'+i]=selections[i].talla;
+  }
+
+  try{
+    await fetch(SCRIPT_URL,{
+      method:'POST',
+      mode:'no-cors',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify(data)
+    });
+  }catch(e2){
+    console.log('no-cors fetch:', e2);
+  }
+
   document.getElementById('order-form').style.display='none';
   document.getElementById('success-msg').style.display='block';
   window.scrollTo({top:document.getElementById('pedido').offsetTop,behavior:'smooth'});
 }
-
-let stock=23;
-setInterval(()=>{if(stock>8&&Math.random()>.7){stock--;const el=document.getElementById('stock-count');if(el)el.textContent=stock;}},15000);
 
 setQty(2);
 </script>

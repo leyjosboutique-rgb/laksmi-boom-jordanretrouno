@@ -154,7 +154,11 @@ footer{background:var(--black);padding:40px 16px;text-align:center;color:var(--c
 </head>
 <body>
 
-<!-- ANNOUNCEMENT BAR -->
+<!-- WHATSAPP FLOTANTE -->
+<a href="https://wa.link/v62tzv" target="_blank" style="position:fixed;bottom:24px;right:24px;z-index:9999;background:#25D366;border-radius:50%;width:60px;height:60px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.5);animation:wapulse 2s infinite">
+  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.136.563 4.14 1.542 5.873L.057 23.882l6.174-1.618A11.935 11.935 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.012-1.372l-.36-.214-3.664.961.977-3.572-.234-.372A9.818 9.818 0 012.182 12c0-5.42 4.398-9.818 9.818-9.818 5.42 0 9.818 4.398 9.818 9.818 0 5.42-4.398 9.818-9.818 9.818z"/></svg>
+</a>
+<style>@keyframes wapulse{0%,100%{box-shadow:0 4px 20px rgba(37,211,102,.5)}50%{box-shadow:0 4px 30px rgba(37,211,102,.9),0 0 0 8px rgba(37,211,102,.15)}}</style>
 <div class="bar">✦ Envío gratis & pago contraentrega en toda Colombia ∞</div>
 
 <!-- PROMO BAR -->
@@ -207,7 +211,33 @@ footer{background:var(--black);padding:40px 16px;text-align:center;color:var(--c
 </section>
 
 <!-- URGENCY BAR -->
-<div class="urgency">🔥 ¡Últimas unidades disponibles! — Precio especial solo por hoy</div>
+<div class="urgency">
+  ⚠️ ¡ATENCIÓN! ESTE PRODUCTO ES MUY SOLICITADO — <span id="stock-count">23</span> PARES DISPONIBLES HOY 🔥 ¡NO DEJES QUE SE AGOTEN!
+</div>
+<style>
+.cta-section{text-align:center;padding:24px 16px;background:#fff8f0}
+.cta-section-btn{display:inline-block;background:linear-gradient(135deg,#C0392B,#922B21);color:#fff;border-radius:999px;padding:18px 36px;font-size:15px;font-weight:800;letter-spacing:.05em;text-decoration:none;box-shadow:0 6px 20px rgba(192,57,43,.4);animation:ctapulse 1.5s infinite;text-transform:uppercase}
+@keyframes ctapulse{0%,100%{transform:scale(1)}50%{transform:scale(1.03)}}
+.solo-hoy{background:#C0392B;color:#fff;text-align:center;padding:10px;font-size:13px;font-weight:800;letter-spacing:.05em}
+</style>
+<script>
+// Fake stock counter going down
+let stock = 23;
+setInterval(() => {
+  if(stock > 8 && Math.random() > 0.7) {
+    stock--;
+    const el = document.getElementById('stock-count');
+    if(el) el.textContent = stock;
+  }
+}, 15000);
+</script>
+
+<!-- CTA 1 -->
+<div class="cta-section">
+  <p style="font-size:13px;font-weight:700;color:#C0392B;text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px">⏰ OFERTA VÁLIDA SOLO POR HOY</p>
+  <a href="#pedido" class="cta-section-btn">✈️ HAZ TU PEDIDO AQUÍ — NO DEJES QUE SE AGOTEN 🤩</a>
+  <p style="font-size:12px;color:#666;margin-top:8px">📦 Envío gratis · Pago contraentrega · 3-7 días hábiles</p>
+</div>
 
 <!-- COLORS -->
 <section class="colors">
@@ -257,6 +287,16 @@ footer{background:var(--black);padding:40px 16px;text-align:center;color:var(--c
   </div>
 </section>
 
+<!-- CTA 2 -->
+<div class="cta-section">
+  <p style="font-size:14px;font-weight:800;color:var(--black);margin-bottom:4px">😎 TENIS DE EDICIÓN LIMITADA 😎</p>
+  <p style="font-size:13px;color:#666;margin-bottom:12px">SE ESTÁN AGOTANDO — <strong style="color:#C0392B">¡NO DEJES PASAR LA OPORTUNIDAD!</strong></p>
+  <a href="#pedido" class="cta-section-btn">🔥 APROVECHA ESTA OFERTA AQUÍ 🤩</a>
+</div>
+
+<!-- SOLO HOY -->
+<div class="solo-hoy">📣 HOY, SOLO HOY ESTA PROMOCIÓN — 🫠 <s>ANTES: $149.900</s> 🫠 → 🤩 AHORA: $89.900 · 2 PARES $119.900 🤩</div>
+
 <!-- BENEFITS -->
 <section class="benefits">
   <div class="section-inner">
@@ -298,6 +338,21 @@ footer{background:var(--black);padding:40px 16px;text-align:center;color:var(--c
     </div>
   </div>
 </section>
+
+<!-- CTA 3 + WHATSAPP -->
+<div style="background:#f9f9f9;padding:32px 16px;text-align:center;border-top:3px solid #C0392B">
+  <p style="font-size:16px;font-weight:800;color:var(--black);text-transform:uppercase">⚠️ ¡ESTE PRODUCTO ES MUY SOLICITADO!</p>
+  <p style="font-size:14px;color:#C0392B;font-weight:700;margin:8px 0">SE AGOTAN — ¡NO DEJES PASAR LA OPORTUNIDAD!</p>
+  <a href="#pedido" class="cta-section-btn" style="display:inline-block;margin:12px 0">✅ COMPRA SEGURA AQUÍ — QUEDAN POCAS UNIDADES 🚚</a>
+  <p style="font-size:13px;color:#555;margin-top:16px;font-weight:600">¿TIENES ALGUNA PREGUNTA? ESCRÍBENOS TOCANDO EL LOGO DE WHATSAPP 👇</p>
+  <a href="https://wa.link/v62tzv" target="_blank" style="display:inline-block;margin-top:12px">
+    <div style="background:#25D366;border-radius:999px;padding:14px 28px;display:inline-flex;align-items:center;gap:10px;color:#fff;font-weight:800;font-size:15px;text-decoration:none;box-shadow:0 4px 15px rgba(37,211,102,.4)">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.136.563 4.14 1.542 5.873L.057 23.882l6.174-1.618A11.935 11.935 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.012-1.372l-.36-.214-3.664.961.977-3.572-.234-.372A9.818 9.818 0 012.182 12c0-5.42 4.398-9.818 9.818-9.818 5.42 0 9.818 4.398 9.818 9.818 0 5.42-4.398 9.818-9.818 9.818z"/></svg>
+      WhatsApp AQUÍ 📲🤩
+    </div>
+  </a>
+  <p style="font-size:11px;color:#999;margin-top:8px">⬇️ REALIZA AQUÍ ABAJO TU PEDIDO ⬇️</p>
+</div>
 
 <!-- ORDER FORM -->
 <section class="order" id="pedido">
@@ -426,6 +481,20 @@ footer{background:var(--black);padding:40px 16px;text-align:center;color:var(--c
     </div>
   </div>
 </section>
+
+<!-- GARANTIA -->
+<div style="background:#fff;padding:40px 16px;text-align:center;border-top:4px solid var(--gold)">
+  <div style="max-width:600px;margin:0 auto">
+    <p style="font-size:22px;font-weight:800;color:var(--black)">CALZADO CON ⭐️ GARANTÍA ⭐️</p>
+    <p style="font-size:14px;color:#555;margin-top:8px;line-height:1.6">Garantía extendida por despegado de suela o descosido de alguna de sus costuras.<br><strong>Los envíos de garantía corren por nuestra cuenta.</strong></p>
+    <div style="display:flex;justify-content:center;gap:24px;margin-top:20px;flex-wrap:wrap">
+      <div style="text-align:center"><div style="font-size:24px">✅</div><div style="font-size:12px;font-weight:700;color:var(--black)">CALIDAD PREMIUM</div></div>
+      <div style="text-align:center"><div style="font-size:24px">📦</div><div style="font-size:12px;font-weight:700;color:var(--black)">ENVÍO GRATIS</div></div>
+      <div style="text-align:center"><div style="font-size:24px">💵</div><div style="font-size:12px;font-weight:700;color:var(--black)">PAGO AL RECIBIR</div></div>
+      <div style="text-align:center"><div style="font-size:24px">🔒</div><div style="font-size:12px;font-weight:700;color:var(--black)">COMPRA SEGURA</div></div>
+    </div>
+  </div>
+</div>
 
 <!-- FOOTER -->
 <footer>

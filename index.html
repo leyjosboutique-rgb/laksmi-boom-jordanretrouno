@@ -268,7 +268,6 @@ footer{background:#111;color:#fff;padding:20px 16px;text-align:center}
       <p style="font-size:15px;font-weight:900;color:#111;text-transform:uppercase;margin:20px 0 6px">2. INFORMACIÓN DE CONTACTO</p>
       <div class="grid2">
         <label><span class="field-label">Nombre completo</span><input class="field-input" type="text" name="nombre" required/></label>
-        <label><span class="field-label">Correo electrónico</span><input class="field-input" type="email" name="email" required/></label>
         <label><span class="field-label">Celular</span><input class="field-input" type="tel" name="celular" required/></label>
         <label><span class="field-label">Confirma tu celular</span><input class="field-input" type="tel" name="celular2" required/></label>
       </div>
@@ -451,7 +450,7 @@ async function submitForm(e){
   const btn=document.getElementById('submit-btn');
   btn.disabled=true;btn.textContent='⏳ Enviando pedido...';
   fbq('track','InitiateCheckout',{content_name:'Jordan Retro 1',currency:'COP',value:PRECIOS[selectedQty],num_items:selectedQty});
-  const data={nombre:form.nombre.value,email:form.email.value,celular:form.celular.value,departamento:form.departamento.value,ciudad:form.ciudad.value,barrio:form.barrio.value,direccion:form.direccion.value,qty:selectedQty,total:fmt(PRECIOS[selectedQty])};
+  const data={nombre:form.nombre.value,celular:form.celular.value,departamento:form.departamento.value,ciudad:form.ciudad.value,barrio:form.barrio.value,direccion:form.direccion.value,qty:selectedQty,total:fmt(PRECIOS[selectedQty])};
   for(let i=1;i<=selectedQty;i++){data['color'+i]=selections[i].color;data['talla'+i]=selections[i].talla;}
   try{await fetch(SCRIPT_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});}catch(e2){console.log('no-cors:',e2);}
   document.getElementById('order-form').style.display='none';

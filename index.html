@@ -131,13 +131,27 @@ footer{background:#111;color:#fff;padding:24px 16px;text-align:center}
   <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.136.563 4.14 1.542 5.873L.057 23.882l6.174-1.618A11.935 11.935 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.012-1.372l-.36-.214-3.664.961.977-3.572-.234-.372A9.818 9.818 0 012.182 12c0-5.42 4.398-9.818 9.818-9.818 5.42 0 9.818 4.398 9.818 9.818 0 5.42-4.398 9.818-9.818 9.818z"/></svg>
 </a>
 
+<!-- 1. TOPBAR -->
 <div class="topbar">✈️ ENVÍO GRATIS + PAGO CONTRAENTREGA EN TODO COLOMBIA 🇨🇴</div>
 
+<!-- 2. IMAGEN HERO — LO PRIMERO QUE VEN -->
+<img id="hero-main" src="img/negra-panda.jpg" style="width:100%;max-height:500px;object-fit:cover;display:block;transition:opacity .2s" alt="Jordan Retro 1 LAKSMI BOOM"/>
+
+<!-- 3. MINI GRID -->
+<div class="mini-grid">
+  <img src="img/mini1.jpg" class="active" onclick="changeHero(this)" alt="Mini 1"/>
+  <img src="img/mini2.jpg" onclick="changeHero(this)" alt="Mini 2"/>
+  <img src="img/mini3.jpg" onclick="changeHero(this)" alt="Mini 3"/>
+  <img src="img/mini4.jpg" onclick="changeHero(this)" alt="Mini 4"/>
+</div>
+
+<!-- 4. PROMOBAR -->
 <div class="promobar">
   🔥 1 PAR <span>$109.900</span> &nbsp;|&nbsp; 2 PARES SOLO <span>$149.900</span><br>
   <em>Y es curioso… porque cuando ves el segundo par… ya sabes que uno no es suficiente.</em>
 </div>
 
+<!-- 5. HEADER -->
 <div class="header">
   <div class="header-inner">
     <img src="img/LOGO.jpg" class="logo-img" alt="Logo" onerror="this.style.display='none'"/>
@@ -148,18 +162,10 @@ footer{background:#111;color:#fff;padding:24px 16px;text-align:center}
   </div>
 </div>
 
+<!-- 6. HERO TITLE -->
 <div class="hero-title">
   <h1>No es casualidad que todos miren estos Jordan…<br><span style="font-style:italic;font-weight:700;font-size:clamp(16px,3vw,22px)">Cuando los ves puestos… entiendes por qué.</span></h1>
   <p class="sub">🔥 LOS JORDAN RETRO 1 MÁS DESEADOS EN COLOMBIA — 40% OFF HOY<br>Edición limitada. Y sí… se están acabando.</p>
-</div>
-
-<img id="hero-main" src="img/negra-panda.jpg" style="width:100%;max-height:480px;object-fit:cover;display:block;transition:opacity .2s" alt="Jordan Retro 1 LAKSMI BOOM"/>
-
-<div class="mini-grid">
-  <img src="img/mini1.jpg" class="active" onclick="changeHero(this)" alt="Mini 1"/>
-  <img src="img/mini2.jpg" onclick="changeHero(this)" alt="Mini 2"/>
-  <img src="img/mini3.jpg" onclick="changeHero(this)" alt="Mini 3"/>
-  <img src="img/mini4.jpg" onclick="changeHero(this)" alt="Mini 4"/>
 </div>
 
 <div class="microcopy">No necesitas pensarlo mucho… solo míralos… y nota cuál ya sientes tuyo.</div>
@@ -388,7 +394,6 @@ footer{background:#111;color:#fff;padding:24px 16px;text-align:center}
 </footer>
 
 <script>
-// ====== META PIXEL ======
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
 n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
@@ -406,9 +411,7 @@ fbq('track', 'ViewContent', {
 <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1294262828814434&ev=PageView&noscript=1"/></noscript>
 
 <script>
-// ====== CONFIGURACIÓN ======
 const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwFOe4vxQkRXBIMxfuGf9_iz7z2erp6EM9ChrHd1xByA60FzSfr9I0ESK2JFqEp7Nw0/exec';
-
 const COLORES=[
   {color:'Negra / Roja',img:'img/negra-roja.jpg',gender:'CABALLERO & UNISEX'},
   {color:'Negra / Blanca Panda',img:'img/PANDA.jpg',gender:'CABALLERO & UNISEX'},
@@ -467,13 +470,8 @@ function setQty(n){
   for(let i=1;i<=3;i++){
     const btn=document.getElementById(`qty-${i}`);
     if(!btn)continue;
-    if(i===n){
-      btn.style.border=i===2?'3px solid #e74c3c':'2px solid #e74c3c';
-      btn.style.background='#fff5f5';
-    }else{
-      btn.style.border='2px solid #ddd';
-      btn.style.background='#fff';
-    }
+    if(i===n){btn.style.border=i===2?'3px solid #e74c3c':'2px solid #e74c3c';btn.style.background='#fff5f5';}
+    else{btn.style.border='2px solid #ddd';btn.style.background='#fff';}
   }
   buildPares();updateSummary();
 }
@@ -507,75 +505,23 @@ function changeHero(img){
 async function submitForm(e){
   e.preventDefault();
   const err=document.getElementById('error-msg');
-
   for(let i=1;i<=selectedQty;i++){
     const s=selections[i]||{};
-    if(!s.color||!s.talla){
-      err.textContent=`Por favor selecciona color y talla del PAR ${i}.`;
-      err.style.display='block';
-      return;
-    }
+    if(!s.color||!s.talla){err.textContent=`Por favor selecciona color y talla del PAR ${i}.`;err.style.display='block';return;}
   }
-
   const form=e.target;
-  if(form.celular.value!==form.celular2.value){
-    err.textContent='Los celulares no coinciden.';
-    err.style.display='block';
-    return;
-  }
+  if(form.celular.value!==form.celular2.value){err.textContent='Los celulares no coinciden.';err.style.display='block';return;}
   err.style.display='none';
-
   const btn=document.getElementById('submit-btn');
-  btn.disabled=true;
-  btn.textContent='⏳ Enviando pedido...';
-
-  // Evento InitiateCheckout
-  fbq('track', 'InitiateCheckout', {
-    content_name: 'Jordan Retro 1',
-    currency: 'COP',
-    value: PRECIOS[selectedQty],
-    num_items: selectedQty
-  });
-
-  const data={
-    nombre:form.nombre.value,
-    email:form.email.value,
-    celular:form.celular.value,
-    departamento:form.departamento.value,
-    ciudad:form.ciudad.value,
-    barrio:form.barrio.value,
-    direccion:form.direccion.value,
-    qty:selectedQty,
-    total:fmt(PRECIOS[selectedQty])
-  };
-
-  for(let i=1;i<=selectedQty;i++){
-    data['color'+i]=selections[i].color;
-    data['talla'+i]=selections[i].talla;
-  }
-
-  try{
-    await fetch(SCRIPT_URL,{
-      method:'POST',
-      mode:'no-cors',
-      headers:{'Content-Type':'application/json'},
-      body:JSON.stringify(data)
-    });
-  }catch(e2){
-    console.log('no-cors fetch:', e2);
-  }
-
+  btn.disabled=true;btn.textContent='⏳ Enviando pedido...';
+  fbq('track','InitiateCheckout',{content_name:'Jordan Retro 1',currency:'COP',value:PRECIOS[selectedQty],num_items:selectedQty});
+  const data={nombre:form.nombre.value,email:form.email.value,celular:form.celular.value,departamento:form.departamento.value,ciudad:form.ciudad.value,barrio:form.barrio.value,direccion:form.direccion.value,qty:selectedQty,total:fmt(PRECIOS[selectedQty])};
+  for(let i=1;i<=selectedQty;i++){data['color'+i]=selections[i].color;data['talla'+i]=selections[i].talla;}
+  try{await fetch(SCRIPT_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});}catch(e2){console.log('no-cors fetch:',e2);}
   document.getElementById('order-form').style.display='none';
   document.getElementById('success-msg').style.display='block';
   window.scrollTo({top:document.getElementById('pedido').offsetTop,behavior:'smooth'});
-
-  // Evento Purchase
-  fbq('track', 'Purchase', {
-    content_name: 'Jordan Retro 1',
-    currency: 'COP',
-    value: PRECIOS[selectedQty],
-    num_items: selectedQty
-  });
+  fbq('track','Purchase',{content_name:'Jordan Retro 1',currency:'COP',value:PRECIOS[selectedQty],num_items:selectedQty});
 }
 
 setQty(2);

@@ -152,6 +152,16 @@ header{position:sticky;top:0;z-index:60;background:var(--negro);border-bottom:1p
   .det-script{font-size:30px}
 }
 
+
+/* ===== BANNER PLANTILLA ===== */
+.plantilla{background:#0d0c0b;line-height:0}
+.pl-full{width:100%;height:auto;display:block}
+.pl-crops{display:none}
+.pl-crop{background-image:url(/img/plantilla.webp);background-repeat:no-repeat;width:100%}
+.pl-a{aspect-ratio:1060/667;background-size:188.68% auto;background-position:0% 0}
+.pl-c{aspect-ratio:940/667;background-size:212.77% auto;background-position:100% 0}
+@media (max-width:700px){.pl-full{display:none}.pl-crops{display:block}}
+
 /* HERO */
 .hero{background:var(--negro);color:#fff;padding:40px 0 50px;position:relative;overflow:hidden}
 .hero::before{content:"";position:absolute;right:-200px;top:-200px;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(201,166,120,.16),transparent 70%)}
@@ -449,36 +459,12 @@ footer b{display:block;color:var(--dorado);font-family:var(--f-serif);font-weigh
   </div>
 </section>
 
-<!-- ================= DETALLES QUE HACEN LA DIFERENCIA ================= -->
-<section class="details">
-  <div class="wrap grid">
-    <div class="det-collage reveal">
-      <img src="/img/negra-panda.webp" alt=""/><img src="/img/mini1.webp" alt=""/><img src="/img/mini2.webp" alt=""/>
-      <img src="/img/mini3.webp" alt=""/><img src="/img/mini4.webp" alt=""/><img src="/img/negra-roja.webp" alt=""/>
-    </div>
-    <div class="det-copy reveal">
-      <h2><span>DETALLES</span><span>QUE HACEN</span><span>LA DIFERENCIA</span></h2>
-      <div class="feat"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="8"/><path d="M8 12c2-3 6-3 8 0M8 15c2-2 6-2 8 0"/></svg></span><div><b>Materiales premium</b><small>en cuero sintético</small></div></div>
-      <div class="feat"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 5l14 14M19 5L5 19M9 4l-2 3M17 20l-2-3M4 15l3-2M20 9l-3 2"/></svg></span><div><b>Suela antideslizante</b><small>de alta resistencia</small></div></div>
-      <div class="feat"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 20L20 4M7 17l2 2M10 14l2 2M13 11l2 2M16 8l2 2"/></svg></span><div><b>Costuras reforzadas</b><small>para mayor durabilidad</small></div></div>
-      <span class="det-script">Calidad en cada paso ♛</span>
-    </div>
-  </div>
-</section>
-
-<!-- ================= COMBÍNALOS CON TU ESTILO ================= -->
-<section class="combine">
-  <div class="wrap grid">
-    <img class="big reveal" src="/img/PANDA.webp" alt="Combínalos con tu estilo"/>
-    <div class="reveal">
-      <div class="polas">
-        <div class="pola"><img src="/img/cristal.webp" alt=""/></div>
-        <div class="pola"><img src="/img/rosada.webp" alt=""/></div>
-      </div>
-      <h3>COMBÍNALOS<br>CON TU ESTILO</h3>
-      <p>Desde un look deportivo hasta uno urbano, siempre serán la mejor elección.</p>
-      <a href="#colores" class="btn">Ver los 6 colores <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-    </div>
+<!-- ================= PLANTILLA ORTOPÉDICA (banner) ================= -->
+<section class="plantilla">
+  <img class="pl-full" src="/img/plantilla.webp" alt="Plantilla ortopédica que hace la diferencia: mayor comodidad, amortiguación, soporte y estabilidad, diseñada para uso diario" width="2172" height="724" loading="lazy"/>
+  <div class="pl-crops" aria-hidden="true">
+    <div class="pl-crop pl-a"></div>
+    <div class="pl-crop pl-c"></div>
   </div>
 </section>
 

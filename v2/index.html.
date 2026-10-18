@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>LAKSMI BOOM | Envío Gratis y Pago Contraentrega en Colombia</title>
+<meta name="description" content="Tenis Retro High de edición limitada. 40% OFF hoy, envío gratis y pago contraentrega en toda Colombia."/>
+
+<!-- Microsoft Clarity (tu ID) -->
+<script type="text/javascript">
+(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","wifw7jn8is");
+</script>
+
+<!-- Meta Pixel (tu ID) -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1294262828814434');
+fbq('track','PageView');
+fbq('track','ViewContent',{content_name:'Jordan Retro 1',content_category:'Calzado',currency:'COP',value:109900});
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1294262828814434&ev=PageView&noscript=1"/></noscript>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=Inter:wght@300;400;500;600;700;800&family=Allura&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --negro:#0f0f0f; --negro-3:#222020;
+  --crema:#f7f2eb; --crema-2:#efe6da;
+  --beige:#ecd3b3; --beige-osc:#d8b48a; --cafe:#8a5636; --dorado:#c9a678;
+  --rojo:#c8412f; --verde:#2f8a4e;
+  --texto:#1b1a19; --gris:#6b6560;
+  --f-titulo:'Oswald',sans-serif; --f-serif:'Playfair Display',serif;
+  --f-texto:'Inter',sans-serif; --f-script:'Allura',cursive;
+  --max:1180px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--f-texto);color:var(--texto);background:var(--crema);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+section{scroll-margin-top:70px}
+.center{text-align:center}
+
+/* Botones */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-weight:800;font-size:14px;letter-spacing:.06em;text-transform:uppercase;padding:18px 30px;border-radius:8px;background:var(--beige);color:var(--negro);border:none;cursor:pointer;transition:transform .2s,background .2s,box-shadow .2s;text-align:center}
+.btn:hover{background:var(--beige-osc);transform:translateY(-2px);box-shadow:0 12px 26px rgba(0,0,0,.2)}
+.btn.full{width:100%}
+.btn.pulse{animation:pulse 2.2s infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(236,211,179,.6)}50%{box-shadow:0 0 0 12px rgba(236,211,179,0)}}
+.btn svg{width:16px;height:16px;flex:none}
+.btn:disabled{background:#ccc;color:#777;animation:none;cursor:not-allowed;transform:none;box-shadow:none}
+
+/* Titulares mixtos (estética del diseño) */
+.eyebrow{font-size:12px;letter-spacing:.34em;text-transform:uppercase;color:var(--dorado);margin-bottom:10px;font-weight:600}
+.h-mix{line-height:1}
+.h-mix .s{display:block;font-family:var(--f-titulo);font-weight:600;font-size:clamp(28px,4vw,40px);letter-spacing:.02em}
+.h-mix .i{display:block;font-family:var(--f-serif);font-style:italic;font-weight:600;font-size:clamp(30px,4.2vw,44px)}
+
+/* Topbar + header */
+.topbar{background:var(--beige);color:var(--negro);font-size:12px;font-weight:800;letter-spacing:.06em;text-align:center;padding:9px 12px}
+header{position:sticky;top:0;z-index:60;background:var(--negro);border-bottom:1px solid rgba(255,255,255,.06)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{display:flex;align-items:center;gap:10px;color:var(--dorado)}
+.logo svg{width:36px;height:27px}
+.logo b{display:block;font-family:var(--f-serif);font-weight:500;font-size:20px;letter-spacing:.18em;line-height:1}
+.logo small{display:block;font-size:8px;letter-spacing:.55em;text-align:center;margin-top:3px}
+.nav .btn{padding:11px 20px;font-size:11px;border-radius:40px}
+
+/* HERO */
+.hero{background:var(--negro);color:#fff;padding:40px 0 50px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;right:-200px;top:-200px;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(201,166,120,.16),transparent 70%)}
+.hero .grid{display:grid;grid-template-columns:1fr 1.05fr;gap:48px;align-items:center;position:relative}
+.hero h1{line-height:.98;margin-bottom:14px}
+.hero h1 .a{display:block;font-family:var(--f-titulo);font-weight:700;font-size:clamp(38px,5.2vw,64px)}
+.hero h1 .b{display:block;font-family:var(--f-serif);font-style:italic;font-weight:500;font-size:clamp(34px,4.6vw,56px)}
+.hero .sub{font-size:17px;font-weight:300;color:#ddd;margin-bottom:20px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.chip{border:1px solid rgba(236,211,179,.4);color:var(--beige);border-radius:30px;padding:7px 13px;font-size:12px;font-weight:600}
+.chip.hot{background:var(--rojo);border-color:var(--rojo);color:#fff}
+.price-box{background:var(--negro-3);border:1px solid rgba(201,166,120,.3);border-radius:16px;padding:20px 22px;margin-bottom:18px}
+.price-line{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.old{font-size:16px;color:#999;text-decoration:line-through}
+.now{font-family:var(--f-titulo);font-size:46px;font-weight:600;line-height:1}
+.off{background:var(--rojo);color:#fff;font-size:12px;font-weight:800;padding:5px 10px;border-radius:4px}
+.combo-line{margin-top:12px;font-size:15px;color:var(--beige)}
+.combo-line b{font-family:var(--f-titulo);font-size:22px;font-weight:600;color:#fff}
+.combo-line em{display:block;font-family:var(--f-script);font-size:27px;color:var(--dorado);font-style:normal;margin-top:2px}
+.gift-line{display:flex;align-items:center;gap:10px;margin-top:12px;padding-top:12px;border-top:1px dashed rgba(255,255,255,.15);font-size:14px}
+.gift-line svg{width:22px;color:var(--beige);flex:none}
+.countdown{display:flex;align-items:center;gap:12px;margin-bottom:18px;font-size:13px;color:#ccc;flex-wrap:wrap}
+.cd{display:flex;gap:6px}
+.cd span{background:#fff;color:var(--negro);font-family:var(--f-titulo);font-size:20px;font-weight:600;min-width:44px;text-align:center;padding:5px 4px;border-radius:6px;line-height:1.1}
+.cd span i{font-style:normal}
+.cd span small{display:block;font-family:var(--f-texto);font-size:8px;font-weight:700;letter-spacing:.06em;color:var(--gris)}
+.mini-trust{margin-top:12px;font-size:12px;color:#bbb;text-align:center}
+.gallery-wrap{position:relative}
+.main-img{position:relative;border-radius:18px;overflow:hidden;border:1px solid rgba(201,166,120,.25);background:#1a1918}
+.main-img img{width:100%;height:auto;aspect-ratio:1672/941;object-fit:cover;transition:opacity .2s}
+.hero-cta{position:absolute;left:5%;bottom:6%;padding:12px 20px;font-size:12px;gap:8px;box-shadow:0 10px 26px rgba(0,0,0,.5)}
+.hero-cta svg{width:13px;height:13px}
+.thumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:10px}
+.thumbs img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:10px;cursor:pointer;border:2px solid transparent;transition:border-color .2s;background:#1a1918}
+.thumbs img.active{border-color:var(--beige)}
+.stamp{position:absolute;right:3%;bottom:5%;z-index:3;width:84px;height:84px;border-radius:50%;background:var(--rojo);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;transform:rotate(-12deg);box-shadow:0 10px 24px rgba(0,0,0,.4);font-weight:800;line-height:1}
+.stamp b{font-family:var(--f-titulo);font-size:27px}
+.stamp small{font-size:10px;letter-spacing:.1em}
+.script-hero{position:absolute;right:18px;bottom:22px;z-index:3;font-family:var(--f-script);font-size:42px;color:#fff;transform:rotate(-8deg);text-shadow:0 2px 14px rgba(0,0,0,.7);line-height:.95;text-align:right;pointer-events:none}
+
+/* BENEFICIOS */
+.benefits{padding:60px 0}
+.benefits .grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.benefits p.lead{font-size:16px;color:#3a3633;margin:16px 0 26px;line-height:1.55;max-width:440px}
+.ben{display:flex;align-items:center;gap:14px;margin-bottom:16px;font-size:15px;font-weight:500}
+.ben .ico{width:42px;height:42px;border-radius:50%;background:var(--negro);color:var(--beige);display:flex;align-items:center;justify-content:center;flex:none}
+.ben .ico svg{width:20px}
+.collage{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:10px;aspect-ratio:1.1}
+.collage img{width:100%;height:100%;object-fit:cover;border-radius:12px;background:#e6dccf}
+.collage img:first-child{grid-row:span 2}
+
+/* COLORES */
+.colors{background:var(--crema-2);padding:60px 0}
+.seg{display:flex;align-items:center;gap:16px;margin:36px 0 16px;font-size:12px;font-weight:700;letter-spacing:.3em}
+.seg::before,.seg::after{content:"";flex:1;height:1px;background:rgba(0,0,0,.15)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.ccard{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 8px 24px rgba(60,40,20,.07);transition:transform .25s,box-shadow .25s;border:2px solid transparent}
+.ccard:hover{transform:translateY(-4px);box-shadow:0 16px 34px rgba(60,40,20,.14)}
+.ccard.sel{border-color:var(--negro)}
+.ccard img{width:100%;aspect-ratio:1;object-fit:cover;background:#f3ece3}
+.ccard .info{padding:14px 16px 16px}
+.ccard .tag{font-size:10px;letter-spacing:.14em;color:var(--cafe);font-weight:700}
+.ccard h4{font-family:var(--f-titulo);font-weight:500;font-size:19px;margin:4px 0 12px;letter-spacing:.02em}
+.ccard .btn{padding:12px;font-size:12px;width:100%}
+.warn{margin-top:28px;text-align:center;font-size:14px;font-weight:700;color:var(--rojo)}
+
+/* GARANTÍAS */
+.guarantees{background:var(--negro);color:#fff;padding:60px 0}
+.g-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:34px}
+.g{background:var(--negro-3);border:1px solid rgba(201,166,120,.25);border-radius:16px;padding:26px 20px;text-align:center}
+.g .seal{width:64px;height:64px;margin:0 auto 14px;border-radius:50%;border:1.5px solid var(--dorado);display:flex;align-items:center;justify-content:center;color:var(--beige)}
+.g .seal svg{width:30px}
+.g h4{font-family:var(--f-titulo);font-weight:500;font-size:18px;letter-spacing:.04em;margin-bottom:8px}
+.g p{font-size:13px;color:#bbb;line-height:1.5}
+.g.star{background:linear-gradient(160deg,#3a2a1e,#1c1714);border-color:var(--beige)}
+
+/* TESTIMONIOS */
+.reviews{padding:60px 0}
+.rev-main{max-width:760px;margin:30px auto 0;border-radius:16px;overflow:hidden;box-shadow:0 12px 30px rgba(0,0,0,.1);background:#fff}
+.rev-main img{width:100%;height:auto}
+
+/* TALLAS */
+.sizes{background:var(--crema-2);padding:60px 0}
+.sizes .grid{display:grid;grid-template-columns:1fr 1.1fr;gap:40px;align-items:center}
+.sizes p{color:#3a3633;margin:14px 0;line-height:1.55}
+.tip{background:#fff;border-left:4px solid var(--beige-osc);padding:14px 16px;border-radius:6px;font-size:14px;line-height:1.5}
+table{width:100%;border-collapse:collapse;background:#fff;font-size:14px;text-align:center;border-radius:12px;overflow:hidden;box-shadow:0 8px 24px rgba(60,40,20,.07)}
+th{background:var(--negro);color:var(--beige);font-weight:600;padding:12px 6px;font-size:12px;letter-spacing:.06em}
+td{padding:8px 6px;border-top:1px solid #eee}
+td:first-child{font-weight:700}
+
+/* PEDIDO */
+.order{background:var(--negro);padding:60px 0 70px}
+.order-card{max-width:680px;margin:0 auto;background:var(--crema);border-radius:22px;padding:30px 26px;box-shadow:0 30px 60px rgba(0,0,0,.4)}
+.order-head{text-align:center;margin-bottom:10px}
+.order-head h2{font-family:var(--f-titulo);font-weight:600;font-size:28px;letter-spacing:.02em}
+.order-head p{font-size:12px;font-weight:700;letter-spacing:.08em;color:var(--cafe);margin-top:6px}
+.urg{background:#fbe9e6;border:1px solid var(--rojo);color:var(--rojo);border-radius:10px;padding:10px 14px;text-align:center;font-size:13px;font-weight:700;margin-top:14px}
+.step{margin-top:26px}
+.step h3{font-size:14px;font-weight:800;letter-spacing:.04em;margin-bottom:10px;display:flex;align-items:center;gap:10px}
+.step h3 i{font-style:normal;width:26px;height:26px;border-radius:50%;background:var(--negro);color:var(--beige);display:flex;align-items:center;justify-content:center;font-size:13px;flex:none}
+.hint{font-size:13px;color:var(--gris);margin-bottom:12px;line-height:1.45}
+.hint b{color:var(--rojo)}
+.packs{display:grid;gap:14px}
+.pack{position:relative;display:flex;align-items:center;gap:14px;background:#fff;border:2px solid #e5ddd2;border-radius:14px;padding:16px;cursor:pointer;transition:border-color .2s,box-shadow .2s;text-align:left;width:100%;color:var(--texto)}
+.pack .radio{width:22px;height:22px;border-radius:50%;border:2px solid #bbb;flex:none;position:relative}
+.pack.sel{border-color:var(--negro);box-shadow:0 8px 20px rgba(0,0,0,.08)}
+.pack.sel .radio{border-color:var(--negro)}
+.pack.sel .radio::after{content:"";position:absolute;inset:3px;border-radius:50%;background:var(--negro)}
+.pack .name{flex:1}
+.pack .name b{display:block;font-family:var(--f-titulo);font-size:20px;font-weight:600}
+.pack .name small{font-size:12px;color:var(--gris)}
+.pack .save{display:inline-block;margin-top:5px;background:var(--verde);color:#fff;font-size:11px;font-weight:700;padding:3px 8px;border-radius:4px}
+.pack .pr{text-align:right}
+.pack .pr s{display:block;font-size:12px;color:#999}
+.pack .pr b{font-family:var(--f-titulo);font-size:24px;font-weight:600}
+.pack .ribbon{position:absolute;top:-11px;right:14px;background:var(--rojo);color:#fff;font-size:10px;font-weight:800;letter-spacing:.06em;padding:4px 10px;border-radius:20px}
+.pair{background:#fff;border-radius:14px;padding:16px;margin-top:14px;border:1px solid #e5ddd2}
+.pair-title{font-size:12px;font-weight:800;letter-spacing:.08em;color:var(--cafe)}
+.pair-micro{font-size:12px;font-style:italic;color:var(--gris);margin:3px 0 12px}
+.copts{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.copt{display:flex;align-items:center;gap:10px;border:2px solid #e5ddd2;border-radius:10px;padding:7px;background:#fff;cursor:pointer;text-align:left;transition:border-color .2s;color:var(--texto)}
+.copt img{width:46px;height:46px;object-fit:cover;border-radius:6px;flex:none;background:#f3ece3}
+.copt span{font-size:12px;font-weight:700;line-height:1.25}
+.copt small{display:block;font-size:9px;font-weight:800;color:var(--cafe);letter-spacing:.06em}
+.copt.on{border-color:var(--negro);background:#faf6f0}
+.sz-label{font-size:12px;font-weight:700;margin:14px 0 8px}
+.szs{display:grid;grid-template-columns:repeat(10,1fr);gap:6px}
+.sz{border:2px solid #e5ddd2;border-radius:8px;padding:9px 0;font-size:14px;font-weight:700;background:#fff;cursor:pointer;color:var(--texto)}
+.sz.on{background:var(--negro);border-color:var(--negro);color:var(--beige)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+label.f{display:block;font-size:12px;font-weight:700;margin:10px 0 5px}
+.i{width:100%;padding:14px;border:1.5px solid #ddd3c6;border-radius:10px;font-family:inherit;font-size:15px;background:#fff;color:var(--texto);-webkit-appearance:none;appearance:none}
+select.i{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23555' stroke-width='1.6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:34px}
+.i:focus{outline:none;border-color:var(--negro)}
+.i.err{border-color:var(--rojo)}
+.cod{background:#fff;border:2px solid var(--verde);border-radius:12px;padding:14px 16px;font-size:14px;line-height:1.5}
+.cod b{color:var(--verde)}
+.summary{background:#fff;border-radius:12px;padding:16px;margin-top:22px;font-size:14px}
+.summary .l{display:flex;justify-content:space-between;gap:10px;padding:7px 0}
+.summary .l+.l{border-top:1px solid #f0ebe4}
+.summary .items{font-size:13px;color:var(--gris);line-height:1.5}
+.summary .tot{font-weight:800;font-size:18px}
+.summary .free{color:var(--verde);font-weight:700;white-space:nowrap}
+.errbox{display:none;background:#fbe9e6;border:1px solid var(--rojo);color:var(--rojo);border-radius:10px;padding:12px;font-size:13px;font-weight:700;margin-top:14px}
+#submitBtn{margin-top:18px;font-size:15px;padding:20px}
+.size-g{display:flex;align-items:center;gap:10px;margin-top:14px;background:var(--crema-2);border-radius:10px;padding:12px;font-size:13px}
+.size-g svg{width:26px;flex:none;color:var(--cafe)}
+.order-foot{text-align:center;font-size:12px;color:var(--gris);margin-top:10px}
+.success{display:none;text-align:center;padding:20px 0}
+.success .ok{width:72px;height:72px;border-radius:50%;background:var(--verde);color:#fff;font-size:36px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px}
+.success h2{font-family:var(--f-titulo);font-size:30px;margin-bottom:10px}
+.success p{line-height:1.55;margin-bottom:16px}
+
+/* FAQ */
+.faq{padding:60px 0}
+.faq-list{max-width:760px;margin:30px auto 0}
+.q{background:#fff;border-radius:12px;margin-bottom:10px;overflow:hidden;box-shadow:0 4px 14px rgba(60,40,20,.05)}
+.q button{width:100%;text-align:left;background:none;border:0;padding:18px 20px;font-size:15px;font-weight:700;display:flex;justify-content:space-between;gap:12px;cursor:pointer;color:var(--texto)}
+.q button::after{content:"+";font-size:22px;line-height:1;color:var(--cafe)}
+.q.open button::after{content:"–"}
+.q .a{max-height:0;overflow:hidden;transition:max-height .3s ease;padding:0 20px;font-size:14px;line-height:1.6;color:#3a3633}
+.q.open .a{max-height:240px;padding-bottom:18px}
+
+/* Trust + footer */
+.trustbar{background:var(--negro);color:#fff;padding:24px 0}
+.trustbar .grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.trustbar .item{display:flex;align-items:center;justify-content:center;gap:12px;font-size:11px;text-transform:uppercase;letter-spacing:.05em;font-weight:600}
+.trustbar .item+.item{border-left:1px solid rgba(255,255,255,.15)}
+.trustbar svg{width:30px;height:30px;color:var(--beige);flex:none}
+footer{background:var(--negro);color:#888;font-size:11px;text-align:center;padding:10px 16px 110px;letter-spacing:.12em;text-transform:uppercase}
+footer .s{font-family:var(--f-script);font-size:30px;color:var(--dorado);display:block;margin-bottom:6px;text-transform:none;letter-spacing:0}
+footer b{display:block;color:var(--dorado);font-family:var(--f-serif);font-weight:500;font-size:18px;letter-spacing:.2em;margin-bottom:6px}
+
+/* Botón fijo móvil + WhatsApp */
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:70;background:rgba(15,15,15,.96);backdrop-filter:blur(6px);padding:10px 14px calc(10px + env(safe-area-inset-bottom));display:none;align-items:center;gap:12px;transform:translateY(110%);transition:transform .3s}
+.sticky.show{transform:none}
+.sticky .p{color:#fff;line-height:1.1}
+.sticky .p s{font-size:11px;color:#999}
+.sticky .p b{display:block;font-family:var(--f-titulo);font-size:20px}
+.sticky .btn{flex:1;padding:15px 10px;font-size:13px}
+.wa{position:fixed;right:16px;bottom:20px;z-index:65;width:56px;height:56px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(0,0,0,.3)}
+.wa svg{width:30px;fill:#fff}
+
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}
+.reveal.in{opacity:1;transform:none}
+
+@media (max-width:900px){
+  .hero{padding-top:20px}
+  .hero .grid,.benefits .grid,.sizes .grid{grid-template-columns:1fr}
+  .hero .grid{gap:26px}
+  .gallery-wrap{order:-1}
+  .stamp{width:58px;height:58px}
+  .stamp b{font-size:18px}
+  .stamp small{font-size:7px}
+  .script-hero{right:12px;bottom:14px;font-size:32px}
+  .cards{grid-template-columns:1fr 1fr 1fr}
+  .g-grid{grid-template-columns:1fr 1fr}
+  .trustbar .grid{grid-template-columns:1fr 1fr;row-gap:18px}
+  .trustbar .item:nth-child(3){border-left:0}
+  .sticky{display:flex}
+  .wa{bottom:88px}
+}
+@media (max-width:560px){
+  .cards{gap:8px}
+  .ccard .info{padding:8px 8px 10px}
+  .ccard .tag{font-size:8px;letter-spacing:.06em}
+  .ccard h4{font-size:13px;margin:3px 0 8px}
+  .ccard .btn{font-size:9px;padding:9px 4px;letter-spacing:.02em}
+  .g-grid{grid-template-columns:1fr}
+  .order-card{padding:24px 14px}
+  .now{font-size:40px}
+  .szs{grid-template-columns:repeat(5,1fr)}
+  .copts{grid-template-columns:1fr}
+  .row{grid-template-columns:1fr;gap:0}
+  .trustbar .item{font-size:10px}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">✈️ ENVÍO GRATIS + PAGO CONTRAENTREGA EN TODA COLOMBIA 🇨🇴</div>
+
+<header>
+  <div class="wrap nav">
+    <a href="#" class="logo" aria-label="Laksmi Boom">
+      <svg viewBox="0 0 64 44" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M32 6c5 7 6 16 0 30-6-14-5-23 0-30z"/><path d="M32 36C27 26 21 20 13 17c1 10 7 17 19 19z"/><path d="M32 36c5-10 11-16 19-19-1 10-7 17-19 19z"/><path d="M32 36C24 31 14 29 4 31c6 5 16 7 28 5z"/><path d="M32 36c8-5 18-7 28-5-6 5-16 7-28 5z"/></svg>
+      <div><b>LAKSMI</b><small>BOOM</small></div>
+    </a>
+    <a href="#pedido" class="btn">Pedir ahora</a>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="wrap grid">
+    <div>
+      <div class="eyebrow">Edición limitada · Retro High</div>
+      <h1>
+        <span class="a">NO ES CASUALIDAD</span>
+        <span class="b">que todos miren</span>
+        <span class="b">estos tenis…</span>
+      </h1>
+      <p class="sub">Cuando los ves puestos… entiendes por qué.</p>
+      <div class="chips">
+        <span class="chip hot">🔥 40% OFF HOY</span>
+        <span class="chip">✈️ Envío gratis</span>
+        <span class="chip">💵 Pagas al recibir</span>
+      </div>
+
+      <div class="price-box">
+        <div class="price-line"><span class="old">Antes $169.900</span><span class="now">$109.900</span><span class="off">-40% SOLO HOY</span></div>
+        <div class="combo-line">🔥 2 PARES SOLO <b>$149.900</b><em>Uno para ti… y el otro ya sabes para quién.</em></div>
+        <div class="gift-line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="9" width="18" height="12" rx="1"/><path d="M3 13h18M12 9v12M12 9C9 3 5 5 7.5 8.5M12 9c3-6 7-4 4.5-.5"/></svg><span><b>+ MEDIAS DE REGALO</b> en todos los pedidos de hoy</span></div>
+      </div>
+
+      <div class="countdown">⏳ El descuento termina en:
+        <div class="cd"><span><i id="h">00</i><small>HRS</small></span><span><i id="m">00</i><small>MIN</small></span><span><i id="s">00</i><small>SEG</small></span></div>
+      </div>
+
+      <a href="#pedido" class="btn full pulse">✈️ Asegurar mis tenis ahora <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <div class="mini-trust">✔ Sin adelantos · ✔ Pago contraentrega · ✔ Cambio de talla gratis</div>
+    </div>
+
+    <div class="gallery-wrap">
+      <div class="main-img">
+        <div class="stamp"><b>-40%</b><small>SOLO HOY</small></div>
+        <img id="mainImg" src="/img/hero.jpg" alt="Tu estilo habla antes que tú — Laksmi Boom"/>
+        <a href="#pedido" class="btn pulse hero-cta">Quiero los míos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="thumbs" id="thumbs">
+        <img src="/img/hero.jpg" class="active" alt=""/>
+        <img src="/img/mini1.jpg" alt=""/>
+        <img src="/img/mini2.jpg" alt=""/>
+        <img src="/img/mini3.jpg" alt=""/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BENEFICIOS ================= -->
+<section class="benefits">
+  <div class="wrap grid">
+    <div class="reveal">
+      <h2 class="h-mix"><span class="s">LO QUE PASA</span><span class="i">cuando los tienes…</span></h2>
+      <p class="lead">Te cambian el outfit completo. Se ven fuertes, urbanos y difíciles de ignorar.</p>
+      <div class="ben"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2c1 4 5 5 5 10a5 5 0 0 1-10 0c0-3 2-4 2-7 2 1 3 3 3 5"/></svg></span>Elevan cualquier pinta al instante</div>
+      <div class="ben"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3h12l4 6-10 12L2 9z"/><path d="M2 9h20M9 3l3 18 3-18"/></svg></span>Se ven premium sin pagar de más</div>
+      <div class="ben"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 16l5-6 4 3 4-5 5 3v5H3z"/></svg></span>Combinan con jean, jogger o ropa casual</div>
+      <div class="ben"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12l5 5L20 7"/></svg></span>Ideales para salir, viajar o uso diario</div>
+      <div class="ben"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20L20 4M7 17l2 2M10 14l2 2M13 11l2 2M16 8l2 2"/></svg></span>Costuras reforzadas y suela antideslizante</div>
+    </div>
+    <div class="collage reveal">
+      <img src="/img/mini4.jpg" alt=""/>
+      <img src="/img/mini2.jpg" alt=""/>
+      <img src="/img/mini3.jpg" alt=""/>
+    </div>
+  </div>
+</section>
+
+<!-- ================= COLORES ================= -->
+<section class="colors" id="colores">
+  <div class="wrap">
+    <div class="center reveal">
+      <div class="eyebrow">🔥 6 colores de edición limitada</div>
+      <h2 class="h-mix"><span class="s">ESCOGE EL ESTILO</span><span class="i">que más va contigo</span></h2>
+    </div>
+    <div class="seg">CABALLERO &amp; UNISEX</div>
+    <div class="cards" id="cardsH"></div>
+    <div class="seg">DAMA</div>
+    <div class="cards" id="cardsD"></div>
+    <p class="warn">⚠️ Los colores más pedidos se están agotando primero.</p>
+  </div>
+</section>
+
+<!-- ================= GARANTÍAS ================= -->
+<section class="guarantees">
+  <div class="wrap">
+    <div class="center reveal">
+      <div class="eyebrow">Compra sin riesgo</div>
+      <h2 class="h-mix"><span class="s">TÚ NO ARRIESGAS</span><span class="i">absolutamente nada</span></h2>
+    </div>
+    <div class="g-grid">
+      <div class="g star reveal"><div class="seal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12a8 8 0 0 1 14-5M20 12a8 8 0 0 1-14 5"/><path d="M18 3v4h-4M6 21v-4h4"/></svg></div><h4>¿NO TE QUEDÓ? TE LA CAMBIAMOS</h4><p>Cambio de talla gratis. Sin preguntas y sin complicaciones.</p></div>
+      <div class="g reveal"><div class="seal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2l8 3v6c0 5-3.5 9-8 11-4.5-2-8-6-8-11V5z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></div><h4>CALIDAD GARANTIZADA</h4><p>Garantía extendida por despegado de suela o costuras. Envíos de garantía por nuestra cuenta.</p></div>
+      <div class="g reveal"><div class="seal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="3"/></svg></div><h4>PAGAS AL RECIBIR</h4><p>Lo ves, lo recibes, y luego pagas. Sin adelantos.</p></div>
+      <div class="g reveal"><div class="seal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="9" width="18" height="12" rx="1"/><path d="M3 13h18M12 9v12M12 9C9 3 5 5 7.5 8.5M12 9c3-6 7-4 4.5-.5"/></svg></div><h4>MEDIAS DE REGALO</h4><p>En todos los pedidos de hoy. Llegan con tus tenis.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TESTIMONIOS ================= -->
+<section class="reviews">
+  <div class="wrap">
+    <div class="center reveal">
+      <div class="eyebrow">★★★★★</div>
+      <h2 class="h-mix"><span class="s">LO QUE DICEN</span><span class="i">nuestros clientes</span></h2>
+    </div>
+    <div class="rev-main reveal"><img src="/img/testimonios.jpg" alt="Lo que dicen nuestros clientes"/></div>
+    <div class="center" style="margin-top:30px"><a href="#pedido" class="btn">🔥 Quiero los míos — pedir ahora</a></div>
+  </div>
+</section>
+
+<!-- ================= TALLAS ================= -->
+<section class="sizes" id="tallas">
+  <div class="wrap grid">
+    <div class="reveal">
+      <h2 class="h-mix"><span class="s">GUÍA DE TALLAS</span><span class="i">acierta a la primera</span></h2>
+      <p>Mide tu pie desde el talón hasta el dedo más largo y busca tu medida en la tabla.</p>
+      <div class="tip">💡 <b>¿Quedas entre dos tallas?</b> Pide la mayor. Y si no te queda, <b>te la cambiamos gratis.</b></div>
+    </div>
+    <div class="reveal">
+      <!-- ⚠️ Verifica estas medidas con tu proveedor -->
+      <table>
+        <thead><tr><th>TALLA</th><th>CMS (PIE)</th></tr></thead>
+        <tbody>
+          <tr><td>33</td><td>21.0</td></tr>
+          <tr><td>34</td><td>21.5</td></tr>
+          <tr><td>35</td><td>22.0</td></tr>
+          <tr><td>36</td><td>23.0</td></tr>
+          <tr><td>37</td><td>24.0</td></tr>
+          <tr><td>38</td><td>25.0</td></tr>
+          <tr><td>39</td><td>26.0</td></tr>
+          <tr><td>40</td><td>27.0</td></tr>
+          <tr><td>41</td><td>28.0</td></tr>
+          <tr><td>42</td><td>28.5</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PEDIDO ================= -->
+<section class="order" id="pedido">
+  <div class="wrap">
+    <div class="order-card">
+      <form id="orderForm" novalidate>
+        <div class="order-head">
+          <h2>⬇️ REALIZA TU PEDIDO AQUÍ ⬇️</h2>
+          <p>ENVÍO GRATIS · PAGO CONTRAENTREGA · 3-7 DÍAS HÁBILES</p>
+        </div>
+        <div class="urg">⚠️ Stock limitado — hoy con 40% OFF. El precio puede cambiar sin previo aviso.</div>
+
+        <div class="step">
+          <h3><i>1</i>¿CUÁNTOS PARES QUIERES?</h3>
+          <p class="hint">La mayoría empieza con uno… pero <b>el combo de 2 pares es el que más se llevan.</b></p>
+          <div class="packs">
+            <button type="button" class="pack" data-pack="1">
+              <span class="radio"></span>
+              <span class="name"><b>1 PAR</b><small>+ medias de regalo</small></span>
+              <span class="pr"><s>$169.900</s><b>$109.900</b></span>
+            </button>
+            <button type="button" class="pack sel" data-pack="2">
+              <span class="ribbon">⭐ MÁS VENDIDO — MEJOR PRECIO POR PAR</span>
+              <span class="radio"></span>
+              <span class="name"><b>2 PARES</b><small>$74.950 c/u + medias de regalo</small><br><span class="save">✓ AHORRAS $69.900</span></span>
+              <span class="pr"><s>$219.800</s><b>$149.900</b></span>
+            </button>
+          </div>
+          <div id="pairs"></div>
+        </div>
+
+        <div class="step">
+          <h3><i>2</i>INFORMACIÓN DE CONTACTO</h3>
+          <label class="f">Nombre completo</label><input class="i" name="nombre" autocomplete="name" required/>
+          <div class="row">
+            <div><label class="f">Celular</label><input class="i" name="celular" type="tel" inputmode="numeric" maxlength="10" placeholder="3001234567" required/></div>
+            <div><label class="f">Escribe tu celular de nuevo</label><input class="i" name="celular2" type="tel" inputmode="numeric" maxlength="10" placeholder="Para confirmar tu envío" required/></div>
+          </div>
+          <p class="hint" style="margin-top:10px">⚠️ Verifica bien tu celular — te contactamos por WhatsApp para confirmar el envío.</p>
+        </div>
+
+        <div class="step">
+          <h3><i>3</i>INFORMACIÓN DE ENTREGA</h3>
+          <div class="row">
+            <div><label class="f">Departamento</label><select class="i" name="departamento" id="dep" required></select></div>
+            <div><label class="f">Ciudad</label><input class="i" name="ciudad" placeholder="Ej: Medellín" required/></div>
+          </div>
+          <label class="f">Dirección completa</label><input class="i" name="direccion" placeholder="Calle, carrera, número, barrio, apto..." required/>
+        </div>
+
+        <div class="step">
+          <h3><i>4</i>PAGO CONTRAENTREGA</h3>
+          <div class="cod">💵 <b>PAGO CONTRAENTREGA</b> — Lo ves, lo recibes, y luego pagas.<br>Sin riesgo. Sin adelantos. Solo confianza.</div>
+        </div>
+
+        <div class="summary">
+          <div class="l"><span><b id="sumItems">2 pares</b><div class="items" id="sumDetail">Selecciona color y talla</div></span><span id="sumSub">$149.900</span></div>
+          <div class="l"><span>Medias de regalo</span><span class="free">GRATIS 🎁</span></div>
+          <div class="l"><span>Envío</span><span class="free">GRATIS ✈️</span></div>
+          <div class="l tot"><span>TOTAL A PAGAR AL RECIBIR</span><span id="sumTot">$149.900</span></div>
+        </div>
+
+        <div class="errbox" id="errBox"></div>
+        <button type="submit" class="btn full pulse" id="submitBtn">✅ LOS QUIERO AHORA — ASEGURAR MI PEDIDO 🔒</button>
+        <div class="size-g"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12a8 8 0 0 1 14-5M20 12a8 8 0 0 1-14 5"/><path d="M18 3v4h-4M6 21v-4h4"/></svg><span><b>¿No te quedó la talla?</b> Te la cambiamos gratis.</span></div>
+        <p class="order-foot">Envíos de 3 a 7 días hábiles · Te confirmamos por WhatsApp</p>
+      </form>
+
+      <div class="success" id="success">
+        <div class="ok">✓</div>
+        <h2>¡Pedido recibido! 🎉</h2>
+        <p>Tu pedido está registrado.<br>En las próximas horas te escribimos por WhatsApp para confirmar tu envío.</p>
+        <p><b>⚠️ Revisa tu WhatsApp — te contactamos pronto para confirmar.</b></p>
+        <a href="https://wa.link/v62tzv" class="btn" target="_blank">Escribir por WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="faq">
+  <div class="wrap">
+    <div class="center reveal"><h2 class="h-mix"><span class="s">PREGUNTAS</span><span class="i">frecuentes</span></h2></div>
+    <div class="faq-list">
+      <div class="q"><button type="button">¿Cómo pago?</button><div class="a">Pagas en efectivo cuando recibes tus tenis en la puerta de tu casa. No tienes que adelantar ni un peso.</div></div>
+      <div class="q"><button type="button">¿Cuánto tarda en llegar?</button><div class="a">Entre 3 y 7 días hábiles según tu ciudad. El envío es gratis a toda Colombia y te confirmamos por WhatsApp.</div></div>
+      <div class="q"><button type="button">¿Qué pasa si no me queda la talla?</button><div class="a">Te la cambiamos gratis. Solo escríbenos por WhatsApp y coordinamos el cambio sin complicaciones.</div></div>
+      <div class="q"><button type="button">¿Qué tal es la calidad?</button><div class="a">Materiales premium, costuras reforzadas y suela antideslizante. Además tienes garantía extendida por despegado de suela o costuras, con envío de garantía por nuestra cuenta.</div></div>
+      <div class="q"><button type="button">¿Puedo pedir dos colores diferentes en el combo?</button><div class="a">Sí. En el combo de 2 pares eliges el color y la talla de cada par por separado.</div></div>
+      <div class="q"><button type="button">¿Las medias de regalo vienen en todos los pedidos?</button><div class="a">Sí, todos los pedidos realizados hoy incluyen medias de regalo.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="trustbar">
+  <div class="wrap grid">
+    <div class="item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l8 3v6c0 5-3.5 9-8 11-4.5-2-8-6-8-11V5z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>Calidad premium</div>
+    <div class="item"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 12h20v14H3zM23 17h7l5 5v4H23"/><circle cx="10" cy="29" r="3"/><circle cx="29" cy="29" r="3"/></svg>Envío gratis</div>
+    <div class="item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="3"/></svg>Pago al recibir</div>
+    <div class="item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Compra segura</div>
+  </div>
+</section>
+
+<footer><span class="s">Mereces brillar en cada paso</span><b>LAKSMI BOOM</b>© 2026 · Todos los derechos reservados</footer>
+
+<div class="sticky" id="sticky">
+  <div class="p"><s>$169.900</s><b>$109.900</b></div>
+  <a href="#pedido" class="btn">Pedir · Pago al recibir</a>
+</div>
+<a class="wa" href="https://wa.link/v62tzv" target="_blank" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.136.563 4.14 1.542 5.873L.057 23.882l6.174-1.618A11.935 11.935 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.012-1.372l-.36-.214-3.664.961.977-3.572-.234-.372A9.818 9.818 0 012.182 12c0-5.42 4.398-9.818 9.818-9.818 5.42 0 9.818 4.398 9.818 9.818 0 5.42-4.398 9.818-9.818 9.818z"/></svg></a>
+
+<script>
+/* ============ CONFIGURACIÓN (tus datos actuales) ============ */
+const SCRIPT_URL='https://script.google.com/macros/s/AKfycbwFOe4vxQkRXBIMxfuGf9_iz7z2erp6EM9ChrHd1xByA60FzSfr9I0ESK2JFqEp7Nw0/exec';
+const COLORES=[
+  {color:'Negra / Roja',img:'/img/negra-roja.jpg',gender:'CABALLERO & UNISEX'},
+  {color:'Negra / Blanca Panda',img:'/img/PANDA.jpg',gender:'CABALLERO & UNISEX'},
+  {color:'Negra Suela Cristal',img:'/img/cristal.jpg',gender:'CABALLERO & UNISEX'},
+  {color:'Oro Rosa',img:'/img/rosada.jpg',gender:'DAMA'},
+  {color:'Azul Cielo Holográfica',img:'/img/azul.jpg',gender:'DAMA'},
+  {color:'Dorada',img:'/img/dorada.jpg',gender:'DAMA'},
+];
+const TALLAS=[33,34,35,36,37,38,39,40,41,42];
+const PRECIOS={1:109900,2:149900};
+const DEPTOS=["Amazonas","Antioquia","Arauca","Atlántico","Bogotá D.C.","Bolívar","Boyacá","Caldas","Caquetá","Casanare","Cauca","Cesar","Chocó","Córdoba","Cundinamarca","Guainía","Guaviare","Huila","La Guajira","Magdalena","Meta","Nariño","Norte de Santander","Putumayo","Quindío","Risaralda","San Andrés y Providencia","Santander","Sucre","Tolima","Valle del Cauca","Vaupés","Vichada"];
+
+const $=s=>document.querySelector(s), $$=s=>document.querySelectorAll(s);
+const fmt=n=>'$'+n.toLocaleString('es-CO');
+const track=(...a)=>{try{fbq(...a)}catch(e){}};
+let qty=2, sel={};
+
+/* Tarjetas de color */
+const card=c=>`<div class="ccard reveal" data-color="${c.color}"><img src="${c.img}" alt="${c.color}"/><div class="info"><div class="tag">${c.gender}</div><h4>${c.color}</h4><button type="button" class="btn pick">Elegir este color</button></div></div>`;
+$('#cardsH').innerHTML=COLORES.filter(c=>c.gender!=='DAMA').map(card).join('');
+$('#cardsD').innerHTML=COLORES.filter(c=>c.gender==='DAMA').map(card).join('');
+
+/* Departamentos */
+$('#dep').innerHTML='<option value="">Selecciona</option>'+DEPTOS.map(d=>`<option>${d}</option>`).join('');
+
+/* Galería */
+$$('#thumbs img').forEach(t=>t.addEventListener('click',()=>{
+  const m=$('#mainImg');m.style.opacity=0;
+  setTimeout(()=>{m.src=t.src;m.style.opacity=1},150);
+  $$('#thumbs img').forEach(x=>x.classList.remove('active'));t.classList.add('active');
+}));
+
+/* Contador hasta medianoche */
+function tick(){
+  if(!$('#h'))return;
+  const n=new Date(),e=new Date(n);e.setHours(24,0,0,0);
+  const d=Math.max(0,Math.floor((e-n)/1000));
+  $('#h').textContent=String(Math.floor(d/3600)).padStart(2,'0');
+  $('#m').textContent=String(Math.floor(d%3600/60)).padStart(2,'0');
+  $('#s').textContent=String(d%60).padStart(2,'0');
+}
+tick();setInterval(tick,1000);
+
+/* Pares: color + talla */
+function buildPairs(){
+  let h='';
+  for(let i=1;i<=qty;i++){
+    const s=sel[i]||{};
+    h+=`<div class="pair" data-p="${i}">
+      <div class="pair-title">${qty===2?'PAR '+i:'TU PAR'} — COLOR Y TALLA</div>
+      <div class="pair-micro">${i===1?'Elige tu color… tu instinto suele acertar.':'Selecciona tu talla habitual… y listo.'}</div>
+      <div class="copts">${COLORES.map(c=>`<button type="button" class="copt ${s.color===c.color?'on':''}" data-c="${c.color}"><img src="${c.img}" alt=""/><span><small>${c.gender}</small>${c.color}</span></button>`).join('')}</div>
+      <div class="sz-label">Talla ${qty===2?'par '+i:''}</div>
+      <div class="szs">${TALLAS.map(t=>`<button type="button" class="sz ${s.talla==t?'on':''}" data-t="${t}">${t}</button>`).join('')}</div>
+    </div>`;
+  }
+  $('#pairs').innerHTML=h;
+}
+$('#pairs').addEventListener('click',e=>{
+  const b=e.target.closest('.copt,.sz');if(!b)return;
+  const p=+b.closest('.pair').dataset.p;sel[p]=sel[p]||{};
+  if(b.classList.contains('copt'))sel[p].color=b.dataset.c;else sel[p].talla=b.dataset.t;
+  b.parentElement.querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));
+  updateSummary();
+});
+
+function setQty(n){
+  qty=n;
+  $$('.pack').forEach(x=>x.classList.toggle('sel',+x.dataset.pack===n));
+  buildPairs();updateSummary();
+}
+$$('.pack').forEach(x=>x.addEventListener('click',()=>setQty(+x.dataset.pack)));
+
+function updateSummary(){
+  $('#sumItems').textContent=qty===2?'2 pares':'1 par';
+  const lines=[];
+  for(let i=1;i<=qty;i++){const s=sel[i]||{};if(s.color)lines.push(`${qty===2?'Par '+i+': ':''}${s.color}${s.talla?' · Talla '+s.talla:''}`)}
+  $('#sumDetail').innerHTML=lines.length?lines.join('<br>'):'Selecciona color y talla';
+  $('#sumSub').textContent=$('#sumTot').textContent=fmt(PRECIOS[qty]);
+}
+
+/* "Elegir este color" → llena el par y baja al formulario */
+$$('.pick').forEach(b=>b.addEventListener('click',()=>{
+  const cardEl=b.closest('.ccard'),c=cardEl.dataset.color;
+  $$('.ccard').forEach(x=>x.classList.toggle('sel',x===cardEl));
+  const target=(qty===2&&sel[1]&&sel[1].color&&sel[1].color!==c&&!(sel[2]&&sel[2].color))?2:1;
+  sel[target]=sel[target]||{};sel[target].color=c;
+  buildPairs();updateSummary();
+  track('track','AddToCart',{content_name:'Jordan Retro 1',content_category:c,currency:'COP',value:PRECIOS[qty]});
+  $('#pedido').scrollIntoView({behavior:'smooth'});
+}));
+
+/* InitiateCheckout: la primera vez que tocan el formulario */
+let ic=false;
+$('#orderForm').addEventListener('focusin',()=>{if(!ic){ic=true;track('track','InitiateCheckout',{content_name:'Jordan Retro 1',currency:'COP',value:PRECIOS[qty],num_items:qty})}});
+
+/* Envío del pedido → mismo Google Sheet de siempre */
+function showErr(msg,el){
+  const box=$('#errBox');box.textContent=msg;box.style.display='block';
+  (el||box).scrollIntoView({behavior:'smooth',block:'center'});
+}
+$('#orderForm').addEventListener('submit',async e=>{
+  e.preventDefault();
+  const f=e.target;$('#errBox').style.display='none';
+  f.querySelectorAll('.i').forEach(x=>x.classList.remove('err'));
+
+  for(let i=1;i<=qty;i++){
+    const s=sel[i]||{};
+    if(!s.color||!s.talla)return showErr(`Por favor selecciona color y talla del ${qty===2?'PAR '+i:'par'}.`,$(`.pair[data-p="${i}"]`));
+  }
+  const empty=[...f.querySelectorAll('[required]')].filter(x=>!x.value.trim());
+  if(empty.length){empty.forEach(x=>x.classList.add('err'));return showErr('Completa todos tus datos de contacto y entrega.',empty[0])}
+  const c1=f.celular.value.replace(/\D/g,''),c2=f.celular2.value.replace(/\D/g,'');
+  if(c1.length!==10){f.celular.classList.add('err');return showErr('Tu celular debe tener 10 dígitos.',f.celular)}
+  if(c1!==c2){f.celular2.classList.add('err');return showErr('Los celulares no coinciden. Verifica e intenta de nuevo.',f.celular2)}
+
+  const btn=$('#submitBtn');btn.disabled=true;btn.textContent='⏳ Enviando pedido...';
+  const data={nombre:f.nombre.value.trim(),celular:c1,departamento:f.departamento.value,ciudad:f.ciudad.value.trim(),direccion:f.direccion.value.trim(),qty:qty,total:fmt(PRECIOS[qty]),landing:'v2'};
+  for(let i=1;i<=qty;i++){data['color'+i]=sel[i].color;data['talla'+i]=sel[i].talla}
+  try{await fetch(SCRIPT_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)})}catch(err){console.log('no-cors:',err)}
+
+  f.style.display='none';$('#success').style.display='block';
+  $('#pedido').scrollIntoView({behavior:'smooth'});
+  track('track','Purchase',{content_name:'Jordan Retro 1',currency:'COP',value:PRECIOS[qty],num_items:qty});
+});
+
+/* FAQ */
+$$('.q button').forEach(b=>b.addEventListener('click',()=>b.parentElement.classList.toggle('open')));
+
+/* Botón fijo móvil: aparece después del hero, se oculta en el formulario */
+const sticky=$('#sticky');
+function stickyCheck(){
+  const heroGone=$('.hero').getBoundingClientRect().bottom<0;
+  const r=$('#pedido').getBoundingClientRect();
+  sticky.classList.toggle('show',heroGone&&!(r.top<innerHeight&&r.bottom>0));
+}
+addEventListener('scroll',stickyCheck,{passive:true});stickyCheck();
+
+/* Animaciones de entrada */
+const io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}}),{threshold:.12});
+$$('.reveal').forEach(el=>io.observe(el));
+
+setQty(2);
+</script>
+</body>
+</html>

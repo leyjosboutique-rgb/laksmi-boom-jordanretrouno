@@ -397,6 +397,20 @@ footer{background:var(--negro);color:#777}
 .thumbs button{padding:0;border:2px solid transparent;border-radius:10px;overflow:hidden;background:#fff;box-shadow:0 3px 10px rgba(17,17,17,.1);aspect-ratio:1;opacity:.6;transition:opacity .2s,border-color .2s}
 .thumbs button.on{border-color:var(--negro);opacity:1}
 .thumbs img{width:100%;height:100%;object-fit:cover;display:block}
+
+/* Sin logo: el titular arranca pegado al ticker */
+section.hero-top,.page>section:first-of-type{padding-top:18px}
+
+/* Íconos a color (se ven igual en todos los celulares) */
+.ship div{display:flex;flex-direction:column;align-items:center;gap:6px;padding:18px 8px 16px}
+.ship div b{font-size:14px;letter-spacing:.05em}
+.ship div small{font-size:11.5px;font-weight:600;color:#bdbdbd;letter-spacing:0}
+.ico-c{width:54px;height:54px;border-radius:50%;display:flex!important;align-items:center;justify-content:center;font-size:0!important;margin:0!important;box-shadow:0 6px 16px rgba(0,0,0,.35)}
+.ico-c svg{width:28px;height:28px}
+.ico-y{background:linear-gradient(145deg,#ffe24d,#ffb800);color:#111}
+.ico-g{background:linear-gradient(145deg,#2ee07a,#139a45);color:#fff}
+.co{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap}
+.flag-co{display:inline-block;width:24px;height:16px;border-radius:3px;flex:none;box-shadow:0 1px 3px rgba(0,0,0,.25);background:linear-gradient(180deg,#fcd116 0 50%,#003893 50% 75%,#ce1126 75% 100%)}
 </style>
 </head>
 <body>
@@ -404,7 +418,7 @@ footer{background:var(--negro);color:#777}
 
 <!-- 1. BARRA DE PAGO -->
 <div class="ticker"><span>🚚 ENVÍO GRATIS A TODA COLOMBIA &nbsp;·&nbsp; 💵 PAGO CONTRAENTREGA &nbsp;·&nbsp; 🎁 OBSEQUIO ESPECIAL EN TU PEDIDO &nbsp;·&nbsp; 🔁 CAMBIO DE TALLA GRATIS &nbsp;·&nbsp; 🔥 40% OFF SOLO HOY</span></div>
-<div class="logo">LAKSMI<small>BOOM</small></div>
+
 
 <!-- PÁGINA DE GRACIAS (se muestra al finalizar el pedido) -->
 <div id="thanks" class="thanks" style="display:none"></div>
@@ -442,10 +456,10 @@ footer{background:var(--negro);color:#777}
 </div>
 <section>
   <div class="ship">
-    <div><span>✈️</span>ENVÍO GRATIS</div>
-    <div><span>📦</span>CONTRAENTREGA</div>
+    <div><span class="ico-c ico-y"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 6h13v10H1zM14 10h4l4 4v2h-8"/><circle cx="5.5" cy="17.5" r="2"/><circle cx="17.5" cy="17.5" r="2"/></svg></span><b>ENVÍO GRATIS</b><small>A toda Colombia</small></div>
+    <div><span class="ico-c ico-g"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2.6"/><path d="M6 10v4M18 10v4"/></svg></span><b>CONTRAENTREGA</b><small>Pagas al recibir</small></div>
   </div>
-  <div class="co">🇨🇴 Llegamos a toda Colombia en 3 a 7 días hábiles</div>
+  <div class="co"><span class="flag-co" aria-hidden="true"></span><span>Llegamos a toda Colombia en <b>3 a 7 días hábiles</b></span></div>
   <a href="#pedido" class="cta"><b>APROVECHA ESTA OFERTA AQUÍ</b><small>🤩 ¡VÁLIDA SOLO POR HOY! 🤩</small></a>
 </section>
 
@@ -466,16 +480,10 @@ footer{background:var(--negro);color:#777}
   <div class="testi"><img src="/img/testimonios.webp" alt="Testimonios de clientes" loading="lazy"/></div>
 </section>
 
-<!-- 9. MEDIOS DE PAGO -->
-<section>
-  <h2 class="t2">😎 Medios de pago disponibles 😎</h2>
-  <div class="pay-grid">
-    <div class="pay"><span>💵</span><b>Contraentrega</b><small>Pagas en efectivo al recibir</small></div>
-    <div class="pay"><span>📱</span><b>Nequi</b><small>Transferencia</small></div>
-    <div class="pay"><span>🏦</span><b>Bancolombia</b><small>Transferencia</small></div>
-  </div>
-  <div class="pay-promo">🎉 RECIBE <b>$10.000 DE DESCUENTO EXTRA</b> pagando por adelantado con Nequi o Bancolombia</div>
-</section>
+<!-- 9. MEDIOS DE PAGO (imagen) -->
+<div class="banner-v">
+  <img src="/img/medios-pago.webp" alt="Medios de pago disponibles: contraentrega, Nequi y Bancolombia. Recibe $10.000 de descuento extra pagando por adelantado" width="1024" height="1536" loading="lazy"/>
+</div>
 
 <!-- 10. LO QUE OBTIENES (con banner de plantilla) -->
 <div class="banner plantilla">

@@ -391,6 +391,12 @@ footer{background:var(--negro);color:#777}
 .slides img{aspect-ratio:2/3!important;object-fit:contain;background:#fff}
 .slides img:first-child{object-fit:cover}
 .carousel .badge40{right:14px;left:auto}
+
+/* Miniaturas del carrusel (reemplazan los puntos y "Desliza") */
+.thumbs{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:10px}
+.thumbs button{padding:0;border:2px solid transparent;border-radius:10px;overflow:hidden;background:#fff;box-shadow:0 3px 10px rgba(17,17,17,.1);aspect-ratio:1;opacity:.6;transition:opacity .2s,border-color .2s}
+.thumbs button.on{border-color:var(--negro);opacity:1}
+.thumbs img{width:100%;height:100%;object-fit:cover;display:block}
 </style>
 </head>
 <body>
@@ -411,8 +417,7 @@ footer{background:var(--negro);color:#777}
     <div class="slides" id="slides"></div>
     <div class="badge40">-40%<small>HOY</small></div>
   </div>
-  <div class="dots" id="dots"></div>
-  <div class="swipe">Desliza ➡️</div>
+  <div class="thumbs" id="thumbs"></div>
 
   <!-- 4. PRECIO -->
   <div class="promo card">
@@ -659,8 +664,9 @@ tick();setInterval(tick,1000);
 
 /* Carrusel */
 $('#slides').innerHTML=CARRUSEL.map(s=>`<img src="${s}" alt="Tenis Laksmi Boom" loading="lazy"/>`).join('');
-$('#dots').innerHTML=CARRUSEL.map((_,i)=>`<i class="${i?'':'on'}"></i>`).join('');
-$('#slides').addEventListener('scroll',e=>{const i=Math.round(e.target.scrollLeft/e.target.clientWidth);$$('#dots i').forEach((d,j)=>d.classList.toggle('on',i===j))},{passive:true});
+$('#thumbs').innerHTML=CARRUSEL.map((src,i)=>`<button type="button" class="${i?'':'on'}" data-i="${i}" aria-label="Ver foto ${i+1}"><img src="${src}" alt="" loading="lazy"/></button>`).join('');
+$$('#thumbs button').forEach(b=>b.addEventListener('click',()=>{const sl=$('#slides');sl.scrollTo({left:+b.dataset.i*sl.clientWidth,behavior:'smooth'})}));
+$('#slides').addEventListener('scroll',e=>{const i=Math.round(e.target.scrollLeft/e.target.clientWidth);$$('#thumbs button').forEach((d,j)=>d.classList.toggle('on',i===j))},{passive:true});
 
 /* Colores */
 $('#colors').innerHTML=COLORES_ORD.map(c=>`<a class="col" href="#pedido" data-c="${c.color}"><img src="${c.img}" alt="${c.color}" loading="lazy"/><small>${c.g==='DAMA'?'DAMA':'UNISEX'}</small><span>${c.color}</span></a>`).join('');

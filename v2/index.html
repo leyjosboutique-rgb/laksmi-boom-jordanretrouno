@@ -70,6 +70,20 @@ header{position:sticky;top:0;z-index:60;background:var(--negro);border-bottom:1p
 .logo small{display:block;font-size:8px;letter-spacing:.55em;text-align:center;margin-top:3px}
 .nav .btn{padding:11px 20px;font-size:11px;border-radius:40px}
 
+/* HERO BANNER + OFERTA */
+.hero-banner{position:relative;background:var(--negro);line-height:0}
+.hero-banner img{width:100%;height:auto;display:block}
+.hero-banner .hero-cta{position:absolute;left:5%;bottom:7%;line-height:1;padding:18px 34px;font-size:15px;box-shadow:0 10px 30px rgba(0,0,0,.45)}
+.offer-hero{padding:34px 0 44px}
+.offer-wrap{max-width:640px}
+.offer-hero .chips{justify-content:center}
+.offer-hero .countdown{justify-content:center}
+@media (max-width:700px){
+  .hero-banner .hero-cta{left:4%;bottom:6%;padding:9px 13px;font-size:10px;gap:6px;border-radius:6px}
+  .hero-banner .hero-cta svg{width:11px;height:11px}
+  .offer-hero{padding:24px 0 36px}
+}
+
 /* HERO */
 .hero{background:var(--negro);color:#fff;padding:40px 0 50px;position:relative;overflow:hidden}
 .hero::before{content:"";position:absolute;right:-200px;top:-200px;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(201,166,120,.16),transparent 70%)}
@@ -303,50 +317,33 @@ footer b{display:block;color:var(--dorado);font-family:var(--f-serif);font-weigh
   </div>
 </header>
 
-<!-- ================= HERO ================= -->
-<section class="hero">
-  <div class="wrap grid">
-    <div>
-      <div class="eyebrow">Edición limitada · Retro High</div>
-      <h1>
-        <span class="a">NO ES CASUALIDAD</span>
-        <span class="b">que todos miren</span>
-        <span class="b">estos tenis…</span>
-      </h1>
-      <p class="sub">Cuando los ves puestos… entiendes por qué.</p>
-      <div class="chips">
-        <span class="chip hot">🔥 40% OFF HOY</span>
-        <span class="chip">✈️ Envío gratis</span>
-        <span class="chip">💵 Pagas al recibir</span>
-      </div>
+<!-- ================= HERO (banner a todo el ancho) ================= -->
+<section class="hero-banner">
+  <img src="/img/hero2.webp" alt="Tu estilo habla antes que tú — Laksmi Boom" width="1672" height="941"/>
+  <a href="#pedido" class="btn pulse hero-cta">Quiero los míos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+</section>
 
-      <div class="price-box">
-        <div class="price-line"><span class="old">Antes $169.900</span><span class="now">$109.900</span><span class="off">-40% SOLO HOY</span></div>
-        <div class="combo-line">🔥 2 PARES SOLO <b>$149.900</b><em>Uno para ti… y el otro ya sabes para quién.</em></div>
-        <div class="gift-line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="9" width="18" height="12" rx="1"/><path d="M3 13h18M12 9v12M12 9C9 3 5 5 7.5 8.5M12 9c3-6 7-4 4.5-.5"/></svg><span><b>+ MEDIAS DE REGALO</b> en todos los pedidos de hoy</span></div>
-      </div>
-
-      <div class="countdown">⏳ El descuento termina en:
-        <div class="cd"><span><i id="h">00</i><small>HRS</small></span><span><i id="m">00</i><small>MIN</small></span><span><i id="s">00</i><small>SEG</small></span></div>
-      </div>
-
-      <a href="#pedido" class="btn full pulse">✈️ Asegurar mis tenis ahora <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      <div class="mini-trust">✔ Sin adelantos · ✔ Pago contraentrega · ✔ Cambio de talla gratis</div>
+<!-- ================= OFERTA ================= -->
+<section class="hero offer-hero">
+  <div class="wrap offer-wrap">
+    <div class="chips">
+      <span class="chip hot">🔥 40% OFF HOY</span>
+      <span class="chip">✈️ Envío gratis</span>
+      <span class="chip">💵 Pagas al recibir</span>
     </div>
 
-    <div class="gallery-wrap">
-      <div class="main-img">
-        <div class="stamp"><b>-40%</b><small>SOLO HOY</small></div>
-        <img id="mainImg" src="/img/hero2.webp" alt="Tu estilo habla antes que tú — Laksmi Boom"/>
-        <a href="#pedido" class="btn pulse hero-cta">Quiero los míos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      </div>
-      <div class="thumbs" id="thumbs">
-        <img src="/img/hero2.webp" class="active" alt=""/>
-        <img src="/img/mini1.jpg" alt=""/>
-        <img src="/img/mini2.jpg" alt=""/>
-        <img src="/img/mini3.jpg" alt=""/>
-      </div>
+    <div class="price-box">
+      <div class="price-line"><span class="old">Antes $169.900</span><span class="now">$109.900</span><span class="off">-40% SOLO HOY</span></div>
+      <div class="combo-line">🔥 2 PARES SOLO <b>$149.900</b><em>Uno para ti… y el otro ya sabes para quién.</em></div>
+      <div class="gift-line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="9" width="18" height="12" rx="1"/><path d="M3 13h18M12 9v12M12 9C9 3 5 5 7.5 8.5M12 9c3-6 7-4 4.5-.5"/></svg><span><b>+ MEDIAS DE REGALO</b> en todos los pedidos de hoy</span></div>
     </div>
+
+    <div class="countdown">⏳ El descuento termina en:
+      <div class="cd"><span><i id="h">00</i><small>HRS</small></span><span><i id="m">00</i><small>MIN</small></span><span><i id="s">00</i><small>SEG</small></span></div>
+    </div>
+
+    <a href="#pedido" class="btn full pulse">✈️ Asegurar mis tenis ahora <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <div class="mini-trust">✔ Sin adelantos · ✔ Pago contraentrega · ✔ Cambio de talla gratis</div>
   </div>
 </section>
 

@@ -231,7 +231,7 @@ header{position:sticky;top:0;z-index:60;background:var(--negro);border-bottom:1p
 .ccard{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 8px 24px rgba(60,40,20,.07);transition:transform .25s,box-shadow .25s;border:2px solid transparent}
 .ccard:hover{transform:translateY(-4px);box-shadow:0 16px 34px rgba(60,40,20,.14)}
 .ccard.sel{border-color:var(--negro)}
-.ccard img{width:100%;aspect-ratio:1;object-fit:cover;background:#f3ece3}
+.ccard img{width:100%;aspect-ratio:4/5;object-fit:contain;background:#fff;padding:6px}
 .ccard .info{padding:14px 16px 16px}
 .ccard .tag{font-size:10px;letter-spacing:.14em;color:var(--cafe);font-weight:700}
 .ccard h4{font-family:var(--f-titulo);font-weight:500;font-size:19px;margin:4px 0 12px;letter-spacing:.02em}
@@ -294,7 +294,7 @@ td:first-child{font-weight:700}
 .pair-micro{font-size:12px;font-style:italic;color:var(--gris);margin:3px 0 12px}
 .copts{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .copt{display:flex;align-items:center;gap:10px;border:2px solid #e5ddd2;border-radius:10px;padding:7px;background:#fff;cursor:pointer;text-align:left;transition:border-color .2s;color:var(--texto)}
-.copt img{width:46px;height:46px;object-fit:cover;border-radius:6px;flex:none;background:#f3ece3}
+.copt img{width:46px;height:52px;object-fit:contain;border-radius:6px;flex:none;background:#fff;border:1px solid #eee}
 .copt span{font-size:12px;font-weight:700;line-height:1.25}
 .copt small{display:block;font-size:9px;font-weight:800;color:var(--cafe);letter-spacing:.06em}
 .copt.on{border-color:var(--negro);background:#faf6f0}
@@ -674,12 +674,12 @@ footer b{display:block;color:var(--dorado);font-family:var(--f-serif);font-weigh
 /* ============ CONFIGURACIÓN (tus datos actuales) ============ */
 const SCRIPT_URL='https://script.google.com/macros/s/AKfycbwFOe4vxQkRXBIMxfuGf9_iz7z2erp6EM9ChrHd1xByA60FzSfr9I0ESK2JFqEp7Nw0/exec';
 const COLORES=[
-  {color:'Negra / Roja',img:'/img/negra-roja.jpg',gender:'CABALLERO & UNISEX'},
-  {color:'Negra / Blanca Panda',img:'/img/PANDA.jpg',gender:'CABALLERO & UNISEX'},
-  {color:'Negra Suela Cristal',img:'/img/cristal.jpg',gender:'CABALLERO & UNISEX'},
-  {color:'Oro Rosa',img:'/img/rosada.jpg',gender:'DAMA'},
-  {color:'Azul Cielo Holográfica',img:'/img/azul.jpg',gender:'DAMA'},
-  {color:'Dorada',img:'/img/dorada.jpg',gender:'DAMA'},
+  {color:'Negra / Roja',img:'/img/color-negra-roja.webp',gender:'CABALLERO & UNISEX'},
+  {color:'Negra / Blanca Panda',img:'/img/color-panda.webp',gender:'CABALLERO & UNISEX'},
+  {color:'Negra Suela Cristal',img:'/img/color-cristal.webp',gender:'CABALLERO & UNISEX'},
+  {color:'Oro Rosa',img:'/img/color-oro-rosa.webp',gender:'DAMA'},
+  {color:'Azul Cielo Holográfica',img:'/img/color-azul.webp',gender:'DAMA'},
+  {color:'Dorada',img:'/img/color-dorada.webp',gender:'DAMA'},
 ];
 const TALLAS=[33,34,35,36,37,38,39,40,41,42];
 const PRECIOS={1:109900,2:189900};

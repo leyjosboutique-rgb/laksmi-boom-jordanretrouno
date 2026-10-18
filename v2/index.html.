@@ -337,11 +337,11 @@ footer b{display:block;color:var(--dorado);font-family:var(--f-serif);font-weigh
     <div class="gallery-wrap">
       <div class="main-img">
         <div class="stamp"><b>-40%</b><small>SOLO HOY</small></div>
-        <img id="mainImg" src="/img/hero.jpg" alt="Tu estilo habla antes que tú — Laksmi Boom"/>
+        <img id="mainImg" src="/img/hero2.webp" alt="Tu estilo habla antes que tú — Laksmi Boom"/>
         <a href="#pedido" class="btn pulse hero-cta">Quiero los míos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </div>
       <div class="thumbs" id="thumbs">
-        <img src="/img/hero.jpg" class="active" alt=""/>
+        <img src="/img/hero2.webp" class="active" alt=""/>
         <img src="/img/mini1.jpg" alt=""/>
         <img src="/img/mini2.jpg" alt=""/>
         <img src="/img/mini3.jpg" alt=""/>

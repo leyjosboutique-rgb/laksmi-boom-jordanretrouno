@@ -201,7 +201,6 @@ select.in{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
 .guar{text-align:center}
 .seal{width:84px;height:84px;margin:0 auto 10px;border-radius:50%;background:var(--amarillo);display:flex;align-items:center;justify-content:center;font-size:40px}
 .guar p{font-size:14px;line-height:1.5;margin-top:6px}
-
 /* ===== PÁGINA DE GRACIAS ===== */
 body.done .page>*:not(.ticker):not(.logo):not(#thanks){display:none!important}
 body.done .sticky,body.done .wa-f{display:none!important}
@@ -240,7 +239,6 @@ footer{text-align:center;font-size:11px;color:var(--gris);padding:18px 16px}
 .sticky small{font-size:12px;font-weight:700}
 .wa-f{position:fixed;right:14px;bottom:86px;z-index:49;width:54px;height:54px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,.25)}
 .wa-f svg{width:30px;fill:#fff}
-
 /* ================================================================
    PULIDO ESTÉTICO — mismos colores probados (verde · rojo · amarillo · negro · blanco)
    ================================================================ */
@@ -356,55 +354,37 @@ footer{background:var(--negro);color:#777}
 .th-btn{border-radius:14px;background:linear-gradient(180deg,#1fb757,#15963f)}
 .th-btn.sec{background:#fff}
 
-/* ===== ELEMENTOS DE LA V2 (banners, contador, garantías, FAQ) ===== */
-.hero-banner{position:relative;line-height:0;background:#000}
-.hero-banner img{width:100%;height:auto}
-.hero-cta{position:absolute;left:4%;bottom:6%;line-height:1;background:linear-gradient(180deg,#1fb757,#15963f);color:#fff;font-weight:900;font-size:12px;letter-spacing:.04em;padding:10px 14px;border-radius:10px;box-shadow:0 8px 20px rgba(0,0,0,.4);animation:pulse 2s infinite}
-.countdown{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:14px;font-size:13px;font-weight:700}
-.cd{display:flex;gap:6px}
-.cd span{background:var(--negro);color:#fff;font-family:var(--f-t);font-weight:700;font-size:20px;min-width:46px;text-align:center;padding:6px 4px 4px;border-radius:8px;line-height:1.05}
-.cd span i{font-style:normal}
-.cd span small{display:block;font-family:var(--f);font-size:8px;font-weight:800;letter-spacing:.06em;color:#ffd400}
-.banner{line-height:0;background:#e9e0d4}
-.banner.plantilla{background:#0d0c0b}
-.b-full{width:100%;height:auto;display:block}
-.b-crops{display:none}
-.b-crop{background-repeat:no-repeat;width:100%}
-.elige .b-crop{background-image:url(/img/elige-par.webp)}
-.plantilla .b-crop{background-image:url(/img/plantilla.webp)}
-.el-a{aspect-ratio:800/941;background-size:209% auto;background-position:0% 0}
-.el-b{aspect-ratio:872/941;background-size:191.74% auto;background-position:100% 0}
-.pl-a{aspect-ratio:1060/667;background-size:188.68% auto;background-position:0% 0}
-.pl-c{aspect-ratio:940/667;background-size:212.77% auto;background-position:100% 0}
-@media (max-width:520px){.b-full{display:none}.b-crops{display:block}}
-.t2 em{font-style:normal;color:var(--rojo)}
-.guarantees{background:var(--negro);color:#fff}
-.guarantees .t2{color:#fff}
-.g-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}
-.g{background:#1c1c1c;border:1px solid #2c2c2c;border-radius:14px;padding:16px 12px;text-align:center}
-.g.star{border-color:#ffd400;background:#221f10}
-.g-ico{font-size:28px;margin-bottom:6px}
-.g h4{font-family:var(--f-t);font-weight:600;font-size:16px;line-height:1.15;text-transform:uppercase;margin-bottom:6px}
-.g p{font-size:12.5px;color:#bbb;line-height:1.45}
-.faq-list{margin-top:18px;background:#fff;border-radius:16px;box-shadow:0 8px 24px rgba(17,17,17,.08);padding:4px 16px}
-.faq-list details{border-top:1px solid #eee;padding:14px 0}
-.faq-list details:first-child{border-top:0}
-.faq-list summary{font-weight:800;font-size:14.5px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:10px}
-.faq-list summary::after{content:"+";color:var(--rojo);font-size:20px;line-height:1}
-.faq-list details[open] summary::after{content:"–"}
-.faq-list p{margin-top:8px;font-size:14px;line-height:1.55;color:#444}
-
-/* Fecha y obsequio especial */
+/* ===== Mejoras: fecha, obsequio, temporizador, medios de pago, pago anticipado, banners ===== */
 .hoy-fecha{display:inline-block;background:var(--rojo);color:#fff;border-radius:8px;padding:5px 12px;margin-bottom:6px;font-size:14px;letter-spacing:.06em}
 .gift{display:flex!important;align-items:center;gap:12px;text-align:left;background:linear-gradient(135deg,#fff6cc,#ffe680)!important;border:0!important;border-radius:14px!important;padding:14px!important;box-shadow:0 8px 20px rgba(230,184,0,.25);font-weight:600!important;font-size:13px!important;line-height:1.4}
 .gift b{display:block;font-family:var(--f-t);font-weight:700;font-size:17px;letter-spacing:.03em;color:var(--rojo);margin-bottom:2px}
 .gift-ico{font-size:34px;flex:none;animation:wiggle 2.4s infinite}
 @keyframes wiggle{0%,80%,100%{transform:rotate(0)}85%{transform:rotate(-12deg)}90%{transform:rotate(10deg)}95%{transform:rotate(-6deg)}}
-
-/* Imagen vertical Imagina + Elige tu par */
+.countdown{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:14px;font-size:13px;font-weight:700}
+.cd{display:flex;gap:6px}
+.cd span{background:var(--negro);color:#fff;font-family:var(--f-t);font-weight:700;font-size:20px;min-width:46px;text-align:center;padding:6px 4px 4px;border-radius:8px;line-height:1.05}
+.cd span i{font-style:normal}
+.cd span small{display:block;font-family:var(--f);font-size:8px;font-weight:800;letter-spacing:.06em;color:#ffd400}
+.pay-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}
+.pay{background:#fff;border-radius:14px;box-shadow:0 8px 24px rgba(17,17,17,.08);padding:14px 6px;text-align:center}
+.pay span{display:block;font-size:26px}
+.pay b{display:block;font-size:14px;margin-top:4px}
+.pay small{display:block;font-size:11px;color:var(--gris);margin-top:2px;line-height:1.3}
+.pay-promo{margin-top:14px;background:#effaf3;border:1.5px dashed var(--verde);border-radius:12px;padding:12px;text-align:center;font-size:14px;font-weight:700;line-height:1.4}
+.pay-promo b{color:var(--verde-osc)}
+.prepay{margin-top:16px;background:#f2fbf5;border:1.5px solid var(--verde);border-radius:14px;padding:14px;text-align:center}
+.prepay>b{display:block;font-size:15px}
+.prepay>span{display:block;font-size:13px;margin:4px 0 10px;line-height:1.4}
+#prepayBtn{width:100%;background:#fff;border:2px solid var(--verde);color:var(--verde-osc);font-weight:900;font-size:14px;padding:12px;border-radius:12px}
 .banner-v{line-height:0;background:#efe6da}
 .banner-v img{width:100%;height:auto;display:block}
-/* Si una foto de color aún no está subida, se muestra un recuadro limpio */
+.banner{line-height:0;background:#0d0c0b}
+.b-full{width:100%;height:auto;display:block}
+.b-crops{display:none}
+.b-crop{background-repeat:no-repeat;width:100%;background-image:url(/img/plantilla.webp)}
+.pl-a{aspect-ratio:1060/667;background-size:188.68% auto;background-position:0% 0}
+.pl-c{aspect-ratio:940/667;background-size:212.77% auto;background-position:100% 0}
+@media (max-width:520px){.b-full{display:none}.b-crops{display:block}}
 .col img,.copt img{background:#f4f4f4}
 </style>
 </head>
@@ -413,18 +393,22 @@ footer{background:var(--negro);color:#777}
 
 <!-- 1. BARRA DE PAGO -->
 <div class="ticker"><span>🚚 ENVÍO GRATIS A TODA COLOMBIA &nbsp;·&nbsp; 💵 PAGO CONTRAENTREGA &nbsp;·&nbsp; 🎁 OBSEQUIO ESPECIAL EN TU PEDIDO &nbsp;·&nbsp; 🔁 CAMBIO DE TALLA GRATIS &nbsp;·&nbsp; 🔥 40% OFF SOLO HOY</span></div>
-
+<div class="logo">LAKSMI<small>BOOM</small></div>
 
 <!-- PÁGINA DE GRACIAS (se muestra al finalizar el pedido) -->
 <div id="thanks" class="thanks" style="display:none"></div>
 
-<!-- 2. HERO BANNER (V2) con CTA encima -->
-<div class="hero-banner">
-  <img src="/img/hero2.webp" alt="Tu estilo habla antes que tú — Laksmi Boom" width="1672" height="941"/>
-  <a href="#pedido" class="hero-cta">QUIERO LOS MÍOS →</a>
-</div>
+<!-- 2-3. TITULAR + CARRUSEL -->
+<section style="border:0;padding-top:8px">
+  <h1 class="t1">No es casualidad que <span class="r">todos miren</span> estos tenis 👀</h1>
+  <div class="c"><span class="pill">🔥 DEL 40% DE DESCUENTO 🔥</span></div>
+  <div class="carousel">
+    <div class="slides" id="slides"></div>
+    <div class="badge40">-40%<small>HOY</small></div>
+  </div>
+  <div class="dots" id="dots"></div>
+  <div class="swipe">Desliza ➡️</div>
 
-<section style="padding-top:10px">
   <!-- 4. PRECIO -->
   <div class="promo card">
     <div class="hoy"><span class="hoy-fecha">SOLO HOY <span id="hoyFecha"></span></span><br>ESTA PROMOCIÓN 📣</div>
@@ -442,12 +426,16 @@ footer{background:var(--negro);color:#777}
   <div class="more">MÁS DETALLES ABAJO 👇🏻</div>
 </section>
 
-<!-- 6-7. IMAGINA + ELIGE TU PAR (imagen vertical) -->
+<!-- 6-7. ATRIBUTOS + IMAGINA + 1 PAR / 2 PARES (imagen vertical) -->
 <div class="banner-v">
-  <img src="/img/elige-par-v.webp" alt="Imagina estrenar unos tenis que elevan cualquier outfit. Elige tu par: 1 par $109.900, 2 pares $189.900, obsequio especial con tu compra" width="941" height="1672" loading="lazy"/>
+  <img src="/img/elige-par-v.webp" alt="Cómodos, combinan con todo, garantizados. Imagina estrenar unos tenis que elevan cualquier outfit. 1 par $109.900, 2 pares $189.900, obsequio especial" width="941" height="1672" loading="lazy"/>
 </div>
-<section style="padding-top:18px">
-  <div class="co">🇨🇴 Envío gratis y pago contraentrega en toda Colombia · 3 a 7 días hábiles</div>
+<section>
+  <div class="ship">
+    <div><span>✈️</span>ENVÍO GRATIS</div>
+    <div><span>📦</span>CONTRAENTREGA</div>
+  </div>
+  <div class="co">🇨🇴 Llegamos a toda Colombia en 3 a 7 días hábiles</div>
   <a href="#pedido" class="cta"><b>APROVECHA ESTA OFERTA AQUÍ</b><small>🤩 ¡VÁLIDA SOLO POR HOY! 🤩</small></a>
 </section>
 
@@ -455,12 +443,6 @@ footer{background:var(--negro);color:#777}
 <section class="alt">
   <div class="normal"><b>Tallas normales para tu tranquilidad</b>Ni muy grandes ni muy pequeños. Pide tu talla de siempre 👟</div>
 </section>
-
-<!-- 7b2. PLANTILLA ORTOPÉDICA (banner V2) -->
-<div class="banner plantilla">
-  <img class="b-full" src="/img/plantilla.webp" alt="Plantilla ortopédica: mayor comodidad, amortiguación, soporte y estabilidad, diseñada para uso diario" width="2172" height="724" loading="lazy"/>
-  <div class="b-crops" aria-hidden="true"><div class="b-crop pl-a"></div><div class="b-crop pl-c"></div></div>
-</div>
 
 <!-- 7c. COLORES -->
 <section>
@@ -474,7 +456,22 @@ footer{background:var(--negro);color:#777}
   <div class="testi"><img src="/img/testimonios.webp" alt="Testimonios de clientes" loading="lazy"/></div>
 </section>
 
-<!-- 10. LO QUE OBTIENES -->
+<!-- 9. MEDIOS DE PAGO -->
+<section>
+  <h2 class="t2">😎 Medios de pago disponibles 😎</h2>
+  <div class="pay-grid">
+    <div class="pay"><span>💵</span><b>Contraentrega</b><small>Pagas en efectivo al recibir</small></div>
+    <div class="pay"><span>📱</span><b>Nequi</b><small>Transferencia</small></div>
+    <div class="pay"><span>🏦</span><b>Bancolombia</b><small>Transferencia</small></div>
+  </div>
+  <div class="pay-promo">🎉 RECIBE <b>$10.000 DE DESCUENTO EXTRA</b> pagando por adelantado con Nequi o Bancolombia</div>
+</section>
+
+<!-- 10. LO QUE OBTIENES (con banner de plantilla) -->
+<div class="banner plantilla">
+  <img class="b-full" src="/img/plantilla.webp" alt="Plantilla ortopédica: mayor comodidad, amortiguación, soporte y estabilidad" width="2172" height="724" loading="lazy"/>
+  <div class="b-crops" aria-hidden="true"><div class="b-crop pl-a"></div><div class="b-crop pl-c"></div></div>
+</div>
 <section>
   <h2 class="t2">😎 Tenis de edición limitada 😎</h2>
   <p class="c" style="font-weight:800;margin-top:6px">CON TU COMPRA OBTIENES 💡:</p>
@@ -580,35 +577,23 @@ footer{background:var(--negro);color:#777}
     </div>
 
     <div class="errbox" id="errBox"></div>
+    <div class="prepay">
+      <b>¿Prefieres pagar por adelantado?</b>
+      <span>Ahorra <b>$10.000</b> pagando con Nequi o Bancolombia. Te enviamos los datos por WhatsApp.</span>
+      <button type="button" id="prepayBtn">💳 PAGAR POR ADELANTADO · <span id="prepayTot"></span></button>
+    </div>
     <button type="submit" class="cta" id="submitBtn"><b>FINALIZAR PEDIDO EN PAGO CONTRAENTREGA</b><small>Compra 100% segura 🔒🤩</small></button>
     <div class="secure">🔁 ¿No te quedó la talla? Te la cambiamos gratis.</div>
   </form>
 
 </section>
 
-<!-- 14. GARANTÍAS (V2) -->
-<section class="guarantees">
-  <h2 class="t2">Tú no arriesgas <em>absolutamente nada</em></h2>
-  <div class="g-grid">
-    <div class="g star"><div class="g-ico">🔁</div><h4>¿No te quedó? Te la cambiamos</h4><p>Cambio de talla gratis. Sin preguntas y sin complicaciones.</p></div>
-    <div class="g"><div class="g-ico">⭐</div><h4>Calidad garantizada</h4><p>Garantía extendida por despegado de suela o costuras. Envíos de garantía por nuestra cuenta.</p></div>
-    <div class="g"><div class="g-ico">💵</div><h4>Pagas al recibir</h4><p>Lo ves, te lo mides y luego pagas. Sin adelantos.</p></div>
-    <div class="g"><div class="g-ico">🎁</div><h4>Un obsequio especial</h4><p>Te regalamos un par de medias deportivas. Llegan junto con tus tenis.</p></div>
-  </div>
-  <a href="#pedido" class="cta"><b>QUIERO LOS MÍOS — PEDIR AHORA</b><small>Envío gratis · Pagas al recibir</small></a>
-</section>
-
-<!-- 15. PREGUNTAS FRECUENTES (V2) -->
-<section class="alt faq2">
-  <h2 class="t2">Preguntas frecuentes</h2>
-  <div class="faq-list">
-    <details><summary>¿Cómo pago?</summary><p>Pagas en efectivo cuando recibes tus tenis en la puerta de tu casa. No adelantas ni un peso.</p></details>
-    <details><summary>¿Cuánto tarda en llegar?</summary><p>Entre 3 y 7 días hábiles según tu ciudad. El envío es gratis a toda Colombia y te confirmamos por WhatsApp.</p></details>
-    <details><summary>¿Qué pasa si no me queda la talla?</summary><p>Te la cambiamos gratis. Escríbenos por WhatsApp y coordinamos el cambio sin complicaciones.</p></details>
-    <details><summary>¿Qué tal es la calidad?</summary><p>Costuras reforzadas, suela antideslizante y plantilla ortopédica. Además tienes garantía extendida por despegado de suela o costuras.</p></details>
-    <details><summary>¿Puedo pedir dos colores diferentes en el combo?</summary><p>Sí. En el combo de 2 pares eliges el color y la talla de cada par por separado.</p></details>
-    <details><summary>¿El obsequio especial viene en todos los pedidos?</summary><p>Sí. Todos los pedidos incluyen un par de medias deportivas de regalo, para que estrenes tus tenis completos.</p></details>
-  </div>
+<!-- 14. GARANTÍA -->
+<section class="guar">
+  <div class="seal">⭐</div>
+  <h2 class="t2">Calzado con ⭐ garantía ⭐</h2>
+  <p><b>Garantía extendida</b> por despegado de suela o descosido de alguna costura.<br>(Los envíos de garantía corren por nuestra cuenta)</p>
+  <p>🔁 <b>Cambio de talla gratis</b> si no te queda.</p>
 </section>
 
 <footer>LAKSMI BOOM · Mereces brillar en cada paso · © 2026</footer>
@@ -624,6 +609,9 @@ const PRECIOS={1:109900,2:189900};
 /* WhatsApp oficial de pedidos (con 57) */
 const WA_NUM='573229484031';
 const WA_VER='+57 322 948 4031';
+/* Medios de pago y descuento por pago anticipado */
+const MEDIOS_ANTICIPADO='Nequi o Bancolombia';
+const DESC_ANTICIPADO=10000;
 /* Paquetes de medias (bump). Cambia precios aquí si lo necesitas */
 const MEDIAS=[
   {id:3,pares:3,precio:19900,antes:59900},
@@ -640,8 +628,9 @@ const COLORES=[
   {color:'Blanco / Azul Rey',img:'/img/color-azul-rey.webp',g:'CABALLERO & UNISEX'},
   {color:'Blanco / Lila',img:'/img/color-lila.webp',g:'DAMA'},
 ];
+const COLORES_ORD=[...COLORES.filter(c=>c.g!=='DAMA'),...COLORES.filter(c=>c.g==='DAMA')];
 /* Fotos del carrusel (en orden) */
-const CARRUSEL=['/img/color-panda.webp','/img/color-negra-roja.webp','/img/mini1.webp','/img/color-oro-rosa.webp','/img/mini3.webp','/img/color-azul.webp','/img/color-dorada.webp','/img/color-cristal.webp'];
+const CARRUSEL=['/img/color-panda.webp','/img/color-negra-roja.webp','/img/color-azul-rey.webp','/img/color-oro-rosa.webp','/img/color-lila.webp','/img/color-azul.webp','/img/color-dorada.webp','/img/color-cristal.webp'];
 /* ⚠️ Verifica estas medidas con tu proveedor: talla → largo máximo del pie en cm */
 const TALLAS=[[33,21.0],[34,21.5],[35,22.0],[36,23.0],[37,24.0],[38,25.0],[39,26.0],[40,27.0],[41,28.0],[42,28.5]];
 const DEPTOS=["Amazonas","Antioquia","Arauca","Atlántico","Bogotá D.C.","Bolívar","Boyacá","Caldas","Caquetá","Casanare","Cauca","Cesar","Chocó","Córdoba","Cundinamarca","Guainía","Guaviare","Huila","La Guajira","Magdalena","Meta","Nariño","Norte de Santander","Putumayo","Quindío","Risaralda","San Andrés y Providencia","Santander","Sucre","Tolima","Valle del Cauca","Vaupés","Vichada"];
@@ -649,9 +638,7 @@ const DEPTOS=["Amazonas","Antioquia","Arauca","Atlántico","Bogotá D.C.","Bolí
 const $=s=>document.querySelector(s),$$=s=>document.querySelectorAll(s);
 const fmt=n=>'$'+n.toLocaleString('es-CO');
 const track=(...a)=>{try{fbq(...a)}catch(e){}};
-let qty=2,sel={},bump=null,sugerida=null;
-
-/* Carrusel */
+let qty=2,sel={},bump=null,sugerida=null,payMode='contraentrega';
 
 /* Fecha de hoy en el bloque de precio (ej: SÁBADO 17 DE OCTUBRE) */
 (()=>{const f=new Date().toLocaleDateString('es-CO',{weekday:'long',day:'numeric',month:'long'}).replace(',','').toUpperCase();const el=$('#hoyFecha');if(el)el.textContent=f;})();
@@ -665,8 +652,12 @@ function tick(){const d=Math.max(0,Math.floor((cdEnd-Date.now())/1000));
   $('#m').textContent=String(Math.floor(d/60)).padStart(2,'0');$('#s').textContent=String(d%60).padStart(2,'0');}
 tick();setInterval(tick,1000);
 
+/* Carrusel */
+$('#slides').innerHTML=CARRUSEL.map(s=>`<img src="${s}" alt="Tenis Laksmi Boom" loading="lazy"/>`).join('');
+$('#dots').innerHTML=CARRUSEL.map((_,i)=>`<i class="${i?'':'on'}"></i>`).join('');
+$('#slides').addEventListener('scroll',e=>{const i=Math.round(e.target.scrollLeft/e.target.clientWidth);$$('#dots i').forEach((d,j)=>d.classList.toggle('on',i===j))},{passive:true});
+
 /* Colores */
-const COLORES_ORD=[...COLORES.filter(c=>c.g!=='DAMA'),...COLORES.filter(c=>c.g==='DAMA')];
 $('#colors').innerHTML=COLORES_ORD.map(c=>`<a class="col" href="#pedido" data-c="${c.color}"><img src="${c.img}" alt="${c.color}" loading="lazy"/><small>${c.g==='DAMA'?'DAMA':'UNISEX'}</small><span>${c.color}</span></a>`).join('');
 $$('.col').forEach(a=>a.addEventListener('click',()=>{const c=a.dataset.c;const t=(qty===2&&sel[1]&&sel[1].color&&sel[1].color!==c&&!(sel[2]&&sel[2].color))?2:1;sel[t]=sel[t]||{};sel[t].color=c;buildPairs();summary();track('track','AddToCart',{content_name:'Jordan Retro 1',content_category:c,currency:'COP',value:PRECIOS[qty]})}));
 
@@ -716,6 +707,7 @@ function summary(){
   $('#sBumpRow').style.display=bump?'flex':'none';
   if(bump){$('#sBumpName').textContent=`Paquete ${bump.pares} pares de medias`;$('#sBump').textContent=fmt(bump.precio);}
   $('#sTot').textContent=fmt(total());
+  const pt=$('#prepayTot');if(pt)pt.textContent=fmt(total()-DESC_ANTICIPADO);
 }
 
 /* InitiateCheckout */
@@ -732,18 +724,23 @@ $('#orderForm').addEventListener('submit',async e=>{
   if(c1.length!==10){f.celular.classList.add('err');return err('Tu celular debe tener 10 dígitos.',f.celular)}
   if(c1!==c2){f.celular2.classList.add('err');return err('Los celulares no coinciden. Verifica e intenta de nuevo.',f.celular2)}
   const btn=$('#submitBtn');btn.disabled=true;btn.innerHTML='<b>⏳ ENVIANDO PEDIDO...</b>';
-  const tot=total();
+  const tot=total()-(payMode==='anticipado'?DESC_ANTICIPADO:0);
   const data={nombre:f.nombre.value.trim(),celular:c1,departamento:f.departamento.value,ciudad:f.ciudad.value.trim(),
     direccion:`${f.direccion.value.trim()} · Barrio: ${f.barrio.value.trim()}`,qty:qty,
     total:fmt(tot)+(bump?` (incluye ${bump.pares} pares de medias)`:''),
-    medias:bump?`${bump.pares} pares - ${fmt(bump.precio)}`:'Solo regalo (1 par)',landing:'v3'};
+    medias:bump?`${bump.pares} pares - ${fmt(bump.precio)}`:'Solo regalo (1 par)',pago:payMode==='anticipado'?`Anticipado (${MEDIOS_ANTICIPADO}) -$10.000`:'Contraentrega',landing:'v3'};
+  if(payMode==='anticipado')data.total+=' · PAGO ANTICIPADO';
   for(let i=1;i<=qty;i++){data['color'+i]=sel[i].color;data['talla'+i]=sel[i].talla}
   try{await fetch(SCRIPT_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)})}catch(x){}
   const items=[];for(let i=1;i<=qty;i++)items.push({color:sel[i].color,talla:sel[i].talla});
-  renderThanks({nombre:f.nombre.value.trim(),celular:c1,departamento:f.departamento.value,ciudad:f.ciudad.value.trim(),direccion:f.direccion.value.trim(),barrio:f.barrio.value.trim(),qty,items,bump,total:tot});
+  renderThanks({nombre:f.nombre.value.trim(),celular:c1,departamento:f.departamento.value,ciudad:f.ciudad.value.trim(),direccion:f.direccion.value.trim(),barrio:f.barrio.value.trim(),qty,items,bump,total:tot,pago:payMode});
   track('track','Purchase',{content_name:'Jordan Retro 1',currency:'COP',value:tot,num_items:qty});
 });
 
+/* Botón de pago anticipado */
+$('#prepayBtn').addEventListener('click',()=>{payMode='anticipado';$('#orderForm').requestSubmit();});
+$('#submitBtn').addEventListener('click',()=>{payMode='contraentrega';});
+/* Si hay error de validación, vuelve a contraentrega por defecto */
 
 /* ===== Página de gracias ===== */
 const esc=t=>String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
@@ -751,7 +748,7 @@ const wa=t=>`https://wa.me/${WA_NUM}?text=${encodeURIComponent(t)}`;
 function renderThanks(o){
   const pares=o.items.map(x=>`${x.color} · Talla ${x.talla}`);
   const nombre1=o.nombre.split(' ')[0];
-  const msgConf=`Hola LAKSMI BOOM 👋 Confirmo mi pedido:\n\n👟 ${o.qty===2?'2 pares':'1 par'}:\n${pares.map(p=>'- '+p).join('\n')}\n🎁 Obsequio especial: medias deportivas de regalo${o.bump?`\n🧦 Paquete de ${o.bump.pares} pares de medias`:''}\n💵 Total a pagar al recibir: ${fmt(o.total)}\n\n📍 Recibe: ${o.nombre}\n📱 Celular: ${o.celular}\n🏠 Dirección: ${o.direccion}, barrio ${o.barrio}\n🏙️ ${o.ciudad}, ${o.departamento}`;
+  const msgConf=`Hola LAKSMI BOOM 👋 Confirmo mi pedido:\n\n👟 ${o.qty===2?'2 pares':'1 par'}:\n${pares.map(p=>'- '+p).join('\n')}\n🎁 Obsequio especial: medias deportivas de regalo${o.bump?`\n🧦 Paquete de ${o.bump.pares} pares de medias`:''}${o.pago==='anticipado'?`\n💳 Quiero PAGAR POR ADELANTADO por ${MEDIOS_ANTICIPADO} (con $10.000 de descuento). Total: ${fmt(o.total)}. Envíenme los datos de pago, por favor.`:`\n💵 Total a pagar al recibir: ${fmt(o.total)}`}\n\n📍 Recibe: ${o.nombre}\n📱 Celular: ${o.celular}\n🏠 Dirección: ${o.direccion}, barrio ${o.barrio}\n🏙️ ${o.ciudad}, ${o.departamento}`;
   const msgAdd=`Hola LAKSMI BOOM, quiero corregir o añadir información a mi pedido a nombre de ${o.nombre} (${o.celular}): `;
   const msgHola=`Hola LAKSMI BOOM, acabo de hacer un pedido a nombre de ${o.nombre} y quiero confirmarlo.`;
   $('#thanks').innerHTML=`
@@ -770,7 +767,7 @@ function renderThanks(o){
     <div class="th-row"><span>Celular</span><span>${esc(o.celular)}</span></div>
     <div class="th-row"><span>Dirección</span><span>${esc(o.direccion)}<br>Barrio ${esc(o.barrio)}</span></div>
     <div class="th-row"><span>Ciudad</span><span>${esc(o.ciudad)}, ${esc(o.departamento)}</span></div>
-    <div class="th-tot"><span>TOTAL A PAGAR AL RECIBIR</span><span>${fmt(o.total)}</span></div>
+    <div class="th-tot"><span>${o.pago==='anticipado'?'TOTAL A PAGAR (ANTICIPADO)':'TOTAL A PAGAR AL RECIBIR'}</span><span>${fmt(o.total)}</span></div>
     <p style="margin-top:10px;font-size:13px">Te llega exactamente el modelo, color y talla que pediste.</p>
   </div>
 
@@ -786,9 +783,9 @@ function renderThanks(o){
     <div class="c"><button type="button" class="th-copy" id="copyNum">Copiar número</button></div>
   </div>
 
-  <div class="th-card"><h3>💵 Así funciona tu pago contraentrega</h3>
+  ${o.pago==='anticipado'?`<div class="th-card"><h3>💳 Tu pago por adelantado</h3><ul><li>Elegiste pagar por adelantado con <b>${MEDIOS_ANTICIPADO}</b> y ahorraste <b>$10.000</b>.</li><li>Total a pagar: <b>${fmt(o.total)}</b>.</li><li>Al confirmar por WhatsApp te enviamos los datos de pago. Solo te escribimos desde el <b>${WA_VER}</b>.</li><li>Cuando confirmemos tu pago, despachamos y te enviamos tu número de guía.</li><li>Tiempo de entrega: <b>3 a 7 días hábiles</b> según tu ciudad.</li></ul></div>`:`<div class="th-card"><h3>💵 Así funciona tu pago contraentrega</h3>
     <ul><li>No pagas nada por adelantado.</li><li>Pagas en efectivo al transportador cuando recibes: <b>${fmt(o.total)}</b>. Ten el valor exacto listo.</li><li>Si no vas a estar, puede recibir y pagar un familiar, un vecino o la portería.</li><li>Cuando despachemos, te enviamos tu número de guía por WhatsApp.</li><li>Tiempo de entrega: <b>3 a 7 días hábiles</b> según tu ciudad.</li></ul>
-  </div>
+  </div>`}
 
   <div class="th-card th-warn"><h3>🚨 Cuidado con estafas</h3>
     <p>LAKSMI BOOM <b>nunca</b> te pedirá pagos por adelantado, transferencias ni códigos por mensaje. Solo te escribimos desde el <b>${WA_VER}</b>.</p>

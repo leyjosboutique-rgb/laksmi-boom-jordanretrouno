@@ -400,6 +400,12 @@ footer{background:var(--negro);color:#777}
 .gift b{display:block;font-family:var(--f-t);font-weight:700;font-size:17px;letter-spacing:.03em;color:var(--rojo);margin-bottom:2px}
 .gift-ico{font-size:34px;flex:none;animation:wiggle 2.4s infinite}
 @keyframes wiggle{0%,80%,100%{transform:rotate(0)}85%{transform:rotate(-12deg)}90%{transform:rotate(10deg)}95%{transform:rotate(-6deg)}}
+
+/* Imagen vertical Imagina + Elige tu par */
+.banner-v{line-height:0;background:#efe6da}
+.banner-v img{width:100%;height:auto;display:block}
+/* Si una foto de color aún no está subida, se muestra un recuadro limpio */
+.col img,.copt img{background:#f4f4f4}
 </style>
 </head>
 <body>
@@ -407,7 +413,7 @@ footer{background:var(--negro);color:#777}
 
 <!-- 1. BARRA DE PAGO -->
 <div class="ticker"><span>🚚 ENVÍO GRATIS A TODA COLOMBIA &nbsp;·&nbsp; 💵 PAGO CONTRAENTREGA &nbsp;·&nbsp; 🎁 OBSEQUIO ESPECIAL EN TU PEDIDO &nbsp;·&nbsp; 🔁 CAMBIO DE TALLA GRATIS &nbsp;·&nbsp; 🔥 40% OFF SOLO HOY</span></div>
-<div class="logo">LAKSMI<small>BOOM</small></div>
+
 
 <!-- PÁGINA DE GRACIAS (se muestra al finalizar el pedido) -->
 <div id="thanks" class="thanks" style="display:none"></div>
@@ -421,7 +427,7 @@ footer{background:var(--negro);color:#777}
 <section style="padding-top:10px">
   <!-- 4. PRECIO -->
   <div class="promo card">
-    <div class="hoy"><span class="hoy-fecha">HOY <span id="hoyFecha"></span></span><br>SOLO HOY ESTA PROMOCIÓN 📣</div>
+    <div class="hoy"><span class="hoy-fecha">SOLO HOY <span id="hoyFecha"></span></span><br>ESTA PROMOCIÓN 📣</div>
     <div class="antes">ANTES: <s>$169.900</s></div>
     <div class="ahora">AHORA: $109.900</div>
     <div class="combo">📣 LLEVA 2 PARES POR SOLO $189.900 📣</div>
@@ -436,16 +442,9 @@ footer{background:var(--negro);color:#777}
   <div class="more">MÁS DETALLES ABAJO 👇🏻</div>
 </section>
 
-<!-- 6. ATRIBUTOS -->
-<section class="alt">
-  <div class="stars"><span>⭐ Cómodos</span><span>⭐ Combinan con todo</span><span>⭐ Garantizados</span></div>
-  <div class="imagine">Imagina estrenar unos tenis que elevan cualquier outfit… y que todos te pregunten dónde los compraste 🤩</div>
-</section>
-
-<!-- 7. ELIGE TU PAR (banner V2) -->
-<div class="banner elige">
-  <img class="b-full" src="/img/elige-par.webp" alt="Elige tu par y lleva más: 1 par $109.900, 2 pares $189.900, medias gratis" width="1672" height="941" loading="lazy"/>
-  <div class="b-crops" aria-hidden="true"><div class="b-crop el-a"></div><div class="b-crop el-b"></div></div>
+<!-- 6-7. IMAGINA + ELIGE TU PAR (imagen vertical) -->
+<div class="banner-v">
+  <img src="/img/elige-par-v.webp" alt="Imagina estrenar unos tenis que elevan cualquier outfit. Elige tu par: 1 par $109.900, 2 pares $189.900, obsequio especial con tu compra" width="941" height="1672" loading="lazy"/>
 </div>
 <section style="padding-top:18px">
   <div class="co">🇨🇴 Envío gratis y pago contraentrega en toda Colombia · 3 a 7 días hábiles</div>
@@ -465,7 +464,7 @@ footer{background:var(--negro);color:#777}
 
 <!-- 7c. COLORES -->
 <section>
-  <h2 class="t2">Mira los 6 colores 👇🏻</h2>
+  <h2 class="t2">Mira los 8 colores 👇🏻</h2>
   <div class="colors" id="colors"></div>
 </section>
 
@@ -638,6 +637,8 @@ const COLORES=[
   {color:'Oro Rosa',img:'/img/color-oro-rosa.webp',g:'DAMA'},
   {color:'Azul Cielo Holográfica',img:'/img/color-azul.webp',g:'DAMA'},
   {color:'Dorada',img:'/img/color-dorada.webp',g:'DAMA'},
+  {color:'Blanco / Azul Rey',img:'/img/color-azul-rey.webp',g:'CABALLERO & UNISEX'},
+  {color:'Blanco / Lila',img:'/img/color-lila.webp',g:'DAMA'},
 ];
 /* Fotos del carrusel (en orden) */
 const CARRUSEL=['/img/color-panda.webp','/img/color-negra-roja.webp','/img/mini1.webp','/img/color-oro-rosa.webp','/img/mini3.webp','/img/color-azul.webp','/img/color-dorada.webp','/img/color-cristal.webp'];
@@ -665,7 +666,8 @@ function tick(){const d=Math.max(0,Math.floor((cdEnd-Date.now())/1000));
 tick();setInterval(tick,1000);
 
 /* Colores */
-$('#colors').innerHTML=COLORES.map(c=>`<a class="col" href="#pedido" data-c="${c.color}"><img src="${c.img}" alt="${c.color}" loading="lazy"/><small>${c.g==='DAMA'?'DAMA':'UNISEX'}</small><span>${c.color}</span></a>`).join('');
+const COLORES_ORD=[...COLORES.filter(c=>c.g!=='DAMA'),...COLORES.filter(c=>c.g==='DAMA')];
+$('#colors').innerHTML=COLORES_ORD.map(c=>`<a class="col" href="#pedido" data-c="${c.color}"><img src="${c.img}" alt="${c.color}" loading="lazy"/><small>${c.g==='DAMA'?'DAMA':'UNISEX'}</small><span>${c.color}</span></a>`).join('');
 $$('.col').forEach(a=>a.addEventListener('click',()=>{const c=a.dataset.c;const t=(qty===2&&sel[1]&&sel[1].color&&sel[1].color!==c&&!(sel[2]&&sel[2].color))?2:1;sel[t]=sel[t]||{};sel[t].color=c;buildPairs();summary();track('track','AddToCart',{content_name:'Jordan Retro 1',content_category:c,currency:'COP',value:PRECIOS[qty]})}));
 
 /* Departamentos */
@@ -676,7 +678,7 @@ function buildPairs(){
   let h='';
   for(let i=1;i<=qty;i++){const s=sel[i]||{};
     h+=`<div class="pair" data-p="${i}"><div class="pair-t">${qty===2?'PAR '+i:'TU PAR'} — COLOR Y TALLA</div>
-    <div class="copts">${COLORES.map(c=>`<button type="button" class="copt ${s.color===c.color?'on':''}" data-c="${c.color}"><img src="${c.img}" alt=""/><span>${c.color}</span></button>`).join('')}</div>
+    <div class="copts">${COLORES_ORD.map(c=>`<button type="button" class="copt ${s.color===c.color?'on':''}" data-c="${c.color}"><img src="${c.img}" alt=""/><span>${c.color}</span></button>`).join('')}</div>
     <div class="sz-l">Talla ${qty===2?'par '+i:''}</div>
     <div class="szs">${TALLAS.map(([t])=>`<button type="button" class="sz ${s.talla==t?'on':''} ${sugerida==t?'sug':''}" data-t="${t}">${t}</button>`).join('')}</div></div>`;}
   $('#pairs').innerHTML=h;

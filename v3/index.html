@@ -499,14 +499,50 @@ section.hero-top,.page>section:first-of-type{padding-top:18px}
 }
 .ticker{position:fixed;top:0;left:0;right:0;max-width:500px;margin:0 auto;z-index:60}
 .page{padding-top:var(--tkh,32px)}
-.normal2{background:linear-gradient(180deg,#f2fbf5,#fff);border:1.5px solid rgba(22,163,74,.25);border-radius:18px;box-shadow:0 8px 24px rgba(17,17,17,.06);text-align:center;padding:22px 18px 18px}
-.n2-ic{width:54px;height:54px;margin:0 auto 10px;border-radius:50%;background:var(--verde);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 16px rgba(22,163,74,.35)}
-.n2-ic svg{width:28px;height:28px}
-.normal2 b{display:block;font-family:var(--f-t);font-weight:700;font-size:26px;line-height:1.05;text-transform:uppercase;color:var(--negro)}
-.normal2 b span{display:block;font-size:17px;color:var(--verde);letter-spacing:.04em;margin-top:2px}
-.normal2 p{font-size:15px;line-height:1.5;color:#444;margin:10px auto 0;max-width:300px}
-.n2-chips{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin-top:14px}
-.n2-chips span{background:#fff;border:1px solid #e3e3e3;border-radius:30px;padding:5px 11px;font-size:12px;font-weight:800;color:var(--negro)}
+.normal2{position:relative;overflow:hidden;background:radial-gradient(120% 80% at 50% 0%,#1f3a2a 0%,#111 60%);color:#fff;border-radius:22px;box-shadow:0 14px 34px rgba(17,17,17,.25);text-align:center;padding:24px 18px 20px}
+.normal2::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(255,255,255,.04) 0 1px,transparent 1px 22px);pointer-events:none}
+.normal2>*{position:relative}
+.n2-ey{display:inline-block;font-size:10.5px;font-weight:800;letter-spacing:.24em;text-transform:uppercase;color:#4ade80;border:1px solid rgba(74,222,128,.4);border-radius:30px;padding:4px 12px;margin-bottom:12px}
+.normal2 b{display:block;font-family:var(--f-t);font-weight:700;font-size:32px;line-height:1;text-transform:uppercase;color:#fff;letter-spacing:.01em}
+.normal2 b span{display:block;font-size:17px;color:#4ade80;letter-spacing:.06em;margin-top:4px}
+.normal2 p{font-size:14.5px;line-height:1.5;color:#cfcfcf;margin:10px auto 0;max-width:300px}
+.normal2 p strong{color:#fff}
+.n2-fit{margin:18px auto 0;max-width:330px}
+.n2-bar{display:grid;grid-template-columns:1fr 1.3fr 1fr;gap:4px;background:rgba(255,255,255,.08);border-radius:30px;padding:4px}
+.n2-bar span{font-size:12px;font-weight:700;color:#8a8a8a;padding:9px 0;border-radius:30px}
+.n2-bar span.on{background:var(--verde);color:#fff;font-weight:900;font-size:13px;text-transform:uppercase;letter-spacing:.06em;box-shadow:0 0 0 3px rgba(22,163,74,.25),0 6px 18px rgba(22,163,74,.55)}
+.n2-pin{display:flex;flex-direction:column;align-items:center;font-size:11.5px;font-weight:700;color:#4ade80;margin-top:6px}
+.n2-pin i{width:0;height:0;border-left:7px solid transparent;border-right:7px solid transparent;border-bottom:8px solid #4ade80;margin-bottom:4px}
+.n2-sizes{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin:16px auto 0;max-width:330px}
+.n2-sizes span{font-family:var(--f-t);font-size:19px;padding:8px 0;border-radius:12px;background:#fff;color:var(--negro)}
+.n2-tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:16px auto 0;max-width:330px}
+.n2-tiles div{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:12px 4px 10px}
+.n2-tiles svg{width:24px;height:24px;color:#4ade80;margin:0 auto 6px;display:block}
+.n2-tiles small{display:block;font-size:12px;font-weight:800;line-height:1.25;color:#fff}
+
+/* ventana emergente del pedido */
+.ov{position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.5);display:none;align-items:flex-end;justify-content:center}
+.ov.open{display:flex}
+.sheet{position:relative;width:100%;max-width:500px;max-height:94vh;overflow-y:auto;-webkit-overflow-scrolling:touch;background:#fff;border-radius:22px 22px 0 0;animation:ovup .25s ease-out}
+@media(min-width:521px){.ov{align-items:center}.sheet{border-radius:22px;max-height:92vh}}
+@keyframes ovup{from{transform:translateY(40px);opacity:.5}}
+.sheet .form-wrap{border-radius:inherit;padding-top:30px}
+.ov-x{position:absolute;top:10px;right:12px;z-index:2;width:34px;height:34px;border-radius:50%;border:1px solid #ddd;background:#fff;font-size:20px;line-height:1;color:#111;cursor:pointer}
+body.ov-on{overflow:hidden}
+
+/* medios de pago corto */
+.mp-rows{display:grid;gap:8px;margin-top:14px}
+.mp-row{display:flex;align-items:center;gap:12px;background:#fff;border:1.5px solid #e6e6e6;border-radius:16px;padding:10px 12px;color:var(--negro);text-decoration:none;box-shadow:0 4px 14px rgba(17,17,17,.05)}
+.mp-row.mp-main{border-color:var(--verde);background:#f3fbf6}
+.mp-lg{width:44px;height:44px;flex:none;border-radius:12px;object-fit:cover;background:#fff}
+span.mp-lg{display:flex;align-items:center;justify-content:center;background:var(--verde);color:#fff}
+span.mp-lg svg{width:26px;height:26px}
+.mp-tx{flex:1;min-width:0;text-align:left}.mp-tx b{display:block;font-family:var(--f-t);font-weight:400;font-size:19px;text-transform:uppercase;line-height:1.1}
+.mp-tx small{display:block;font-size:12.5px;color:var(--gris)}
+.mp-tg{flex:none;background:var(--amarillo);color:var(--negro);font-size:11px;font-weight:900;padding:4px 8px;border-radius:20px}
+.mp-row{position:relative}.mp-tg-g{position:absolute;top:-9px;right:14px;background:var(--verde);color:#fff;font-size:10px;padding:3px 9px}
+.mp-ar{width:18px;height:18px;flex:none;color:#999}
+.mp-note{margin-top:10px;text-align:center;font-size:13.5px;background:#fff8d1;border:1px dashed #e6c200;border-radius:12px;padding:9px 10px}
 </style>
 </head>
 <body>
@@ -547,10 +583,6 @@ section.hero-top,.page>section:first-of-type{padding-top:18px}
   <div class="more">MÁS DETALLES ABAJO 👇🏻</div>
 </section>
 
-<!-- 6-7. ATRIBUTOS + IMAGINA + 1 PAR / 2 PARES (imagen vertical) -->
-<div class="banner-v">
-  <img src="/img/m-elige-par-v3.webp" decoding="async" alt="Cómodos, combinan con todo, garantizados. Imagina estrenar unos tenis que elevan cualquier outfit. 1 par $109.900, 2 pares $169.900, obsequio especial" width="900" height="1598" loading="lazy"/>
-</div>
 <section>
   <div class="ship">
     <div><span class="ico-c ico-y"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 6h13v10H1zM14 10h4l4 4v2h-8"/><circle cx="5.5" cy="17.5" r="2"/><circle cx="17.5" cy="17.5" r="2"/></svg></span><b>ENVÍO GRATIS</b><small>A toda Colombia</small></div>
@@ -563,10 +595,19 @@ section.hero-top,.page>section:first-of-type{padding-top:18px}
 <!-- 7b. TALLAS NORMALES -->
 <section class="alt">
   <div class="normal2">
-    <div class="n2-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="8" width="20" height="8" rx="1.5" transform="rotate(-20 12 12)"/><path d="M6.2 9.6l1 2.6M9.9 8.2l1.4 3.8M13.6 6.9l1 2.6M17.3 5.5l1.4 3.8"/></svg></div>
+    <div class="n2-ey">Guía de tallas</div>
     <b>Tallas normales<span>para tu tranquilidad</span></b>
-    <p>Ni muy grandes ni muy pequeños.<br>Pide tu talla de siempre 👟</p>
-    <div class="n2-chips"><span>✓ Horma normal</span><span>✓ Talla 33 a 42</span><span>✓ Cambio gratis</span></div>
+    <p>Ni muy grandes ni muy pequeños. <strong>Pide tu talla de siempre.</strong></p>
+    <div class="n2-fit">
+      <div class="n2-bar"><span>Pequeño</span><span class="on">Normal</span><span>Grande</span></div>
+      <div class="n2-pin"><i></i>Así horman nuestros tenis</div>
+    </div>
+    <div class="n2-sizes"><span>33</span><span>34</span><span>35</span><span>36</span><span>37</span><span>38</span><span>39</span><span>40</span><span>41</span><span>42</span></div>
+    <div class="n2-tiles">
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><small>Horma<br>normal</small></div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="8" width="20" height="8" rx="1.5"/><path d="M6 8v3M10 8v4M14 8v3M18 8v4"/></svg><small>Talla<br>33 a 42</small></div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 0 1 14-5M20 12a8 8 0 0 1-14 5"/><path d="M18 3v4h-4M6 21v-4h4"/></svg><small>Cambio<br>gratis</small></div>
+    </div>
   </div>
 </section>
 
@@ -583,38 +624,15 @@ section.hero-top,.page>section:first-of-type{padding-top:18px}
   <div class="testi"><img src="/img/m-testimonios-v2.webp" alt="Lo que dicen nuestros clientes: miles ya tienen los suyos" width="900" height="1350" loading="lazy" decoding="async"/></div>
 </section>
 
-<!-- 9. MEDIOS DE PAGO (en código, colores de la página) -->
+<!-- 9. MEDIOS DE PAGO (versión corta) -->
 <section class="mp alt">
   <h2 class="t2">Medios de pago <em>disponibles</em></h2>
-  <p class="mp-sub">Elige la opción que más te convenga</p>
-  <div class="mp-chips"><span>✔ Fácil</span><span>✔ Seguro</span><span>✔ 100% confiable</span></div>
-  <div class="mp-cards">
-    <div class="mp-card mp-main"><span class="mp-tag mp-tag-g">MÁS ELEGIDO</span>
-      <div class="mp-top"><span class="mp-logo mp-cod"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 8.2 10 4.5l7.5 3.7v7.6L10 19.5l-7.5-3.7z"/><path d="M2.5 8.2 10 12l7.5-3.8M10 12v7.5"/><circle cx="18" cy="17" r="4.6" fill="currentColor" stroke="none" opacity=".22"/><circle cx="18" cy="17" r="4.6"/><path d="M19.4 15.3c-.4-.5-1-.7-1.6-.7-.9 0-1.5.5-1.5 1.1 0 1.5 3.2.8 3.2 2.4 0 .7-.7 1.2-1.7 1.2-.7 0-1.3-.3-1.7-.8M18 13.8v.8M18 19.4v.8"/></svg></span><div><h3>Contraentrega</h3><p>Pagas en efectivo al recibir en la puerta de tu casa.</p></div></div>
-      <ul><li><span class="mp-ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>Disponible en toda Colombia</li><li><span class="mp-ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>Pagas en la puerta de tu casa</li><li><span class="mp-ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>Sin adelantos, cero riesgo</li></ul>
-      <a class="mp-btn" href="#pedido">ELEGIR CONTRAENTREGA<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-    </div>
-    <div class="mp-card "><span class="mp-tag">AHORRA $10.000</span>
-      <div class="mp-top"><img class="mp-logo" src="/img/m-logo-nequi.webp" alt="Nequi" width="120" height="120" loading="lazy" decoding="async"/><div><h3>Nequi</h3><p>Transferencia inmediata desde tu app.</p></div></div>
-      <ul><li><span class="mp-ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>Pago al instante</li><li><span class="mp-ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>Fácil y seguro</li><li><span class="mp-ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>Ahorras $10.000</li></ul>
-      <a class="mp-btn" href="#pago-anticipado">PAGAR CON NEQUI<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-    </div>
-    <div class="mp-card "><span class="mp-tag">AHORRA $10.000</span>
-      <div class="mp-top"><img class="mp-logo" src="/img/m-logo-bancolombia.webp" alt="Bancolombia" width="120" height="120" loading="lazy" decoding="async"/><div><h3>Bancolombia</h3><p>Transferencia directa desde tu app Bancolombia.</p></div></div>
-      <ul><li><span class="mp-ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>Pago al instante</li><li><span class="mp-ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>100% seguro</li><li><span class="mp-ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>Ahorras $10.000</li></ul>
-      <a class="mp-btn" href="#pago-anticipado">PAGAR CON BANCOLOMBIA<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-    </div>
+  <div class="mp-rows">
+    <a class="mp-row mp-main" href="#pedido"><span class="mp-lg mp-cod"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 8.2 10 4.5l7.5 3.7v7.6L10 19.5l-7.5-3.7z"/><path d="M2.5 8.2 10 12l7.5-3.8M10 12v7.5"/><circle cx="18" cy="17" r="4.6" fill="currentColor" stroke="none" opacity=".22"/><circle cx="18" cy="17" r="4.6"/><path d="M19.4 15.3c-.4-.5-1-.7-1.6-.7-.9 0-1.5.5-1.5 1.1 0 1.5 3.2.8 3.2 2.4 0 .7-.7 1.2-1.7 1.2-.7 0-1.3-.3-1.7-.8M18 13.8v.8M18 19.4v.8"/></svg></span><span class="mp-tx"><b>Contraentrega</b><small>Pagas al recibir en casa</small></span><span class="mp-tg mp-tg-g">MÁS ELEGIDO</span><svg class="mp-ar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <a class="mp-row" href="#pago-anticipado"><img class="mp-lg" src="/img/m-logo-nequi.webp" onerror="this.onerror=null;this.src='/img/logo-nequi.webp'" alt="Nequi" width="120" height="120" loading="lazy" decoding="async"/><span class="mp-tx"><b>Nequi</b><small>Transferencia al instante</small></span><span class="mp-tg">-$10.000</span><svg class="mp-ar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <a class="mp-row" href="#pago-anticipado"><img class="mp-lg" src="/img/m-logo-bancolombia.webp" onerror="this.onerror=null;this.src='/img/logo-bancolombia.webp'" alt="Bancolombia" width="120" height="120" loading="lazy" decoding="async"/><span class="mp-tx"><b>Bancolombia</b><small>Transferencia al instante</small></span><span class="mp-tg">-$10.000</span><svg class="mp-ar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
   </div>
-  <div class="mp-promo">
-    <span class="mp-gift"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="9" width="18" height="12" rx="1.5"/><path d="M3 13h18M12 9v12M12 9C9 3 5 5 7.5 8.5M12 9c3-6 7-4 4.5-.5"/></svg></span>
-    <div><small>RECIBE</small><b>$10.000</b><strong>DE DESCUENTO EXTRA</strong><span>pagando por adelantado con Nequi o Bancolombia</span></div>
-  </div>
-  <div class="mp-trust">
-    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 6h13v10H1zM14 10h4l4 4v2h-8"/><circle cx="5.5" cy="17.5" r="2"/><circle cx="17.5" cy="17.5" r="2"/></svg><span><b>ENVÍO GRATIS</b>A toda Colombia</span></div>
-    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg><span><b>PAGO SEGURO</b>Datos protegidos</span></div>
-    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 0 1 14-5M20 12a8 8 0 0 1-14 5"/><path d="M18 3v4h-4M6 21v-4h4"/></svg><span><b>CAMBIOS DE TALLA</b>Sin complicaciones</span></div>
-    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="9" width="18" height="12" rx="1.5"/><path d="M3 13h18M12 9v12M12 9C9 3 5 5 7.5 8.5M12 9c3-6 7-4 4.5-.5"/></svg><span><b>OBSEQUIO ESPECIAL</b>Medias de regalo</span></div>
-  </div>
+  <div class="mp-note">🎁 Paga por adelantado y recibe <b>$10.000 de descuento extra</b></div>
 </section>
 
 <!-- 10. LO QUE OBTIENES (con banner de plantilla) -->
@@ -650,7 +668,8 @@ section.hero-top,.page>section:first-of-type{padding-top:18px}
   </div>
 </section>
 
-<!-- 13. FORMULARIO -->
+<!-- 13. FORMULARIO (ventana emergente) -->
+<div class="ov" id="ov"><div class="sheet" id="sheet"><button type="button" class="ov-x" id="ovX" aria-label="Cerrar">×</button>
 <section class="form-wrap" id="pedido">
   <form id="orderForm" novalidate>
     <div class="fh">
@@ -733,6 +752,7 @@ section.hero-top,.page>section:first-of-type{padding-top:18px}
   </form>
 
 </section>
+</div></div>
 
 <!-- 14. GARANTÍA -->
 <section class="guar2">
@@ -878,6 +898,16 @@ function summary(){
 
 /* InitiateCheckout */
 let ic=false;$('#orderForm').addEventListener('focusin',()=>{if(!ic){ic=true;track('track','InitiateCheckout',{content_name:'Jordan Retro 1',currency:'COP',value:total(),num_items:qty})}});
+/* ventana emergente: todos los botones de pedido la abren */
+function openOv(){const o=$('#ov');o.classList.add('open');document.body.classList.add('ov-on');$('#sheet').scrollTop=0;
+  if(!ic){ic=true;track('track','InitiateCheckout',{content_name:'Jordan Retro 1',currency:'COP',value:total(),num_items:qty})}}
+function closeOv(){$('#ov').classList.remove('open');document.body.classList.remove('ov-on')}
+document.addEventListener('click',e=>{const a=e.target.closest('a[href="#pedido"],a[href="#pago-anticipado"]');if(!a)return;e.preventDefault();openOv();
+  if(a.getAttribute('href')==='#pago-anticipado')setTimeout(()=>$('#pago-anticipado').scrollIntoView({behavior:'smooth',block:'center'}),250)});
+$('#ovX').addEventListener('click',closeOv);
+$('#ov').addEventListener('click',e=>{if(e.target.id==='ov')closeOv()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeOv()});
+
 
 /* Envío al Google Sheet (mismo de siempre) */
 function err(m,el){const b=$('#errBox');b.textContent=m;b.style.display='block';(el||b).scrollIntoView({behavior:'smooth',block:'center'})}
@@ -980,7 +1010,7 @@ function renderThanks(o){
 
   <a class="th-btn" href="${wa(msgConf)}" target="_blank">✅ IR A CONFIRMAR MI PEDIDO</a>`;
   $('#copyNum').addEventListener('click',async e=>{try{await navigator.clipboard.writeText('+'+WA_NUM);e.target.textContent='¡Número copiado! ✅'}catch(x){e.target.textContent=WA_VER}});
-  document.body.classList.add('done');$('#thanks').style.display='block';window.scrollTo({top:0});
+  closeOv();document.body.classList.add('done');$('#thanks').style.display='block';window.scrollTo({top:0});
 }
 
 /* Botón fijo: se oculta cuando el formulario está a la vista */

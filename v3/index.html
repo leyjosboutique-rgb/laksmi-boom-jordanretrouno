@@ -497,6 +497,16 @@ section.hero-top,.page>section:first-of-type{padding-top:18px}
 .carousel{margin-top:10px}
 .slides img{aspect-ratio:auto!important;height:var(--hh,calc(100svh - 215px));object-fit:contain!important;background:#fff}
 }
+.ticker{position:fixed;top:0;left:0;right:0;max-width:500px;margin:0 auto;z-index:60}
+.page{padding-top:var(--tkh,32px)}
+.normal2{background:linear-gradient(180deg,#f2fbf5,#fff);border:1.5px solid rgba(22,163,74,.25);border-radius:18px;box-shadow:0 8px 24px rgba(17,17,17,.06);text-align:center;padding:22px 18px 18px}
+.n2-ic{width:54px;height:54px;margin:0 auto 10px;border-radius:50%;background:var(--verde);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 16px rgba(22,163,74,.35)}
+.n2-ic svg{width:28px;height:28px}
+.normal2 b{display:block;font-family:var(--f-t);font-weight:700;font-size:26px;line-height:1.05;text-transform:uppercase;color:var(--negro)}
+.normal2 b span{display:block;font-size:17px;color:var(--verde);letter-spacing:.04em;margin-top:2px}
+.normal2 p{font-size:15px;line-height:1.5;color:#444;margin:10px auto 0;max-width:300px}
+.n2-chips{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin-top:14px}
+.n2-chips span{background:#fff;border:1px solid #e3e3e3;border-radius:30px;padding:5px 11px;font-size:12px;font-weight:800;color:var(--negro)}
 </style>
 </head>
 <body>
@@ -552,7 +562,12 @@ section.hero-top,.page>section:first-of-type{padding-top:18px}
 
 <!-- 7b. TALLAS NORMALES -->
 <section class="alt">
-  <div class="normal"><b>Tallas normales para tu tranquilidad</b>Ni muy grandes ni muy pequeños. Pide tu talla de siempre 👟</div>
+  <div class="normal2">
+    <div class="n2-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="8" width="20" height="8" rx="1.5" transform="rotate(-20 12 12)"/><path d="M6.2 9.6l1 2.6M9.9 8.2l1.4 3.8M13.6 6.9l1 2.6M17.3 5.5l1.4 3.8"/></svg></div>
+    <b>Tallas normales<span>para tu tranquilidad</span></b>
+    <p>Ni muy grandes ni muy pequeños.<br>Pide tu talla de siempre 👟</p>
+    <div class="n2-chips"><span>✓ Horma normal</span><span>✓ Talla 33 a 42</span><span>✓ Cambio gratis</span></div>
+  </div>
 </section>
 
 <!-- 7c. COLORES -->
@@ -972,6 +987,7 @@ function renderThanks(o){
 function st(){const r=$('#pedido').getBoundingClientRect();$('#sticky').classList.toggle('hide',(r.top<innerHeight*.8&&r.bottom>0)||(innerWidth<=520&&scrollY<140))}
 /* Móvil: la foto principal cabe completa en la primera pantalla */
 function fitHero(){if(innerWidth>520)return;const sl=$('#slides'),top=sl.getBoundingClientRect().top+scrollY,h=Math.max(300,Math.min(sl.clientWidth*1.5,innerHeight-top-10));sl.style.setProperty('--hh',h+'px')}
+(function(){const t=document.querySelector('.ticker');if(t)document.documentElement.style.setProperty('--tkh',t.offsetHeight+'px')})();
 fitHero();addEventListener('resize',fitHero);
 addEventListener('scroll',st,{passive:true});st();
 

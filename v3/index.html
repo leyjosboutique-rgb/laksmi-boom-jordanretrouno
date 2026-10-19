@@ -479,6 +479,12 @@ section.hero-top,.page>section:first-of-type{padding-top:18px}
 
 .ico-g svg{width:34px;height:34px}
 .mp-cod svg{width:38px;height:38px}
+
+.bump-img{width:62px;height:78px;object-fit:contain;background:#fff;padding:2px;border-radius:10px;flex:none;background:#f4f4f4;border:1px solid #eee}
+.bump{gap:10px!important}
+.bump.on .bump-img{border-color:var(--verde)}
+.bump .nm{font-size:16px!important;line-height:1.15}
+.bump .nm small{font-size:12px!important;margin-top:3px}
 </style>
 </head>
 <body>
@@ -826,7 +832,7 @@ $('#mMinus').addEventListener('click',()=>{const i=$('#mInput');i.value=Math.max
 $('#mPlus').addEventListener('click',()=>{const i=$('#mInput');i.value=Math.min(30,(parseFloat(i.value)||24)+.5);medir()});
 
 /* Bump de medias */
-$('#bumps').innerHTML=MEDIAS.map(m=>`<button type="button" class="bump" data-id="${m.id}">${m.tag?`<span class="tag">${m.tag}</span>`:''}<span class="ck">✓</span><span class="nm">${m.pares} PARES DE MEDIAS<small>Tallaje normal · Súper descuento</small></span><span class="pr"><s>${fmt(m.antes)}</s><b>${fmt(m.precio)}</b></span></button>`).join('');
+$('#bumps').innerHTML=MEDIAS.map(m=>`<button type="button" class="bump" data-id="${m.id}">${m.tag?`<span class="tag">${m.tag}</span>`:''}<span class="ck">✓</span><img class="bump-img" src="/img/medias-${m.pares}.webp" alt="Pack de ${m.pares} pares de medias" loading="lazy"/><span class="nm">PACK X${m.pares}<small>${m.pares} pares · Súper descuento</small></span><span class="pr"><s>${fmt(m.antes)}</s><b>${fmt(m.precio)}</b></span></button>`).join('');
 $$('.bump').forEach(b=>b.addEventListener('click',()=>{const id=+b.dataset.id;bump=(bump&&bump.id===id)?null:MEDIAS.find(m=>m.id===id);
   $$('.bump').forEach(x=>x.classList.toggle('on',bump&&+x.dataset.id===bump.id));summary();}));
 

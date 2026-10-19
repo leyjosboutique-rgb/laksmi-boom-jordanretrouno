@@ -559,6 +559,23 @@ span.mp-lg svg{width:26px;height:26px}
 .pk-sz button{border:1.5px solid #ddd;background:#fff;border-radius:8px;padding:10px 0;font-weight:700;font-size:15px;color:var(--negro)}
 .pk-sz button.on{background:var(--negro);border-color:var(--negro);color:#fff}
 .pk .cta{margin-top:14px}
+
+/* selector de pares compacto en el formulario */
+.pair.pv2{background:#fff;border:1.5px solid #eee;border-radius:16px;padding:12px}
+.pv-top{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.pv-img{width:64px;height:64px;flex:none;border-radius:12px;background:#f4f4f4;overflow:hidden;display:flex;align-items:center;justify-content:center;font-size:26px}
+.pv-img img{width:100%;height:100%;object-fit:cover}
+.pv-tx{display:flex;flex-direction:column;min-width:0}
+.pv-tx small{font-size:10.5px;font-weight:900;letter-spacing:.1em;color:var(--rojo)}
+.pv-name{font-size:16px;font-weight:900;line-height:1.15}
+.pv-sz{font-style:normal;font-size:12.5px;color:var(--gris);font-weight:600}
+.pair.pv2 .copts{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.pair.pv2 .copt{padding:0;aspect-ratio:1;border-radius:50%;border:2px solid #e5e5e5;background:#f4f4f4;overflow:hidden;display:block;min-height:0}
+.pair.pv2 .copt img{width:100%;height:100%;object-fit:cover;border:0;border-radius:0;margin:0}
+.pair.pv2 .copt.on{border-color:var(--verde);box-shadow:0 0 0 2px #fff inset,0 0 0 2px var(--verde);transform:scale(1.06)}
+.pair.pv2 .sz-l{display:none}
+.pair.pv2 .szs{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-top:12px}
+.pair.pv2 .sz{padding:9px 0;font-size:14.5px;border-radius:8px}
 </style>
 </head>
 <body>
@@ -889,15 +906,20 @@ $('#dep').innerHTML='<option value="">Selecciona</option>'+DEPTOS.map(d=>`<optio
 function buildPairs(){
   let h='';
   for(let i=1;i<=qty;i++){const s=sel[i]||{};
-    h+=`<div class="pair" data-p="${i}"><div class="pair-t">${qty===2?'PAR '+i:'TU PAR'} — COLOR Y TALLA</div>
-    <div class="copts">${COLORES_ORD.map(c=>`<button type="button" class="copt ${s.color===c.color?'on':''}" data-c="${c.color}"><img src="${c.img}" alt="" loading="lazy" decoding="async"/><span>${c.color}</span></button>`).join('')}</div>
+    const cs=COLORES_ORD.find(c=>c.color===s.color);
+    h+=`<div class="pair pv2" data-p="${i}"><div class="pv-top"><span class="pv-img">${cs?`<img src="${cs.img}" alt=""/>`:'👟'}</span><span class="pv-tx"><small>${qty===2?'PAR '+i:'TU PAR'}</small><b class="pv-name">${cs?cs.color:'Elige tu color'}</b><em class="pv-sz">${s.talla?'Talla '+s.talla:'Elige tu talla'}</em></span></div>
+    <div class="copts">${COLORES_ORD.map(c=>`<button type="button" class="copt ${s.color===c.color?'on':''}" data-c="${c.color}" aria-label="${c.color}" title="${c.color}"><img src="${c.img}" alt="" loading="lazy" decoding="async"/></button>`).join('')}</div>
     <div class="sz-l">Talla ${qty===2?'par '+i:''}</div>
     <div class="szs">${TALLAS.map(([t])=>`<button type="button" class="sz ${s.talla==t?'on':''} ${sugerida==t?'sug':''}" data-t="${t}">${t}</button>`).join('')}</div></div>`;}
   $('#pairs').innerHTML=h;
 }
 $('#pairs').addEventListener('click',e=>{const b=e.target.closest('.copt,.sz');if(!b)return;const p=+b.closest('.pair').dataset.p;sel[p]=sel[p]||{};
   if(b.classList.contains('copt'))sel[p].color=b.dataset.c;else sel[p].talla=b.dataset.t;
-  b.parentElement.querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));summary();});
+  b.parentElement.querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));
+  const pe=b.closest('.pair'),cs=COLORES_ORD.find(c=>c.color===sel[p].color);
+  if(cs){pe.querySelector('.pv-img').innerHTML=`<img src="${cs.img}" alt=""/>`;pe.querySelector('.pv-name').textContent=cs.color}
+  if(sel[p].talla)pe.querySelector('.pv-sz').textContent='Talla '+sel[p].talla;
+  summary();});
 function setQty(n){qty=n;$$('.pack').forEach(x=>x.classList.toggle('sel',+x.dataset.q===n));buildPairs();summary();}
 $$('.pack').forEach(x=>x.addEventListener('click',()=>setQty(+x.dataset.q)));
 

@@ -673,8 +673,7 @@ section.hero-top,.page>section:first-of-type{padding-top:18px}
     <div class="step">
       <h3>2. Datos de contacto</h3>
       <label class="f">Nombre completo</label><input class="in" name="nombre" autocomplete="name" required/>
-      <label class="f">Celular</label><input class="in" name="celular" type="tel" inputmode="numeric" maxlength="10" placeholder="3001234567" required/>
-      <label class="f">Confirma tu celular</label><input class="in" name="celular2" type="tel" inputmode="numeric" maxlength="10" placeholder="Escríbelo de nuevo" required/>
+      <label class="f">Celular</label><input class="in" name="celular" type="tel" inputmode="numeric" maxlength="10" placeholder="3001234567" autocomplete="tel-national" required/>
       <div class="warn">⚠️ Verifica que toda la información esté correcta. Te confirmamos tu pedido por WhatsApp.</div>
     </div>
 
@@ -863,9 +862,9 @@ $('#orderForm').addEventListener('submit',async e=>{
   for(let i=1;i<=qty;i++){const s=sel[i]||{};if(!s.color||!s.talla)return err(`Selecciona color y talla del ${qty===2?'PAR '+i:'par'}.`,$(`.pair[data-p="${i}"]`))}
   const vac=[...f.querySelectorAll('[required]')].filter(x=>!x.value.trim());
   if(vac.length){vac.forEach(x=>x.classList.add('err'));return err('Completa todos tus datos de contacto y entrega.',vac[0])}
-  const c1=f.celular.value.replace(/\D/g,''),c2=f.celular2.value.replace(/\D/g,'');
+  const c1=f.celular.value.replace(/\D/g,'');
   if(c1.length!==10){f.celular.classList.add('err');return err('Tu celular debe tener 10 dígitos.',f.celular)}
-  if(c1!==c2){f.celular2.classList.add('err');return err('Los celulares no coinciden. Verifica e intenta de nuevo.',f.celular2)}
+  if(c1[0]!=='3'){f.celular.classList.add('err');return err('Revisa tu celular: debe empezar por 3 (ej: 3001234567).',f.celular)}
   const btn=$('#submitBtn');btn.disabled=true;btn.innerHTML='<b>⏳ ENVIANDO PEDIDO...</b>';
   const tot=total()-(payMode==='anticipado'?DESC_ANTICIPADO:0);
   const data={nombre:f.nombre.value.trim(),celular:c1,departamento:f.departamento.value,ciudad:f.ciudad.value.trim(),

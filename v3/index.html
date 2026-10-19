@@ -8,7 +8,7 @@
 
 <!-- Microsoft Clarity -->
 <script type="text/javascript">
-(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","wifw7jn8is");
+window.addEventListener('load',function(){setTimeout(function(){(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","wifw7jn8is");},1500)});
 </script>
 <!-- Meta Pixel -->
 <script>
@@ -21,7 +21,10 @@ fbq('track','ViewContent',{content_name:'Jordan Retro 1',content_category:'Calza
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="/img/m-pareja.webp" fetchpriority="high">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;600;700;800;900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet"></noscript>
+<link rel="preconnect" href="https://connect.facebook.net">
 
 <style>
 :root{--rojo:#e0242c;--verde:#16a34a;--verde-osc:#12813b;--negro:#111;--amarillo:#ffd400;--gris:#6b6b6b;--suave:#f4f4f4;--f-t:'Anton',Impact,sans-serif;--f:'Inter',sans-serif}
@@ -29,6 +32,7 @@ fbq('track','ViewContent',{content_name:'Jordan Retro 1',content_category:'Calza
 html{scroll-behavior:smooth}
 body{font-family:var(--f);color:var(--negro);background:#e9e9e9;-webkit-font-smoothing:antialiased}
 img{display:block;max-width:100%}
+img[height]{height:auto}
 a{color:inherit;text-decoration:none}
 button{font-family:inherit;cursor:pointer}
 .page{max-width:500px;margin:0 auto;background:#fff;min-height:100vh;padding-bottom:84px}
@@ -502,7 +506,7 @@ section.hero-top,.page>section:first-of-type{padding-top:18px}
   <h1 class="t1">No es casualidad que <span class="r">todos miren</span> estos tenis 👀</h1>
   <div class="c"><span class="pill">🔥 DEL 40% DE DESCUENTO 🔥</span></div>
   <div class="carousel">
-    <div class="slides" id="slides"></div>
+    <div class="slides" id="slides"><img src="/img/m-pareja.webp" alt="Tenis Laksmi Boom" width="900" height="1350" fetchpriority="high" decoding="async"/></div>
     <div class="badge40">-40%<small>HOY</small></div>
   </div>
   <div class="thumbs" id="thumbs"></div>
@@ -526,7 +530,7 @@ section.hero-top,.page>section:first-of-type{padding-top:18px}
 
 <!-- 6-7. ATRIBUTOS + IMAGINA + 1 PAR / 2 PARES (imagen vertical) -->
 <div class="banner-v">
-  <img src="/img/elige-par-v.webp" alt="Cómodos, combinan con todo, garantizados. Imagina estrenar unos tenis que elevan cualquier outfit. 1 par $109.900, 2 pares $189.900, obsequio especial" width="941" height="1672" loading="lazy"/>
+  <img src="/img/m-elige-par-v.webp" decoding="async" alt="Cómodos, combinan con todo, garantizados. Imagina estrenar unos tenis que elevan cualquier outfit. 1 par $109.900, 2 pares $189.900, obsequio especial" width="900" height="1599" loading="lazy"/>
 </div>
 <section>
   <div class="ship">
@@ -552,7 +556,7 @@ section.hero-top,.page>section:first-of-type{padding-top:18px}
 <!-- 8. TESTIMONIOS -->
 <section class="alt">
   <h2 class="t2">Esto opinan los que ya los tienen 💪🏻💪🏻💪🏻</h2>
-  <div class="testi"><img src="/img/testimonios.webp" alt="Testimonios de clientes" loading="lazy"/></div>
+  <div class="testi"><img src="/img/m-testimonios.webp" alt="Testimonios de clientes" width="800" height="533" loading="lazy" decoding="async"/></div>
 </section>
 
 <!-- 9. MEDIOS DE PAGO (en código, colores de la página) -->
@@ -567,12 +571,12 @@ section.hero-top,.page>section:first-of-type{padding-top:18px}
       <a class="mp-btn" href="#pedido">ELEGIR CONTRAENTREGA<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
     <div class="mp-card "><span class="mp-tag">AHORRA $10.000</span>
-      <div class="mp-top"><img class="mp-logo" src="/img/logo-nequi.webp" alt="Nequi"/><div><h3>Nequi</h3><p>Transferencia inmediata desde tu app.</p></div></div>
+      <div class="mp-top"><img class="mp-logo" src="/img/m-logo-nequi.webp" alt="Nequi" width="120" height="120" loading="lazy" decoding="async"/><div><h3>Nequi</h3><p>Transferencia inmediata desde tu app.</p></div></div>
       <ul><li><span class="mp-ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>Pago al instante</li><li><span class="mp-ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>Fácil y seguro</li><li><span class="mp-ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>Ahorras $10.000</li></ul>
       <a class="mp-btn" href="#pago-anticipado">PAGAR CON NEQUI<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
     <div class="mp-card "><span class="mp-tag">AHORRA $10.000</span>
-      <div class="mp-top"><img class="mp-logo" src="/img/logo-bancolombia.webp" alt="Bancolombia"/><div><h3>Bancolombia</h3><p>Transferencia directa desde tu app Bancolombia.</p></div></div>
+      <div class="mp-top"><img class="mp-logo" src="/img/m-logo-bancolombia.webp" alt="Bancolombia" width="120" height="120" loading="lazy" decoding="async"/><div><h3>Bancolombia</h3><p>Transferencia directa desde tu app Bancolombia.</p></div></div>
       <ul><li><span class="mp-ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>Pago al instante</li><li><span class="mp-ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>100% seguro</li><li><span class="mp-ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>Ahorras $10.000</li></ul>
       <a class="mp-btn" href="#pago-anticipado">PAGAR CON BANCOLOMBIA<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
@@ -590,7 +594,7 @@ section.hero-top,.page>section:first-of-type{padding-top:18px}
 </section>
 
 <!-- 10. LO QUE OBTIENES (con banner de plantilla) -->
-<div class="banner-v plantilla-o"><img src="/img/plantilla-comodidad.webp" alt="Cada paso, con más comodidad: plantillas diseñadas para amortiguar y dar soporte, incluidas con tu compra" width="1024" height="1536" loading="lazy"/></div>
+<div class="banner-v plantilla-o"><img src="/img/m-plantilla-comodidad.webp" decoding="async" alt="Cada paso, con más comodidad: plantillas diseñadas para amortiguar y dar soporte, incluidas con tu compra" width="900" height="1350" loading="lazy"/></div>
 <section>
   <h2 class="t2">😎 Tenis de edición limitada 😎</h2>
   <p class="c" style="font-weight:800;margin-top:6px">CON TU COMPRA OBTIENES 💡:</p>
@@ -649,7 +653,7 @@ section.hero-top,.page>section:first-of-type{padding-top:18px}
         </ol>
         <div class="mrow">
           <button type="button" id="mMinus">−</button>
-          <input id="mInput" type="number" inputmode="decimal" step="0.5" min="20" max="30" placeholder="Escribe tu medida (cm)"/>
+          <input id="mInput" type="number" inputmode="decimal" step="0.5" min="20" max="30" placeholder="Tu medida en cm"/>
           <button type="button" id="mPlus">+</button>
         </div>
         <div class="msg" id="mMsg"></div>
@@ -751,24 +755,24 @@ const MEDIAS=[
   {id:10,pares:10,precio:49900,antes:199700}
 ];
 const COLORES=[
-  {color:'Negra / Roja',img:'/img/color-negra-roja.webp',g:'CABALLERO & UNISEX'},
-  {color:'Negra / Blanca Panda',img:'/img/color-panda.webp',g:'CABALLERO & UNISEX'},
-  {color:'Negra Charol Suela Cristal',img:'/img/color-cristal.webp',g:'CABALLERO & UNISEX'},
-  {color:'Oro Rosa',img:'/img/color-oro-rosa.webp',g:'DAMA'},
-  {color:'Azul Cielo Holográfica',img:'/img/color-azul.webp',g:'DAMA'},
-  {color:'Dorada',img:'/img/color-dorada.webp',g:'DAMA'},
-  {color:'Azul Rey',img:'/img/color-azul-rey.webp',g:'CABALLERO & UNISEX'},
-  {color:'Charol Chulo Dorado',img:'/img/color-charol-dorado.webp',g:'CABALLERO & UNISEX'},
-  {color:'Blanca / Roja',img:'/img/color-blanca-roja.webp',g:'CABALLERO & UNISEX'},
-  {color:'Roja Charol',img:'/img/color-roja.webp',g:'CABALLERO & UNISEX'},
-  {color:'Negra Charol Suela Roja',img:'/img/color-negra-suela-roja.webp',g:'CABALLERO & UNISEX'},
-  {color:'Negra Beige',img:'/img/color-negra-beige.webp',g:'CABALLERO & UNISEX'},
-  {color:'Plateada',img:'/img/color-plateada.webp',g:'CABALLERO & UNISEX'},
-  {color:'Rosa Vino',img:'/img/color-rosa-vino.webp',g:'DAMA'},
+  {color:'Negra / Roja',img:'/img/m-color-negra-roja.webp',g:'CABALLERO & UNISEX'},
+  {color:'Negra / Blanca Panda',img:'/img/m-color-panda.webp',g:'CABALLERO & UNISEX'},
+  {color:'Negra Charol Suela Cristal',img:'/img/m-color-cristal.webp',g:'CABALLERO & UNISEX'},
+  {color:'Oro Rosa',img:'/img/m-color-oro-rosa.webp',g:'DAMA'},
+  {color:'Azul Cielo Holográfica',img:'/img/m-color-azul.webp',g:'DAMA'},
+  {color:'Dorada',img:'/img/m-color-dorada.webp',g:'DAMA'},
+  {color:'Azul Rey',img:'/img/m-color-azul-rey.webp',g:'CABALLERO & UNISEX'},
+  {color:'Charol Chulo Dorado',img:'/img/m-color-charol-dorado.webp',g:'CABALLERO & UNISEX'},
+  {color:'Blanca / Roja',img:'/img/m-color-blanca-roja.webp',g:'CABALLERO & UNISEX'},
+  {color:'Roja Charol',img:'/img/m-color-roja.webp',g:'CABALLERO & UNISEX'},
+  {color:'Negra Charol Suela Roja',img:'/img/m-color-negra-suela-roja.webp',g:'CABALLERO & UNISEX'},
+  {color:'Negra Beige',img:'/img/m-color-negra-beige.webp',g:'CABALLERO & UNISEX'},
+  {color:'Plateada',img:'/img/m-color-plateada.webp',g:'CABALLERO & UNISEX'},
+  {color:'Rosa Vino',img:'/img/m-color-rosa-vino.webp',g:'DAMA'},
 ];
 const COLORES_ORD=[...COLORES.filter(c=>c.g!=='DAMA'),...COLORES.filter(c=>c.g==='DAMA')];
 /* Fotos del carrusel (en orden) */
-const CARRUSEL=['/img/pareja.webp','/img/pedestal.webp','/img/mano.webp','/img/piesambos.webp','/img/cordones.webp'];
+const CARRUSEL=['/img/m-pareja.webp','/img/m-pedestal.webp','/img/m-mano.webp','/img/m-piesambos.webp','/img/m-cordones.webp'];
 /* ⚠️ Verifica estas medidas con tu proveedor: talla → largo máximo del pie en cm */
 const TALLAS=[[33,21.0],[34,21.5],[35,22.0],[36,23.0],[37,24.0],[38,25.0],[39,26.0],[40,27.0],[41,28.0],[42,28.5]];
 const DEPTOS=["Amazonas","Antioquia","Arauca","Atlántico","Bogotá D.C.","Bolívar","Boyacá","Caldas","Caquetá","Casanare","Cauca","Cesar","Chocó","Córdoba","Cundinamarca","Guainía","Guaviare","Huila","La Guajira","Magdalena","Meta","Nariño","Norte de Santander","Putumayo","Quindío","Risaralda","San Andrés y Providencia","Santander","Sucre","Tolima","Valle del Cauca","Vaupés","Vichada"];
@@ -791,13 +795,13 @@ function tick(){const d=Math.max(0,Math.floor((cdEnd-Date.now())/1000));
 tick();setInterval(tick,1000);
 
 /* Carrusel */
-$('#slides').innerHTML=CARRUSEL.map(s=>`<img src="${s}" alt="Tenis Laksmi Boom" loading="lazy"/>`).join('');
-$('#thumbs').innerHTML=CARRUSEL.map((src,i)=>`<button type="button" class="${i?'':'on'}" data-i="${i}" aria-label="Ver foto ${i+1}"><img src="${src}" alt="" loading="lazy"/></button>`).join('');
+$('#slides').insertAdjacentHTML('beforeend',CARRUSEL.slice(1).map(s=>`<img src="${s}" alt="Tenis Laksmi Boom" loading="lazy" decoding="async"/>`).join(''));
+$('#thumbs').innerHTML=CARRUSEL.map((src,i)=>`<button type="button" class="${i?'':'on'}" data-i="${i}" aria-label="Ver foto ${i+1}"><img src="${src.replace('/img/m-','/img/m-t-')}" alt="" width="90" height="90" decoding="async"/></button>`).join('');
 $$('#thumbs button').forEach(b=>b.addEventListener('click',()=>{const sl=$('#slides');sl.scrollTo({left:+b.dataset.i*sl.clientWidth,behavior:'smooth'})}));
 $('#slides').addEventListener('scroll',e=>{const i=Math.round(e.target.scrollLeft/e.target.clientWidth);$$('#thumbs button').forEach((d,j)=>d.classList.toggle('on',i===j))},{passive:true});
 
 /* Colores */
-$('#colors').innerHTML=COLORES_ORD.map(c=>`<a class="col" href="#pedido" data-c="${c.color}"><img src="${c.img}" alt="${c.color}" loading="lazy"/><small>${c.g==='DAMA'?'DAMA':'UNISEX'}</small><span>${c.color}</span></a>`).join('');
+$('#colors').innerHTML=COLORES_ORD.map(c=>`<a class="col" href="#pedido" data-c="${c.color}"><img src="${c.img}" alt="${c.color}" width="480" height="600" loading="lazy" decoding="async"/><small>${c.g==='DAMA'?'DAMA':'UNISEX'}</small><span>${c.color}</span></a>`).join('');
 $$('.col').forEach(a=>a.addEventListener('click',()=>{const c=a.dataset.c;const t=(qty===2&&sel[1]&&sel[1].color&&sel[1].color!==c&&!(sel[2]&&sel[2].color))?2:1;sel[t]=sel[t]||{};sel[t].color=c;buildPairs();summary();track('track','AddToCart',{content_name:'Jordan Retro 1',content_category:c,currency:'COP',value:PRECIOS[qty]})}));
 
 /* Departamentos */
@@ -808,7 +812,7 @@ function buildPairs(){
   let h='';
   for(let i=1;i<=qty;i++){const s=sel[i]||{};
     h+=`<div class="pair" data-p="${i}"><div class="pair-t">${qty===2?'PAR '+i:'TU PAR'} — COLOR Y TALLA</div>
-    <div class="copts">${COLORES_ORD.map(c=>`<button type="button" class="copt ${s.color===c.color?'on':''}" data-c="${c.color}"><img src="${c.img}" alt=""/><span>${c.color}</span></button>`).join('')}</div>
+    <div class="copts">${COLORES_ORD.map(c=>`<button type="button" class="copt ${s.color===c.color?'on':''}" data-c="${c.color}"><img src="${c.img}" alt="" loading="lazy" decoding="async"/><span>${c.color}</span></button>`).join('')}</div>
     <div class="sz-l">Talla ${qty===2?'par '+i:''}</div>
     <div class="szs">${TALLAS.map(([t])=>`<button type="button" class="sz ${s.talla==t?'on':''} ${sugerida==t?'sug':''}" data-t="${t}">${t}</button>`).join('')}</div></div>`;}
   $('#pairs').innerHTML=h;
@@ -832,7 +836,7 @@ $('#mMinus').addEventListener('click',()=>{const i=$('#mInput');i.value=Math.max
 $('#mPlus').addEventListener('click',()=>{const i=$('#mInput');i.value=Math.min(30,(parseFloat(i.value)||24)+.5);medir()});
 
 /* Bump de medias */
-$('#bumps').innerHTML=MEDIAS.map(m=>`<button type="button" class="bump" data-id="${m.id}">${m.tag?`<span class="tag">${m.tag}</span>`:''}<span class="ck">✓</span><img class="bump-img" src="/img/medias-${m.pares}.webp" alt="Pack de ${m.pares} pares de medias" loading="lazy"/><span class="nm">PACK X${m.pares}<small>${m.pares} pares · Súper descuento</small></span><span class="pr"><s>${fmt(m.antes)}</s><b>${fmt(m.precio)}</b></span></button>`).join('');
+$('#bumps').innerHTML=MEDIAS.map(m=>`<button type="button" class="bump" data-id="${m.id}">${m.tag?`<span class="tag">${m.tag}</span>`:''}<span class="ck">✓</span><img class="bump-img" src="/img/m-medias-${m.pares}.webp" alt="Pack de ${m.pares} pares de medias" loading="lazy" decoding="async"/><span class="nm">PACK X${m.pares}<small>${m.pares} pares · Súper descuento</small></span><span class="pr"><s>${fmt(m.antes)}</s><b>${fmt(m.precio)}</b></span></button>`).join('');
 $$('.bump').forEach(b=>b.addEventListener('click',()=>{const id=+b.dataset.id;bump=(bump&&bump.id===id)?null:MEDIAS.find(m=>m.id===id);
   $$('.bump').forEach(x=>x.classList.toggle('on',bump&&+x.dataset.id===bump.id));summary();}));
 

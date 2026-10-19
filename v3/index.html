@@ -881,6 +881,13 @@ $('#prepayBtn').addEventListener('click',()=>{payMode='anticipado';$('#orderForm
 $('#submitBtn').addEventListener('click',()=>{payMode='contraentrega';});
 /* Si hay error de validación, vuelve a contraentrega por defecto */
 
+/* El aviso de error se oculta en cuanto la persona corrige algo */
+const hideErr=()=>{const b=$('#errBox');if(b)b.style.display='none'};
+$('#pairs').addEventListener('click',hideErr);
+$$('.pack').forEach(x=>x.addEventListener('click',hideErr));
+$('#orderForm').addEventListener('input',e=>{hideErr();if(e.target.classList)e.target.classList.remove('err')});
+$('#orderForm').addEventListener('change',hideErr);
+
 /* ===== Página de gracias ===== */
 const esc=t=>String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const wa=t=>`https://wa.me/${WA_NUM}?text=${encodeURIComponent(t)}`;

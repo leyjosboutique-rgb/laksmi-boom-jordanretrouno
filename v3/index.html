@@ -385,7 +385,7 @@ footer{background:var(--negro);color:#777}
 .banner{line-height:0;background:#0d0c0b}
 .b-full{width:100%;height:auto;display:block}
 .b-crops{display:none}
-.b-crop{background-repeat:no-repeat;width:100%;background-image:url(/img/plantilla.webp)}
+
 .pl-a{aspect-ratio:1060/667;background-size:188.68% auto;background-position:0% 0}
 .pl-c{aspect-ratio:940/667;background-size:212.77% auto;background-position:100% 0}
 @media (max-width:520px){.b-full{display:none}.b-crops{display:block}}
@@ -576,6 +576,28 @@ span.mp-lg svg{width:26px;height:26px}
 .pair.pv2 .sz-l{display:none}
 .pair.pv2 .szs{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-top:12px}
 .pair.pv2 .sz{padding:9px 0;font-size:14.5px;border-radius:8px}
+
+/* bloque unido: urgencia + whatsapp */
+.urg{display:flex;align-items:center;gap:12px;margin-top:14px;background:#fff4f4;border:1.5px dashed var(--rojo);border-radius:14px;padding:12px 14px;text-align:left}
+.urg span{font-size:26px}.urg b{display:block;font-size:15px;font-weight:900;color:var(--rojo);text-transform:uppercase}.urg small{display:block;font-size:13px;color:#444;font-weight:600}
+.wa-mini{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:12px;font-size:14px;font-weight:800;color:#128c4a;text-decoration:none}
+.wa-mini svg{width:20px;height:20px;fill:#25d366}
+/* preguntas frecuentes */
+.faq2{background:#fff;border-radius:16px;box-shadow:0 8px 24px rgba(17,17,17,.06);padding:4px 16px;margin-top:16px;text-align:left}
+.faq2 details{border-bottom:1px solid #eee;padding:14px 0}.faq2 details:last-child{border-bottom:0}
+.faq2 summary{list-style:none;cursor:pointer;font-weight:800;font-size:15px;display:flex;justify-content:space-between;gap:10px}
+.faq2 summary::-webkit-details-marker{display:none}
+.faq2 summary::after{content:"+";color:var(--verde);font-size:22px;line-height:1;font-weight:900}
+.faq2 details[open] summary::after{content:"–"}
+.faq2 p{margin-top:8px;color:#444;font-size:14px;line-height:1.5}
+
+/* video del producto */
+.vid-s{padding-top:6px}
+.vid-h{font-family:var(--f-t);font-size:24px;text-transform:uppercase;text-align:center;margin-bottom:12px}.vid-h span{color:var(--rojo)}
+.vid-w{position:relative;border-radius:18px;overflow:hidden;background:#ddd;box-shadow:0 10px 28px rgba(17,17,17,.15)}
+.vid-w video{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover}
+.vid-tag{position:absolute;top:12px;left:12px;background:rgba(0,0,0,.65);color:#fff;font-size:11px;font-weight:800;letter-spacing:.06em;padding:5px 10px;border-radius:20px}
+.vid-btn{display:block;text-align:center;margin-top:12px;font-weight:900;font-size:15px;color:var(--negro);text-decoration:underline;text-underline-offset:3px}
 </style>
 </head>
 <body>
@@ -614,6 +636,13 @@ span.mp-lg svg{width:26px;height:26px}
   <!-- 5. CTA 1 -->
   <a href="#pedido" class="cta"><b>HAZ TU PEDIDO, TOCA AQUÍ →</b><small>✈️ NO DEJES QUE SE AGOTEN 🤩</small></a>
   <div class="more">MÁS DETALLES ABAJO 👇🏻</div>
+</section>
+
+<!-- 5b. VIDEO DEL PRODUCTO -->
+<section class="vid-s">
+  <div class="vid-h">Míralos <span>de cerca</span> 👀</div>
+  <div class="vid-w"><video id="pVid" muted loop playsinline preload="none" poster="/img/m-color-panda.webp" width="432" height="540" data-src="/m-video-panda.mp4"></video><span class="vid-tag">● VIDEO REAL</span></div>
+  <a href="#pedido" class="vid-btn" id="vidBtn">Quiero los Negra / Blanca Panda →</a>
 </section>
 
 <section>
@@ -661,7 +690,7 @@ span.mp-lg svg{width:26px;height:26px}
 <!-- 8. TESTIMONIOS -->
 <section class="alt">
   <h2 class="t2">Esto opinan los que ya los tienen 💪🏻💪🏻💪🏻</h2>
-  <div class="testi"><img src="/img/m-testimonios.webp" alt="Lo que dicen nuestros clientes: miles ya tienen los suyos" width="800" height="533" loading="lazy" decoding="async"/></div>
+  <div class="testi"><img src="/m-testimonios.webp" alt="Lo que dicen nuestros clientes: miles ya tienen los suyos" width="800" height="1216" loading="lazy" decoding="async"/></div>
 </section>
 
 <!-- 9. MEDIOS DE PAGO (versión corta) -->
@@ -675,8 +704,8 @@ span.mp-lg svg{width:26px;height:26px}
   <div class="mp-note">🎁 Paga por adelantado y recibe <b>$10.000 de descuento extra</b></div>
 </section>
 
-<!-- 10. LO QUE OBTIENES (con banner de plantilla) -->
-<div class="banner-v plantilla-o"><img src="/img/m-plantilla-ortopedica-v2.webp" decoding="async" alt="Plantilla ortopédica que hace la diferencia: mayor comodidad, amortiguación, soporte y estabilidad" width="900" height="810" loading="lazy"/></div>
+<!-- 10. LO QUE OBTIENES + URGENCIA + WHATSAPP (un solo bloque) -->
+<div class="banner-v plantilla-o"><img src="/m-plantilla-ortopedica-v2.webp" decoding="async" alt="Plantilla ortopédica que hace la diferencia: mayor comodidad, amortiguación, soporte y estabilidad" width="800" height="800" loading="lazy"/></div>
 <section>
   <h2 class="t2">😎 Tenis de edición limitada 😎</h2>
   <p class="c" style="font-weight:800;margin-top:6px">CON TU COMPRA OBTIENES 💡:</p>
@@ -688,24 +717,9 @@ span.mp-lg svg{width:26px;height:26px}
     <div>🎁 <span><b>Obsequio especial:</b> un par de medias deportivas de regalo para estrenar con tus tenis</span></div>
     <div>✅ <span>Estilo único que combina con jean, jogger o sudadera</span></div>
   </div>
-</section>
-
-<!-- 11. URGENCIA -->
-<section class="alt">
-  <div class="alert">
-    <div class="a1">⚠️✅ ATENCIÓN ✅⚠️</div>
-    <div style="font-weight:800;margin-top:4px">¡Este producto es muy solicitado!</div>
-    <div class="a2">SE AGOTAN</div>
-    <div style="font-weight:800">¡NO DEJES PASAR LA OPORTUNIDAD!</div>
-  </div>
+  <div class="urg"><span>⚠️</span><div><b>Muy solicitados: se agotan rápido</b><small>Asegura tu color y tu talla hoy</small></div></div>
   <a href="#pedido" class="cta red"><b>COMPRA SEGURA AQUÍ →</b><small>Quedan pocas unidades. ¡APROVECHA! 🚚</small></a>
-</section>
-
-<!-- 12. WHATSAPP -->
-<section>
-  <div class="wa-box">¿TIENES ALGUNA PREGUNTA? ESCRÍBENOS 🔥✅<br>
-    <a class="wa-btn" href="https://wa.link/v62tzv" target="_blank"><svg viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12c0 2.136.563 4.14 1.542 5.873L.057 23.882l6.174-1.618A11.935 11.935 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm5.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35z"/></svg>WhatsApp AQUÍ 📲</a>
-  </div>
+  <a class="wa-mini" href="https://wa.link/v62tzv" target="_blank"><svg viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12c0 2.136.563 4.14 1.542 5.873L.057 23.882l6.174-1.618A11.935 11.935 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm5.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35z"/></svg>¿Tienes alguna pregunta? Escríbenos</a>
 </section>
 
 <!-- 13. FORMULARIO (ventana emergente) -->
@@ -794,6 +808,17 @@ span.mp-lg svg{width:26px;height:26px}
 </section>
 </div></div>
 
+<!-- 13b. PREGUNTAS FRECUENTES -->
+<section class="alt">
+  <h2 class="t2">Preguntas <em>frecuentes</em></h2>
+  <div class="faq2">
+    <details open><summary>¿Cuánto tarda el envío?</summary><p>Entre 3 y 7 días hábiles según tu ciudad. El envío es gratis a toda Colombia y te enviamos la guía por WhatsApp cuando despachamos.</p></details>
+    <details><summary>¿De verdad pago cuando los recibo?</summary><p>Sí. Pagas en efectivo cuando los recibes en la puerta de tu casa. No pagas nada antes.</p></details>
+    <details><summary>¿Cómo funciona el cambio de talla?</summary><p>Nos escribes por WhatsApp y te cambiamos la talla gratis, sin complicaciones.</p></details>
+    <details><summary>¿Y si no me quedan?</summary><p>Nuestras tallas son normales: pide tu talla de siempre. Si aun así no te quedan, escríbenos y te los cambiamos por tu talla correcta sin costo.</p></details>
+  </div>
+</section>
+
 <!-- 14. GARANTÍA -->
 <section class="guar2">
   <div class="g2-seal">
@@ -840,16 +865,16 @@ const MEDIAS=[
 const COLORES=[
   {color:'Negra / Roja',img:'/img/m-color-negra-roja.webp',g:'CABALLERO & UNISEX'},
   {color:'Negra / Blanca Panda',img:'/img/m-color-panda.webp',g:'CABALLERO & UNISEX'},
-  {color:'Negra Charol Suela Cristal',img:'/img/m-color-cristal.webp',g:'CABALLERO & UNISEX'},
+  {color:'Negra Charol Suela Cristal',img:'/m-color-cristal.webp',g:'CABALLERO & UNISEX'},
   {color:'Oro Rosa',img:'/img/m-color-oro-rosa.webp',g:'DAMA'},
   {color:'Azul Cielo Holográfica',img:'/img/m-color-azul.webp',g:'DAMA'},
   {color:'Dorada',img:'/img/m-color-dorada.webp',g:'DAMA'},
-  {color:'Azul Rey',img:'/img/m-color-azul-rey.webp',g:'CABALLERO & UNISEX'},
-  {color:'Charol Chulo Dorado',img:'/img/m-color-charol-dorado.webp',g:'CABALLERO & UNISEX'},
-  {color:'Blanca / Roja',img:'/img/m-color-blanca-roja.webp',g:'CABALLERO & UNISEX'},
-  {color:'Roja Charol',img:'/img/m-color-roja.webp',g:'CABALLERO & UNISEX'},
-  {color:'Negra Charol Suela Roja',img:'/img/m-color-negra-suela-roja.webp',g:'CABALLERO & UNISEX'},
-  {color:'Negra Beige',img:'/img/m-color-negra-beige.webp',g:'CABALLERO & UNISEX'},
+  {color:'Azul Rey',img:'/m-color-azul-rey.webp',g:'CABALLERO & UNISEX'},
+  {color:'Charol Chulo Dorado',img:'/m-color-charol-dorado.webp',g:'CABALLERO & UNISEX'},
+  {color:'Blanca / Roja',img:'/m-color-blanca-roja.webp',g:'CABALLERO & UNISEX'},
+  {color:'Roja Charol',img:'/m-color-roja.webp',g:'CABALLERO & UNISEX'},
+  {color:'Negra Charol Suela Roja',img:'/m-color-negra-suela-roja.webp',g:'CABALLERO & UNISEX'},
+  {color:'Negra Beige',img:'/m-color-negra-beige.webp',g:'CABALLERO & UNISEX'},
   {color:'Plateada',img:'/img/m-color-plateada.webp',g:'CABALLERO & UNISEX'},
   {color:'Rosa Vino',img:'/img/m-color-rosa-vino.webp',g:'DAMA'},
 ];
@@ -899,6 +924,11 @@ $('#pkSz').addEventListener('click',e=>{const b=e.target.closest('button');if(!b
 $('#pkBtn').addEventListener('click',()=>{const t=(qty===2&&sel[1]&&sel[1].color&&!(sel[2]&&sel[2].color))?2:1;sel[t]=sel[t]||{};sel[t].color=pkC;if(pkT)sel[t].talla=pkT;buildPairs();summary();
   track('track','AddToCart',{content_name:'Jordan Retro 1 '+pkC,currency:'COP',value:PRECIOS[qty]||0})});
 pkRender();
+
+/* Video: carga solo cuando la persona llega a él */
+(()=>{const v=$('#pVid');if(!v)return;const go=()=>{if(!v.src){v.src=v.dataset.src}v.play().catch(()=>{})};
+  if('IntersectionObserver' in window){new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting)go();else if(v.src)v.pause()}),{rootMargin:'200px'}).observe(v)}else go();
+  $('#vidBtn').addEventListener('click',()=>{pkC='Negra / Blanca Panda';pkRender();const t=(qty===2&&sel[1]&&sel[1].color&&!(sel[2]&&sel[2].color))?2:1;sel[t]=sel[t]||{};sel[t].color=pkC;buildPairs();summary()});})();
 /* Departamentos */
 $('#dep').innerHTML='<option value="">Selecciona</option>'+DEPTOS.map(d=>`<option>${d}</option>`).join('');
 

@@ -21,7 +21,7 @@ fbq('track','ViewContent',{content_name:'Jordan Retro 1',content_category:'Calza
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="image" href="/img/m-pareja.webp" fetchpriority="high">
+<link rel="preload" as="image" href="/img/m-color-panda.webp" fetchpriority="high">
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;600;700;800;900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet"></noscript>
 <link rel="preconnect" href="https://connect.facebook.net">
@@ -598,6 +598,23 @@ span.mp-lg svg{width:26px;height:26px}
 .vid-w video{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover}
 .vid-tag{position:absolute;top:12px;left:12px;background:rgba(0,0,0,.65);color:#fff;font-size:11px;font-weight:800;letter-spacing:.06em;padding:5px 10px;border-radius:20px}
 .vid-btn{display:block;text-align:center;margin-top:12px;font-weight:900;font-size:15px;color:var(--negro);text-decoration:underline;text-underline-offset:3px}
+
+/* tallas compacto */
+.normal2{padding:14px 14px 12px;border-radius:16px}
+.normal2 b{font-size:20px;line-height:1.1}
+.normal2 b span{display:block;margin-top:3px!important;font-family:var(--f);font-size:12.5px;font-weight:700;letter-spacing:0;text-transform:none;color:#4ade80;margin:0}
+.n2-fit{margin:10px auto 0;max-width:300px}
+.n2-bar span{padding:6px 0;font-size:11.5px}.n2-bar span.on{font-size:12px}
+.n2-chips{display:flex;justify-content:center;flex-wrap:nowrap;gap:5px;margin-top:10px}
+.n2-chips span{white-space:nowrap;font-size:10.5px;font-weight:700;color:#fff;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:20px;padding:4px 9px}
+
+/* video en el carrusel del hero */
+.slides video{flex:0 0 100%;width:100%;aspect-ratio:2/3;object-fit:cover;background:#f2f2f2;scroll-snap-align:center;display:block}
+@media(max-width:520px){.slides video{aspect-ratio:auto;height:var(--hh,calc(100svh - 215px))}}
+.slides img:first-of-type{object-fit:cover}
+.thumbs{grid-template-columns:repeat(6,minmax(0,1fr))!important;gap:6px!important}.thumbs button{min-width:0}
+.thumbs button.tv{position:relative}
+.thumbs button.tv i{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-style:normal;color:#fff;font-size:15px;background:rgba(0,0,0,.35)}
 </style>
 </head>
 <body>
@@ -615,7 +632,7 @@ span.mp-lg svg{width:26px;height:26px}
   <h1 class="t1">No es casualidad que <span class="r">todos miren</span> estos tenis 👀</h1>
   <div class="c"><span class="pill">🔥 2 PARES POR $169.900 🔥</span></div>
   <div class="carousel">
-    <div class="slides" id="slides"><img src="/img/m-pareja.webp" alt="Tenis Laksmi Boom" width="900" height="1350" fetchpriority="high" decoding="async"/></div>
+    <div class="slides" id="slides"><video id="hVid" class="hv" muted loop playsinline autoplay preload="none" poster="/img/m-color-panda.webp" width="432" height="540" data-src="/m-video-panda.mp4"></video><img src="/img/m-pareja.webp" alt="Tenis Laksmi Boom" width="900" height="1350" decoding="async"/></div>
     <div class="badge40">-40%<small>HOY</small></div>
   </div>
   <div class="thumbs" id="thumbs"></div>
@@ -638,12 +655,6 @@ span.mp-lg svg{width:26px;height:26px}
   <div class="more">MÁS DETALLES ABAJO 👇🏻</div>
 </section>
 
-<!-- 5b. VIDEO DEL PRODUCTO -->
-<section class="vid-s">
-  <div class="vid-h">Míralos <span>de cerca</span> 👀</div>
-  <div class="vid-w"><video id="pVid" muted loop playsinline preload="none" poster="/img/m-color-panda.webp" width="432" height="540" data-src="/m-video-panda.mp4"></video><span class="vid-tag">● VIDEO REAL</span></div>
-  <a href="#pedido" class="vid-btn" id="vidBtn">Quiero los Negra / Blanca Panda →</a>
-</section>
 
 <section>
   <div class="ship">
@@ -657,19 +668,11 @@ span.mp-lg svg{width:26px;height:26px}
 <!-- 7b. TALLAS NORMALES -->
 <section class="alt">
   <div class="normal2">
-    <div class="n2-ey">Guía de tallas</div>
-    <b>Tallas normales<span>para tu tranquilidad</span></b>
-    <p>Ni muy grandes ni muy pequeños. <strong>Pide tu talla de siempre.</strong></p>
+    <b>Tallas normales <span>Pide tu talla de siempre</span></b>
     <div class="n2-fit">
       <div class="n2-bar"><span>Pequeño</span><span class="on">Normal</span><span>Grande</span></div>
-      <div class="n2-pin"><i></i>Así horman nuestros tenis</div>
     </div>
-    <div class="n2-sizes"><span>33</span><span>34</span><span>35</span><span>36</span><span>37</span><span>38</span><span>39</span><span>40</span><span>41</span><span>42</span></div>
-    <div class="n2-tiles">
-      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><small>Horma<br>normal</small></div>
-      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="8" width="20" height="8" rx="1.5"/><path d="M6 8v3M10 8v4M14 8v3M18 8v4"/></svg><small>Talla<br>33 a 42</small></div>
-      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 0 1 14-5M20 12a8 8 0 0 1-14 5"/><path d="M18 3v4h-4M6 21v-4h4"/></svg><small>Cambio<br>gratis</small></div>
-    </div>
+    <div class="n2-chips"><span>✓ Horma normal</span><span>✓ Talla 33 a 42</span><span>✓ Cambio gratis</span></div>
   </div>
 </section>
 
@@ -904,7 +907,7 @@ tick();setInterval(tick,1000);
 
 /* Carrusel */
 $('#slides').insertAdjacentHTML('beforeend',CARRUSEL.slice(1).map(s=>`<img src="${s}" alt="Tenis Laksmi Boom" loading="lazy" decoding="async"/>`).join(''));
-$('#thumbs').innerHTML=CARRUSEL.map((src,i)=>`<button type="button" class="${i?'':'on'}" data-i="${i}" aria-label="Ver foto ${i+1}"><img src="${src.replace('/img/m-','/img/m-t-')}" alt="" width="90" height="90" decoding="async"/></button>`).join('');
+$('#thumbs').innerHTML=`<button type="button" class="on tv" data-i="0" aria-label="Ver video"><img src="/img/m-color-panda.webp" alt="" width="90" height="90" decoding="async"/><i>▶</i></button>`+CARRUSEL.map((src,i)=>`<button type="button" data-i="${i+1}" aria-label="Ver foto ${i+1}"><img src="${src.replace('/img/m-','/img/m-t-')}" alt="" width="90" height="90" decoding="async"/></button>`).join('');
 $$('#thumbs button').forEach(b=>b.addEventListener('click',()=>{const sl=$('#slides');sl.scrollTo({left:+b.dataset.i*sl.clientWidth,behavior:'smooth'})}));
 $('#slides').addEventListener('scroll',e=>{const i=Math.round(e.target.scrollLeft/e.target.clientWidth);$$('#thumbs button').forEach((d,j)=>d.classList.toggle('on',i===j))},{passive:true});
 
@@ -925,10 +928,11 @@ $('#pkBtn').addEventListener('click',()=>{const t=(qty===2&&sel[1]&&sel[1].color
   track('track','AddToCart',{content_name:'Jordan Retro 1 '+pkC,currency:'COP',value:PRECIOS[qty]||0})});
 pkRender();
 
-/* Video: carga solo cuando la persona llega a él */
-(()=>{const v=$('#pVid');if(!v)return;const go=()=>{if(!v.src){v.src=v.dataset.src}v.play().catch(()=>{})};
-  if('IntersectionObserver' in window){new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting)go();else if(v.src)v.pause()}),{rootMargin:'200px'}).observe(v)}else go();
-  $('#vidBtn').addEventListener('click',()=>{pkC='Negra / Blanca Panda';pkRender();const t=(qty===2&&sel[1]&&sel[1].color&&!(sel[2]&&sel[2].color))?2:1;sel[t]=sel[t]||{};sel[t].color=pkC;buildPairs();summary()});})();
+
+/* Video del hero: primera foto del carrusel, arranca solo apenas carga la página */
+(()=>{const v=$('#hVid');if(!v)return;const start=()=>{v.src=v.dataset.src;v.play().catch(()=>{})};
+  if(document.readyState==='complete')setTimeout(start,200);else addEventListener('load',()=>setTimeout(start,200));
+  $('#slides').addEventListener('scroll',e=>{const i=Math.round(e.target.scrollLeft/e.target.clientWidth);if(!v.src)return;if(i===0)v.play().catch(()=>{});else v.pause()},{passive:true});})();
 /* Departamentos */
 $('#dep').innerHTML='<option value="">Selecciona</option>'+DEPTOS.map(d=>`<option>${d}</option>`).join('');
 

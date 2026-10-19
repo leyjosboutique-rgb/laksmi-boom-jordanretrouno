@@ -491,6 +491,12 @@ section.hero-top,.page>section:first-of-type{padding-top:18px}
 .bump .nm small{font-size:12px!important;margin-top:3px}
 .lanz{margin:10px auto 0;max-width:330px;font-size:13px;line-height:1.4;color:#333;background:#f4f4f4;border-radius:10px;padding:8px 12px}
 .lanz b{color:var(--negro)}
+@media (max-width:520px){
+.t1{font-size:28px}
+.pill{margin-top:8px}
+.carousel{margin-top:10px}
+.slides img{aspect-ratio:auto!important;height:var(--hh,calc(100svh - 215px));object-fit:contain!important;background:#fff}
+}
 </style>
 </head>
 <body>
@@ -506,7 +512,7 @@ section.hero-top,.page>section:first-of-type{padding-top:18px}
 <!-- 2-3. TITULAR + CARRUSEL -->
 <section style="border:0;padding-top:8px">
   <h1 class="t1">No es casualidad que <span class="r">todos miren</span> estos tenis 👀</h1>
-  <div class="c"><span class="pill">🔥 DEL 40% DE DESCUENTO 🔥</span></div>
+  <div class="c"><span class="pill">🔥 2 PARES POR $169.900 🔥</span></div>
   <div class="carousel">
     <div class="slides" id="slides"><img src="/img/m-pareja.webp" alt="Tenis Laksmi Boom" width="900" height="1350" fetchpriority="high" decoding="async"/></div>
     <div class="badge40">-40%<small>HOY</small></div>
@@ -533,7 +539,7 @@ section.hero-top,.page>section:first-of-type{padding-top:18px}
 
 <!-- 6-7. ATRIBUTOS + IMAGINA + 1 PAR / 2 PARES (imagen vertical) -->
 <div class="banner-v">
-  <img src="/img/m-elige-par-v2.webp" decoding="async" alt="Cómodos, combinan con todo, garantizados. Imagina estrenar unos tenis que elevan cualquier outfit. 1 par $109.900, 2 pares $169.900, obsequio especial" width="900" height="1598" loading="lazy"/>
+  <img src="/img/m-elige-par-v3.webp" decoding="async" alt="Cómodos, combinan con todo, garantizados. Imagina estrenar unos tenis que elevan cualquier outfit. 1 par $109.900, 2 pares $169.900, obsequio especial" width="900" height="1598" loading="lazy"/>
 </div>
 <section>
   <div class="ship">
@@ -963,7 +969,10 @@ function renderThanks(o){
 }
 
 /* Botón fijo: se oculta cuando el formulario está a la vista */
-function st(){const r=$('#pedido').getBoundingClientRect();$('#sticky').classList.toggle('hide',r.top<innerHeight*.8&&r.bottom>0)}
+function st(){const r=$('#pedido').getBoundingClientRect();$('#sticky').classList.toggle('hide',(r.top<innerHeight*.8&&r.bottom>0)||(innerWidth<=520&&scrollY<140))}
+/* Móvil: la foto principal cabe completa en la primera pantalla */
+function fitHero(){if(innerWidth>520)return;const sl=$('#slides'),top=sl.getBoundingClientRect().top+scrollY,h=Math.max(300,Math.min(sl.clientWidth*1.5,innerHeight-top-10));sl.style.setProperty('--hh',h+'px')}
+fitHero();addEventListener('resize',fitHero);
 addEventListener('scroll',st,{passive:true});st();
 
 setQty(2);

@@ -615,6 +615,20 @@ span.mp-lg svg{width:26px;height:26px}
 .thumbs{grid-template-columns:repeat(6,minmax(0,1fr))!important;gap:6px!important}.thumbs button{min-width:0}
 .thumbs button.tv{position:relative}
 .thumbs button.tv i{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-style:normal;color:#fff;font-size:15px;background:rgba(0,0,0,.35)}
+/* barra de arriba roja */
+.ticker{background:var(--rojo)!important;color:#fff!important}
+/* más vendidos */
+.pk-sw button.top,.pair .copt.top{position:relative;overflow:visible!important}
+.pk-sw button.top::after,.pair .copt.top::after{content:"🔥";position:absolute;top:-6px;right:-6px;width:20px;height:20px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;box-shadow:0 2px 6px rgba(0,0,0,.25);z-index:2}
+.pk-sw button.top img,.pair .copt.top img{border-radius:50%}
+.topt{display:inline-block;margin-left:6px;font-size:10.5px;font-weight:900;color:#fff;background:var(--rojo);border-radius:20px;padding:2px 8px;vertical-align:2px;letter-spacing:.03em}
+/* envío prioritario */
+.prio{display:flex;align-items:center;gap:10px;width:100%;margin-top:10px;background:#fff;border:2px dashed #e3e3e3;border-radius:12px;padding:12px;text-align:left;color:var(--negro)}
+.prio .ck{width:22px;height:22px;border-radius:5px;border:2px solid #bbb;flex:none;display:flex;align-items:center;justify-content:center;font-size:14px;color:#fff;font-weight:900}
+.prio .pz{font-size:24px}
+.prio .nm{flex:1;font-weight:900;font-size:15px;line-height:1.15}.prio .nm small{display:block;font-weight:600;font-size:12px;color:var(--gris);margin-top:3px}
+.prio .pr b{font-size:17px;font-weight:900;color:var(--rojo)}
+.prio.on{border:2px solid var(--verde);background:#f2fbf5}.prio.on .ck{background:var(--verde);border-color:var(--verde)}
 </style>
 </head>
 <body>
@@ -768,6 +782,7 @@ span.mp-lg svg{width:26px;height:26px}
         <p>Tu obsequio especial ya está incluido 🎁. Aprovecha y llévate un paquete al precio más bajo (opcional):</p>
         <div class="bumps" id="bumps"></div>
       </div>
+      <button type="button" class="prio" id="prioBtn"><span class="ck">✓</span><span class="pz">🚀</span><span class="nm">ENVÍO PRIORITARIO<small>Tu pedido sale primero, antes que los demás</small></span><span class="pr"><b>+$10.000</b></span></button>
     </div>
 
     <div class="step">
@@ -793,6 +808,7 @@ span.mp-lg svg{width:26px;height:26px}
     <div class="sum">
       <div class="l"><span><b id="sItems">2 pares</b><div class="det" id="sDet">Selecciona color y talla</div></span><span id="sSub">$169.900</span></div>
       <div class="l" id="sBumpRow" style="display:none"><span id="sBumpName"></span><span id="sBump"></span></div>
+      <div class="l" id="sPrioRow" style="display:none"><span>🚀 Envío prioritario</span><span>$10.000</span></div>
       <div class="l"><span>🎁 Obsequio especial: medias deportivas</span><span class="free">DE REGALO</span></div>
       <div class="l"><span>Envío</span><span class="free">GRATIS ✈️</span></div>
       <div class="l tot"><span>TOTAL A PAGAR AL RECIBIR</span><span id="sTot">$169.900</span></div>
@@ -867,21 +883,22 @@ const MEDIAS=[
 ];
 const COLORES=[
   {color:'Negra / Roja',img:'/img/m-color-negra-roja.webp',g:'CABALLERO & UNISEX'},
-  {color:'Negra / Blanca Panda',img:'/img/m-color-panda.webp',g:'CABALLERO & UNISEX'},
-  {color:'Negra Charol Suela Cristal',img:'/m-color-cristal.webp',g:'CABALLERO & UNISEX'},
+  {color:'Negra / Blanca Panda',img:'/img/m-color-panda.webp',g:'CABALLERO & UNISEX',top:true},
+  {color:'Negra Charol Suela Cristal',img:'/m-color-cristal.webp',g:'CABALLERO & UNISEX',top:true},
   {color:'Oro Rosa',img:'/img/m-color-oro-rosa.webp',g:'DAMA'},
   {color:'Azul Cielo Holográfica',img:'/img/m-color-azul.webp',g:'DAMA'},
   {color:'Dorada',img:'/img/m-color-dorada.webp',g:'DAMA'},
   {color:'Azul Rey',img:'/m-color-azul-rey.webp',g:'CABALLERO & UNISEX'},
   {color:'Charol Chulo Dorado',img:'/m-color-charol-dorado.webp',g:'CABALLERO & UNISEX'},
   {color:'Blanca / Roja',img:'/m-color-blanca-roja.webp',g:'CABALLERO & UNISEX'},
-  {color:'Roja Charol',img:'/m-color-roja.webp',g:'CABALLERO & UNISEX'},
+  {color:'Roja Charol',img:'/m-color-roja.webp',g:'CABALLERO & UNISEX',top:true},
   {color:'Negra Charol Suela Roja',img:'/m-color-negra-suela-roja.webp',g:'CABALLERO & UNISEX'},
   {color:'Negra Beige',img:'/m-color-negra-beige.webp',g:'CABALLERO & UNISEX'},
   {color:'Plateada',img:'/img/m-color-plateada.webp',g:'CABALLERO & UNISEX'},
   {color:'Rosa Vino',img:'/img/m-color-rosa-vino.webp',g:'DAMA'},
 ];
-const COLORES_ORD=[...COLORES.filter(c=>c.g!=='DAMA'),...COLORES.filter(c=>c.g==='DAMA')];
+/* Los más vendidos (top:true) van primero */
+const COLORES_ORD=[...COLORES.filter(c=>c.top),...COLORES.filter(c=>!c.top&&c.g!=='DAMA'),...COLORES.filter(c=>!c.top&&c.g==='DAMA')];
 /* Fotos del carrusel (en orden) */
 const CARRUSEL=['/img/m-pareja.webp','/img/m-pedestal.webp','/img/m-mano.webp','/img/m-piesambos.webp','/img/m-cordones.webp'];
 /* ⚠️ Verifica estas medidas con tu proveedor: talla → largo máximo del pie en cm */
@@ -891,6 +908,7 @@ const DEPTOS=["Amazonas","Antioquia","Arauca","Atlántico","Bogotá D.C.","Bolí
 const $=s=>document.querySelector(s),$$=s=>document.querySelectorAll(s);
 const fmt=n=>'$'+n.toLocaleString('es-CO');
 const track=(...a)=>{try{fbq(...a)}catch(e){}};
+const PRIO=10000;let prio=false;
 let qty=2,sel={},bump=null,sugerida=null,payMode='contraentrega';
 
 /* Fecha de hoy en el bloque de precio (ej: SÁBADO 17 DE OCTUBRE) */
@@ -918,9 +936,9 @@ $$('.col').forEach(a=>a.addEventListener('click',()=>{const c=a.dataset.c;const 
 
 /* Selector de color (foto grande + círculos + tallas) */
 let pkC=COLORES_ORD[0].color,pkT='';
-function pkRender(){const c=COLORES_ORD.find(x=>x.color===pkC);$('#pkImg').src=c.img;$('#pkImg').alt=c.color;$('#pkName').textContent=c.color;$('#pkTag').textContent=c.g==='DAMA'?'DAMA':'UNISEX';
+function pkRender(){const c=COLORES_ORD.find(x=>x.color===pkC);$('#pkImg').src=c.img;$('#pkImg').alt=c.color;$('#pkName').innerHTML=c.color+(c.top?' <span class="topt">🔥 MÁS VENDIDO</span>':'');$('#pkTag').textContent=c.g==='DAMA'?'DAMA':'UNISEX';
   $$('#pkSw button').forEach(b=>b.classList.toggle('on',b.dataset.c===pkC));$$('#pkSz button').forEach(b=>b.classList.toggle('on',b.dataset.t==pkT))}
-$('#pkSw').innerHTML=COLORES_ORD.map(c=>`<button type="button" data-c="${c.color}" aria-label="${c.color}"><img src="${c.img}" alt="" width="60" height="60" loading="lazy" decoding="async"/></button>`).join('');
+$('#pkSw').innerHTML=COLORES_ORD.map(c=>`<button type="button" class="${c.top?'top':''}" data-c="${c.color}" aria-label="${c.color}"><img src="${c.img}" alt="" width="60" height="60" loading="lazy" decoding="async"/></button>`).join('');
 $('#pkSz').innerHTML=TALLAS.map(([t])=>`<button type="button" data-t="${t}">${t}</button>`).join('');
 $('#pkSw').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;pkC=b.dataset.c;pkRender()});
 $('#pkSz').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;pkT=b.dataset.t;pkRender()});
@@ -942,7 +960,7 @@ function buildPairs(){
   for(let i=1;i<=qty;i++){const s=sel[i]||{};
     const cs=COLORES_ORD.find(c=>c.color===s.color);
     h+=`<div class="pair pv2" data-p="${i}"><div class="pv-top"><span class="pv-img">${cs?`<img src="${cs.img}" alt=""/>`:'👟'}</span><span class="pv-tx"><small>${qty===2?'PAR '+i:'TU PAR'}</small><b class="pv-name">${cs?cs.color:'Elige tu color'}</b><em class="pv-sz">${s.talla?'Talla '+s.talla:'Elige tu talla'}</em></span></div>
-    <div class="copts">${COLORES_ORD.map(c=>`<button type="button" class="copt ${s.color===c.color?'on':''}" data-c="${c.color}" aria-label="${c.color}" title="${c.color}"><img src="${c.img}" alt="" loading="lazy" decoding="async"/></button>`).join('')}</div>
+    <div class="copts">${COLORES_ORD.map(c=>`<button type="button" class="copt ${s.color===c.color?'on':''} ${c.top?'top':''}" data-c="${c.color}" aria-label="${c.color}" title="${c.color}"><img src="${c.img}" alt="" loading="lazy" decoding="async"/></button>`).join('')}</div>
     <div class="sz-l">Talla ${qty===2?'par '+i:''}</div>
     <div class="szs">${TALLAS.map(([t])=>`<button type="button" class="sz ${s.talla==t?'on':''} ${sugerida==t?'sug':''}" data-t="${t}">${t}</button>`).join('')}</div></div>`;}
   $('#pairs').innerHTML=h;
@@ -975,7 +993,8 @@ $$('.bump').forEach(b=>b.addEventListener('click',()=>{const id=+b.dataset.id;bu
   $$('.bump').forEach(x=>x.classList.toggle('on',bump&&+x.dataset.id===bump.id));summary();}));
 
 /* Resumen */
-function total(){return PRECIOS[qty]+(bump?bump.precio:0)}
+function total(){return PRECIOS[qty]+(bump?bump.precio:0)+(prio?PRIO:0)}
+$('#prioBtn').addEventListener('click',()=>{prio=!prio;$('#prioBtn').classList.toggle('on',prio);summary()});
 function summary(){
   $('#sItems').textContent=qty===2?'2 pares':'1 par';
   const l=[];for(let i=1;i<=qty;i++){const s=sel[i]||{};if(s.color)l.push(`${qty===2?'Par '+i+': ':''}${s.color}${s.talla?' · Talla '+s.talla:''}`)}
@@ -983,6 +1002,7 @@ function summary(){
   $('#sSub').textContent=fmt(PRECIOS[qty]);
   $('#sBumpRow').style.display=bump?'flex':'none';
   if(bump){$('#sBumpName').textContent=`Paquete ${bump.pares} pares de medias`;$('#sBump').textContent=fmt(bump.precio);}
+  $('#sPrioRow').style.display=prio?'flex':'none';
   $('#sTot').textContent=fmt(total());
   const pt=$('#prepayTot');if(pt)pt.textContent=fmt(total()-DESC_ANTICIPADO);
 }
@@ -1014,13 +1034,13 @@ $('#orderForm').addEventListener('submit',async e=>{
   const tot=total()-(payMode==='anticipado'?DESC_ANTICIPADO:0);
   const data={nombre:f.nombre.value.trim(),celular:c1,departamento:f.departamento.value,ciudad:f.ciudad.value.trim(),
     direccion:`${f.direccion.value.trim()} · Barrio: ${f.barrio.value.trim()}`,qty:qty,
-    total:fmt(tot)+(bump?` (incluye ${bump.pares} pares de medias)`:''),
-    medias:bump?`${bump.pares} pares - ${fmt(bump.precio)}`:'Solo regalo (1 par)',pago:payMode==='anticipado'?`Anticipado (${MEDIOS_ANTICIPADO}) -$10.000`:'Contraentrega',landing:'v3'};
+    total:fmt(tot)+(bump?` (incluye ${bump.pares} pares de medias)`:'')+(prio?' · ENVÍO PRIORITARIO':''),
+    medias:(bump?`${bump.pares} pares - ${fmt(bump.precio)}`:'Solo regalo (1 par)')+(prio?' + Envío prioritario $10.000':''),pago:payMode==='anticipado'?`Anticipado (${MEDIOS_ANTICIPADO}) -$10.000`:'Contraentrega',landing:'v3'};
   if(payMode==='anticipado')data.total+=' · PAGO ANTICIPADO';
   for(let i=1;i<=qty;i++){data['color'+i]=sel[i].color;data['talla'+i]=sel[i].talla}
   try{await fetch(SCRIPT_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)})}catch(x){}
   const items=[];for(let i=1;i<=qty;i++)items.push({color:sel[i].color,talla:sel[i].talla});
-  renderThanks({nombre:f.nombre.value.trim(),celular:c1,departamento:f.departamento.value,ciudad:f.ciudad.value.trim(),direccion:f.direccion.value.trim(),barrio:f.barrio.value.trim(),qty,items,bump,total:tot,pago:payMode});
+  renderThanks({nombre:f.nombre.value.trim(),celular:c1,departamento:f.departamento.value,ciudad:f.ciudad.value.trim(),direccion:f.direccion.value.trim(),barrio:f.barrio.value.trim(),qty,items,bump,prio,total:tot,pago:payMode});
   track('track','Purchase',{content_name:'Jordan Retro 1',currency:'COP',value:tot,num_items:qty});
 });
 
@@ -1042,7 +1062,7 @@ const wa=t=>`https://wa.me/${WA_NUM}?text=${encodeURIComponent(t)}`;
 function renderThanks(o){
   const pares=o.items.map(x=>`${x.color} · Talla ${x.talla}`);
   const nombre1=o.nombre.split(' ')[0];
-  const msgConf=`Hola LAKSMI BOOM 👋 Confirmo mi pedido:\n\n👟 ${o.qty===2?'2 pares':'1 par'}:\n${pares.map(p=>'- '+p).join('\n')}\n🎁 Obsequio especial: medias deportivas de regalo${o.bump?`\n🧦 Paquete de ${o.bump.pares} pares de medias`:''}${o.pago==='anticipado'?`\n💳 Quiero PAGAR POR ADELANTADO por ${MEDIOS_ANTICIPADO} (con $10.000 de descuento). Total: ${fmt(o.total)}. Envíenme los datos de pago, por favor.`:`\n💵 Total a pagar al recibir: ${fmt(o.total)}`}\n\n📍 Recibe: ${o.nombre}\n📱 Celular: ${o.celular}\n🏠 Dirección: ${o.direccion}, barrio ${o.barrio}\n🏙️ ${o.ciudad}, ${o.departamento}`;
+  const msgConf=`Hola LAKSMI BOOM 👋 Confirmo mi pedido:\n\n👟 ${o.qty===2?'2 pares':'1 par'}:\n${pares.map(p=>'- '+p).join('\n')}\n🎁 Obsequio especial: medias deportivas de regalo${o.bump?`\n🧦 Paquete de ${o.bump.pares} pares de medias`:''}${o.prio?`\n🚀 Envío prioritario`:''}${o.pago==='anticipado'?`\n💳 Quiero PAGAR POR ADELANTADO por ${MEDIOS_ANTICIPADO} (con $10.000 de descuento). Total: ${fmt(o.total)}. Envíenme los datos de pago, por favor.`:`\n💵 Total a pagar al recibir: ${fmt(o.total)}`}\n\n📍 Recibe: ${o.nombre}\n📱 Celular: ${o.celular}\n🏠 Dirección: ${o.direccion}, barrio ${o.barrio}\n🏙️ ${o.ciudad}, ${o.departamento}`;
   const msgAdd=`Hola LAKSMI BOOM, quiero corregir o añadir información a mi pedido a nombre de ${o.nombre} (${o.celular}): `;
   const msgHola=`Hola LAKSMI BOOM, acabo de hacer un pedido a nombre de ${o.nombre} y quiero confirmarlo.`;
   $('#thanks').innerHTML=`
@@ -1056,6 +1076,7 @@ function renderThanks(o){
     <div class="th-row"><span>${o.qty===2?'2 pares':'1 par'}</span><span>${pares.map(esc).join('<br>')}</span></div>
     <div class="th-row"><span>🎁 Obsequio especial</span><span style="color:var(--verde-osc)">1 par · GRATIS</span></div>
     ${o.bump?`<div class="th-row"><span>Paquete de medias</span><span>${o.bump.pares} pares · ${fmt(o.bump.precio)}</span></div>`:''}
+    ${o.prio?`<div class="th-row"><span>🚀 Envío prioritario</span><span>${fmt(PRIO)}</span></div>`:''}
     <div class="th-row"><span>Envío</span><span style="color:var(--verde-osc)">GRATIS</span></div>
     <div class="th-row"><span>Recibe</span><span>${esc(o.nombre)}</span></div>
     <div class="th-row"><span>Celular</span><span>${esc(o.celular)}</span></div>
